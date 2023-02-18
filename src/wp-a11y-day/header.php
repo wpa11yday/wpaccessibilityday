@@ -47,7 +47,7 @@
 					) );
 				?>
 			</nav><!-- #site-navigation -->
-			<time class="event-date" datetime="2022-11-02T14:45:00Z"><span class="dashicons dashicons-clock" aria-hidden="true"></span> November 2nd-3rd, 2022</time>
+			<time class="event-date" datetime="2022-11-02T14:45:00Z"><span class="dashicons dashicons-clock" aria-hidden="true"></span> Fall 2023</time>
 			</div>
 		</div><!-- .header-1 -->
 		<nav id="main-navigation" class="main-navigation navigation" aria-label="Main">
