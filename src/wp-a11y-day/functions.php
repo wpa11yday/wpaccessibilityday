@@ -231,13 +231,11 @@ add_action( 'after_setup_theme', 'wp_accessibility_day_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function wp_accessibility_day_scripts() {
-	$css_ver   = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/theme.css' ) );
 	$style_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/style.css' ) );
 	$js_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/navigation.js' ) );
 	$ts_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/talk-time.js' ) );
 
 	wp_enqueue_style( 'wp-accessibility-day-style', get_stylesheet_uri(), array(), $style_ver );
-	wp_enqueue_style( 'wp-accessibility-day-theme', get_template_directory_uri() . '/css/theme.css', array( 'wp-accessibility-day-style', 'dashicons' ), $css_ver );
 	wp_enqueue_script( 'wp-accessibility-day-navigation', get_template_directory_uri() . '/js/navigation.js', array(), $js_ver, true );
 	wp_enqueue_script( 'wp-accessibility-day-time', get_template_directory_uri() . '/js/talk-time.js', array(), $ts_ver, true );
 
