@@ -568,3 +568,14 @@ add_action( 'gform_after_submission_19', function ( $entry ) {
 add_action( 'gform_after_submission_2', function ( $entry ) {
 	GFAPI::update_entry_property( $entry['id'], 'created_by', '' );
 } );
+
+/**
+ * Display archive site headers.
+ */
+function wpad_archive_header() {
+	$title = get_bloginfo( 'title' );
+	if ( false !== stripos( $title, 'archive' ) ) {
+		echo sprintf( '<aside id="wpad-archive"><p>You are viewing the <strong>%s</strong>. <a 	href="https://wpaccessibility.day">View the current event site</a>.</p></aside>', $title );
+	}
+}
+add_action( 'wp_body_open', 'wpad_archive_header' );
