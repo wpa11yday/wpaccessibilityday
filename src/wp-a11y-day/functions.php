@@ -558,14 +558,14 @@ add_action( 'show_admin_bar', 'wpad_hide_admin_bar' );
 /**
  * Erase submitter ID from feedback form.
  */
-add_action( 'gform_after_submission_19', function ( $entry ) {
+add_action( 'gform_after_submission_19', function( $entry ) {
 	GFAPI::update_entry_property( $entry['id'], 'created_by', '' );
 } );
 
 /**
  * Erase submitter ID from code of conduct form.
  */
-add_action( 'gform_after_submission_2', function ( $entry ) {
+add_action( 'gform_after_submission_2', function( $entry ) {
 	GFAPI::update_entry_property( $entry['id'], 'created_by', '' );
 } );
 
