@@ -312,28 +312,6 @@ add_action( 'after_setup_theme', 'wp_accessibility_day_text_domain' );
 // Instantiate theme.
 Theme::get_instance();
 
-
-
-/**
- * Swap the YouTube link based on current time.
- *
- * @return string
- */
-function wpad_banner() {
-	$time   = time();
-	$output = '';
-	if ( $time < strtotime( '2022-11-02 14:50 UTC' ) ) {
-		if ( $time < strtotime( '2022-11-02 15:00 UTC' ) ) {
-			$start = gmdate( 'F j, Y', strtotime( '2022-11-02 15:00 UTC' ) );
-			$until = human_time_diff( $time, strtotime( '2022-11-02 15:00 UTC' ) );
-			$append = " - in just <strong>$until</strong>!";
-		}
-		$output = "<div class='wpad-callout'><p>WP Accessibility Day starts $start $append <a href='" . esc_url( get_option( 'wpcs_field_registration' ) ) . "'>Register today!</a> </p></div>";
-	}
-
-	return $output;
-}
-
 /**
  * This was, I believe, because we made speakers a non-publishing level of user, but assigned them as authors of their own talks.
  *
