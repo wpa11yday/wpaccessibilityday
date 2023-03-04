@@ -2268,3 +2268,11 @@ blockquote cite {
 .wpcsp_sponsor .wpcsp-sponsor-grid,.page-id-1168 .nav-breadcrumbs,.page-id-1168 .entry-header,.page-id-1168 .entry-content > * {
 	max-width:1280px
 }
+
+#wpad-archive {
+	background: var(--color-light-blue);
+	text-align: center;
+	padding:.25em;
+	margin: 0;
+	border-bottom: 2px solid;
+}
