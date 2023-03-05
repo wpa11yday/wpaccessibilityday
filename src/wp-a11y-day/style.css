@@ -888,11 +888,14 @@ footer .widget {
 }
 
 #colophon #bottom-credits .site-logo {
-	text-align:left
+	display: flex;
+	flex-wrap: wrap;
+	text-align:left;
+	align-items:center;
+	min-width: calc( 17em + 60px );
 }
 
 #bottom-credits .site-logo svg {
-	float:left;
 	margin-right:10px;
 	width:40px
 }
