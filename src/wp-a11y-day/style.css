@@ -2032,6 +2032,10 @@ input[type="text"],input[type="password"],input[type="email"],select,textarea {
 	width:100%
 }
 
+aside input[type="text"], aside input[type="password"], aside input[type="email"], aside select,aside textarea {
+	background: #fff;
+}
+
 input[type="text"],input[type="password"],input[type="email"],select {
 	height:44px
 }
