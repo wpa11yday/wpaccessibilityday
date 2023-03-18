@@ -507,8 +507,47 @@ a:hover,a:active {
 	text-align:center
 }
 
+.main-navigation {
+	color:var(--color-dark-purple);
+	padding:9px 0
+}
+
+.main-navigation a {
+	color:var(--color-dark-purple);
+	background:transparent;
+	font-size:20px;
+	font-size:1.23rem;
+	border-radius:2px
+}
+
+.main-navigation .sub-menu {
+	padding:12px;
+	background:#fff
+}
+
+.main-navigation .sub-menu li {
+	margin-bottom:4px
+}
+
+.main-navigation .sub-menu a {
+	background:#fff;
+	color:var(--color-dark-purple)
+}
+
+.main-navigation .current-menu-item a,
+.main-navigation .sub-menu a:hover,.main-navigation .sub-menu a:focus {
+	outline: 2px solid;
+	outline-offset: 2px;
+	outline-color:var(--color-dark-purple);
+	background: #fff
+}
+
 .main-navigation .menu-item-has-children {
 	display:flex
+}
+
+.main-navigation .current-menu-ancestor {
+	border-bottom: 2px solid var(--color-dark-purple);
 }
 
 .main-navigation.navigation .menu {
@@ -559,7 +598,7 @@ a:hover,a:active {
 	text-decoration:none
 }
 
-#main-navigation .dropdown-toggle {
+.main-navigation .dropdown-toggle {
 	padding:0 4px;
 	border-radius:20px;
 	margin:8px 0;
@@ -1804,38 +1843,6 @@ h2.event-time {
 
 #colophon .site-logo svg {
 	transform:rotate(-4deg)
-}
-
-#main-navigation {
-	color:var(--color-dark-purple);
-	padding:9px 0
-}
-
-#main-navigation a {
-	color:var(--color-dark-purple);
-	background:transparent;
-	font-size:20px;
-	font-size:1.23rem;
-	border-radius:2px
-}
-
-#main-navigation .sub-menu {
-	padding:12px;
-	background:#fff
-}
-
-#main-navigation .sub-menu li {
-	margin-bottom:4px
-}
-
-#main-navigation .sub-menu a {
-	background:#fff;
-	color:var(--color-dark-purple)
-}
-
-#main-navigation .sub-menu a:hover,#main-navigation .sub-menu a:focus {
-	border-radius:0;
-	outline-color:var(--color-dark-purple)
 }
 
 .site-header .utility-navigation {
