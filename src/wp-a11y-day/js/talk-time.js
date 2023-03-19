@@ -49,17 +49,6 @@
 			$( this ).attr( 'aria-label', label );
 		});
 
-		var slido = document.getElementById( 'slido' );
-		if ( slido ) {
-			var content = slido.contentWindow;
-			waitForEl( '#live-tab-ideas', content ).then( function( el ) {
-				console.log( el );
-				var chatLabel = content.document.querySelector( '#live-tab-ideas .live-tab__title' );
-				chatLabel.innerHTML = 'Chat';
-				console.log( chatLabel );
-			});
-		}
-
 		const streamtext = document.getElementById( 'streamtext' );
 		const transcript = document.querySelector( '#transcript button' );
 		const chat       = document.querySelector( '#chat button' );
@@ -100,26 +89,6 @@
 					createCookie( 'slido.hidden', 1 );
 				}
 			});
-		}
-
-		function waitForEl(selector,context){
-			 return new Promise(resolve => {
-				 if (context.document.querySelector(selector)) {
-					 return resolve(context.document.querySelector(selector));
-				 }
-
-				 const observer = new MutationObserver(mutations => {
-					 if (context.document.querySelector(selector)) {
-						 resolve(context.document.querySelector(selector));
-						 observer.disconnect();
-					 }
-				 });
-
-				 observer.observe(context.document.body, {
-					 childList: true,
-					 subtree: true
-				 });
-			 });
 		}
 
 		// Cookie handler, non-$ style
