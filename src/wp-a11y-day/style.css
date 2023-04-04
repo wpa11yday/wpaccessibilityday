@@ -488,7 +488,7 @@ figure.box-shadow {
 	color:var(--color-dark-purple)
 }
 
-.main-navigation .current-menu-item a,
+.main-navigation .current-menu-item > a,
 .main-navigation .sub-menu a:hover,.main-navigation .sub-menu a:focus {
 	outline: 2px solid;
 	outline-offset: 2px;
@@ -760,6 +760,7 @@ footer .widget {
 	flex-wrap: wrap;
 	text-align:left;
 	align-items:center;
+	column-gap: 5px;
 	min-width: calc( 17em + 60px );
 }
 
@@ -1678,10 +1679,6 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	padding:2em
 }
 
-.entry-content ul {
-	list-style:url(../assets/images/list-tick.svg)
-}
-
 .current-talk {
 	background:#fff;
 	padding:1em;
@@ -1946,16 +1943,6 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		grid-gap:5px
 	}
 
-	#colophon #bottom-credits .site-logo {
-		text-align:center
-	}
-
-	#bottom-credits .site-logo svg {
-		float:none;
-		margin-right:0;
-		width:40px
-	}
-
 	#bottom-credits .navigation .menu {
 		justify-content:center
 	}
@@ -2013,6 +2000,11 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 	.entry-list {
 		grid-template-columns:1fr
+	}
+
+	#colophon #bottom-credits .site-logo {
+		display: block;
+		text-align:center
 	}
 
 	#sponsorship-levels .gb-container-c9734134 {
