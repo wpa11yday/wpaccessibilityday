@@ -126,7 +126,9 @@ function wp_accessibility_day_footer_sidebars() {
 		<aside id="footer-sidebar-columns" class="footer-sidebar widget-area footer-columns footer-columns-<?php echo $i; ?>" aria-label="Footer Sidebars">
 			<?php
 				foreach ( $active_sidebars as $sidebar ) {
+					echo '<div class="widget-sidebar-column">';
 					dynamic_sidebar( $sidebar );
+					echo '</div>';
 				}
 			?>
 		</aside>
