@@ -1,0 +1,302 @@
+.home .wpcsp-speaker-title-organization {
+	display:none
+}
+
+.home .wpcsp-speakers .wpcsp-speaker-name {
+	margin-top:-72px
+}
+
+.home .wpcsp-speakers .wpcsp-speaker-name a {
+	background:#fff;
+	padding:2px 10px;
+	text-decoration:none;
+	font-size:.8em
+}
+
+.home .wpcsp-speakers .wpcsp-speaker-name a:hover,.home .wpcsp-speakers .wpcsp-speaker-name a:focus {
+	text-decoration:underline;
+	outline-color:#fff
+}
+
+.home .wpcsp-speakers .wpcsp-speaker-image {
+	margin-bottom:15px
+}
+
+.single-wpcsp_speaker .has-post-thumbnail .wpcsp-speaker-grid {
+	max-width:1200px;
+	padding-top:20px
+}
+
+.single-wpcsp_speaker #breadcrumbs {
+	padding:0 36px
+}
+
+.wpcsp-session-speaker img,.wpcsp-speaker-grid img,.wpcsp-speakers .wpcsp-speaker-image {
+	border-radius:20px;
+	margin-bottom:5px
+}
+
+.wpcsp-speaker-social-icon .dashicons {
+	font-size:24px;
+	width:24px;
+	height:24px
+}
+
+.wpcsp-speaker-pronouns {
+	font-size:1.5rem;
+	color:var(--color-dark-blue)
+}
+
+.wpcsp_speaker .wp-block-latest-posts.wp-block-latest-posts__list li {
+	list-style:disc
+}
+
+.wpcsp_speaker .wpcsp-speaker-country .dashicons-location {
+	width:30px;
+	padding-top:3px
+}
+
+.wpcsp_speaker .wpcsp-speaker-country .dashicons-location:before {
+	color:var(--color-dark-purple);
+	font-size:30px
+}
+
+.sponsor-levels h3 {
+	color:var(--color-dark-purple);
+	margin:0
+}
+
+.sponsor-levels .price {
+	margin:0;
+	font-weight:700
+}
+
+.sponsor-spots {
+	color:var(--color-dark-blue);
+	margin-top:0;
+	font-size:1rem;
+	font-weight:700
+}
+
+.sponsor-benefits {
+	margin-left:0;
+	padding-left:0
+}
+
+.sponsor-benefits li {
+	list-style:none;
+	border-bottom:1px solid #105a7f;
+	margin-bottom:10px;
+	padding-bottom:10px;
+	text-align:center;
+	font-size:1rem
+}
+
+.wpcs-session-sponsor {
+	border:2px solid var(--color-dark-blue);
+	padding:5px;
+	border-radius:12px;
+	margin-bottom:1rem;
+	background:var(--color-light-blue)
+}
+
+.wp-block-group.schedule {
+	padding:1em 36px
+}
+
+.wpcsp-sponsor-description a img, .lightning .wp-block-columns {
+	display:block
+}
+
+.schedule .inside.hidden {
+	display:none
+}
+
+.wpcsp-sponsor-description a {
+	display:inline-block
+}
+
+.schedule img {
+	border-radius:12px
+}
+
+.schedule .wp-block-column h3 {
+	margin-top:0
+}
+
+.wpad-microsponsors {
+	align-items:center
+}
+
+.wpad-microsponsors,.wpad-attendees {
+	display:grid;
+	padding:0;
+	list-style:none
+}
+
+.wpad-microsponsors li {
+	list-style:none;
+	text-align:center
+}
+
+.wpad-attendees li {
+	padding:12px;
+	display:grid;
+	grid-template-columns:64px 1fr;
+	column-gap:16px;
+	font-size:1rem
+}
+
+.wpad-attendees li h2,.wpad-attendees li h3 {
+	margin:0;
+	font-size:1.1rem
+}
+
+.wpad-attendees .attendee-info div {
+	font-size:.9rem
+}
+
+.wpad-attendees img {
+	border-radius:8px
+}
+
+#page .wpad-donors {
+	list-style:none;
+	margin:0;
+	padding:0
+}
+
+#page .wpad-donors li {
+	margin-bottom:1rem
+}
+
+#page .wpad-donors li span.date {
+	font-size:.9rem;
+	margin-left:1rem
+}
+
+#page .wpad-donors li span.info {
+	font-size:1rem
+}
+
+.current-talk {
+	background:#fff;
+	padding:1em;
+	margin:0 -1em
+}
+
+.wp-block-column .slides a {
+	font-size:1rem;
+	padding:4px 6px;
+	border:1px solid var(--color-dark-purple);
+	background:#fff;
+	text-decoration:none
+}
+
+.wp-block-column .slides a:hover,.wp-block-column .slides a:focus {
+	border-bottom:3px solid
+}
+
+.session_id {
+	font-family:courier;
+	margin-left:5px;
+	color:#333;
+	border:1px solid #aaa;
+	font-size:1rem;
+	padding:5px
+}
+
+.wpcsp_sponsor .wpcsp-sponsor-grid img {
+	margin-top:1.5em
+}
+
+.wpcsp_sponsor .wpcsp-sponsor-grid,.page-id-1168 .nav-breadcrumbs,.page-id-1168 .entry-header,.page-id-1168 .entry-content > * {
+	max-width:1280px
+}
+
+.wpad-attendees li:nth-of-type(odd),.wp-block-group.schedule:nth-of-type(odd), .sponsor-levels-container,.gradient-background,.main-navigation,.site-footer,.entry-meta {
+	background:radial-gradient(circle,var(--color-light-blue) 52%,var(--color-light-purple) 100%)
+}
+
+.lead-organizers .wp-block-group__inner-container {
+	display:grid;
+	grid-template-columns:1fr
+}
+
+.team-organizers .wp-block-group__inner-container {
+	display:grid;
+	grid-template-columns:1fr 1fr
+}
+
+.people-profile {
+	text-align:center;
+	margin-bottom:2em
+}
+
+.people-profile img {
+	border-radius:120px
+}
+
+.people-profile h3 {
+	font-size:1em;
+	line-height:1;
+	padding:0;
+	margin:.5em 0
+}
+
+.people-profile p {
+	font-size:.85em;
+	margin:0
+}
+
+.donate-list {
+	font-weight:100!important
+}
+
+/* Media queries */
+@media screen and (min-width: 960px) {
+	.wp-block-group.schedule {
+		transform:skew(-3deg,-1deg);
+		max-width:960px
+	}
+
+	.wp-block-group.schedule .wp-block-group__inner-container {
+		transform:skew(3deg,1deg);
+		padding:1em
+	}
+}
+
+@media screen and (min-width: 60em) {
+	.lead-organizers .wp-block-group__inner-container {
+		grid-template-columns:1fr 1fr 1fr
+	}
+
+	.team-organizers .wp-block-group__inner-container {
+		grid-template-columns:1fr 1fr 1fr 1fr
+	}
+}
+
+@media screen and (min-width: 50em) {
+	.wpad-attendees {
+		grid-template-columns:repeat(3,1fr)
+	}
+
+	.wpad-microsponsors {
+		grid-template-columns:repeat(5,1fr)
+	}
+}
+
+@media screen and (max-width: 60em) {
+	#sponsorship-levels .gb-container-c9734134 {
+		margin-right:0;
+		margin-left:0
+	}
+
+	#sponsorship-levels .gb-grid-column-c9734134 {
+		margin-bottom:30px
+	}
+
+	#sponsorship-levels .gb-grid-column-c9734134:last-of-type() {
+		margin-bottom:0
+	}
+}
