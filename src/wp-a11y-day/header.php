@@ -48,7 +48,9 @@
 					) );
 				?>
 			</nav><!-- #site-navigation -->
-			<time class="event-date" datetime="2022-11-02T14:45:00Z"><span class="dashicons dashicons-clock" aria-hidden="true"></span> Fall 2023</time>
+
+			<?php dynamic_sidebar( 'event-date-widget-area' ); ?>
+
 			</div>
 		</div><!-- .header-1 -->
 		<nav id="main-navigation" class="main-navigation navigation" aria-label="Main">
