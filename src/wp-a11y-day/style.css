@@ -652,10 +652,13 @@ figure.box-shadow {
 	margin:30px
 }
 
+.widget .menu a {
+	padding: 5px;
+}
+
 .widget a[aria-current=page] {
 	background:var(--color-dark-blue);
 	color:#fff;
-	padding:5px;
 	border-radius:5px;
 	text-decoration:none
 }
@@ -1204,6 +1207,10 @@ h2.event-time {
 	vertical-align:middle;
 	color:var(--color-dark-purple);
 	line-height:.8
+}
+
+.site-utilities .event-time .localtime {
+	display: none;
 }
 
 .site-header .utility-navigation li {
