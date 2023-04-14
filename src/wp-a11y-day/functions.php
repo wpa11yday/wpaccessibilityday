@@ -346,16 +346,6 @@ function wpad_replace_optout( $src ) {
 add_filter( 'script_loader_src', 'wpad_replace_optout', 10 );
 
 /**
- * Inline shortcode to generate event start time.
- *
- * @return string
- */
-function wpad_event_start( $atts = array(), $content = '' ) {
-	return '<time class="event-time" datetime="2022-11-02T14:45:00Z" data-time="2022-11-02T14:45:00Z">14:45 UTC</span>';
-}
-add_shortcode( 'wpad', 'wpad_event_start' );
-
-/**
  * Filter 'Protected:' out of password protected post titles.
  *
  * @return string
