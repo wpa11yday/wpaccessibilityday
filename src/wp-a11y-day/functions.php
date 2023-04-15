@@ -237,7 +237,7 @@ function wp_accessibility_day_scripts() {
 	$style_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/style.css' ) );
 	$gform_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/gforms.css' ) );
 	$event_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/event.css' ) );
-	$js_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/gforms.css' ) );
+	$js_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/navigation.js' ) );
 	$ts_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/talk-time.js' ) );
 
 	wp_enqueue_style( 'wp-accessibility-day-style', get_stylesheet_uri(), array(), $style_ver );
