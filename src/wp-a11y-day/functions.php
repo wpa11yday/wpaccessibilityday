@@ -470,6 +470,30 @@ add_action( 'gform_advancedpostcreation_post_after_creation_9', 'wpad_map_alt_to
 add_action( 'gform_advancedpostcreation_post_after_creation_11', 'wpad_map_alt_to_image', 10, 4 );
 
 /**
+ * Assign speaker to their session post after submission.
+ *
+ * @param int    $post_id New post ID.
+ * @param object $feed Feed object.
+ * @param array  $entry Gravity Forms entry.
+ * @param array  $form Gravity form schema.
+ */
+function wpad_map_speaker_to_session( $post_id, $feed, $entry, $form ) {
+	$lead_field    = 44;
+	$lead_value    = $entry[ $lead_field ];
+	$session_field = 43;
+	$session_id    = $entry[ $session_field ];
+	$speakers      = get_post_meta( $session_id, 'wpcsp_session_speakers', true );
+	if ( is_array( $speakers ) ) {
+		$speakers[] = $post_id;
+	} else {
+		$speakers = array( $post_id );
+	}
+	update_post_meta( $session_id, 'wpcsp_session_speakers', $speakers );
+}
+// Speaker onboarding form.
+add_action( 'gform_advancedpostcreation_post_after_creation_9', 'wpad_map_speaker_to_session', 10, 4 );
+
+/**
  * Display archive site headers.
  */
 function wpad_archive_header() {
