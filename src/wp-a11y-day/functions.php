@@ -380,9 +380,9 @@ function wpad_breadcrumbs( $link_output, $link ) {
 add_filter( 'wpseo_breadcrumb_single_link', 'wpad_breadcrumbs', 10, 2 );
 
 /**
-* Gravity Forms Custom Activation Template
-* http://gravitywiz.com/customizing-gravity-forms-user-registration-activation-page
-*/
+ * Gravity Forms Custom Activation Template
+ * http://gravitywiz.com/customizing-gravity-forms-user-registration-activation-page
+ */
 function custom_maybe_activate_user() {
 	$template_path    = STYLESHEETPATH . '/templates/gravity-forms/activate.php';
 	$is_activate_page = isset( $_GET['gfur_activation'] );
@@ -444,6 +444,30 @@ add_action( 'gform_after_submission_19', function( $entry ) {
 add_action( 'gform_after_submission_2', function( $entry ) {
 	GFAPI::update_entry_property( $entry['id'], 'created_by', '' );
 } );
+
+/**
+ * Map the alt attribute from form submission to the featured image on the created post.
+ *
+ * @param int    $post_id New post ID.
+ * @param object $feed Feed object.
+ * @param array  $entry Gravity Forms entry.
+ * @param array  $form Gravity form schema.
+ */
+function wpad_map_alt_to_image( $post_id, $feed, $entry, $form ) {
+	// Both alt text fields have ID 42; but I'll track them separately in case of future changes.
+	if ( 11 === (int) $entry['form_id'] ) {
+		$alt_id = 42;
+	} else {
+		$alt_id = 42;
+	}
+	$alt            = $entry[ $alt_id ];
+	$post_thumbnail = get_post_thumbnail_id( $post_id );
+	update_post_meta( $post_thumbnail, '_wp_attachment_image_alt', sanitize_text_field( $alt ) );
+}
+// Speaker onboarding form.
+add_action( 'gform_advancedpostcreation_post_after_creation_9', 'wpad_map_alt_to_image', 10, 4 );
+// Volunteer onboarding form.
+add_action( 'gform_advancedpostcreation_post_after_creation_11', 'wpad_map_alt_to_image', 10, 4 );
 
 /**
  * Display archive site headers.
