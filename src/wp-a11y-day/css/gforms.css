@@ -112,3 +112,7 @@
 	border-color: #dfe3e9;
 	color: #405362;
 }
+
+#primary .gform_ajax_spinner {
+	margin-left: 10px;
+}
