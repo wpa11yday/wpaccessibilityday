@@ -105,3 +105,9 @@
 #gform_submit_button_1 {
 	border-radius:0 2px 2px 0
 }
+
+/* Override Gravity Forms insufficient color contrast. */
+#primary .gform_wrapper.gravity-theme .gf_step_active .gf_step_number {
+	background: #dfe3e9;
+	color: #506372;
+}
