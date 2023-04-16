@@ -25,7 +25,7 @@
 					echo do_shortcode('[logo]');
 				?>
 				<p>
-					© 2022 WordPress Accessibility Day
+					©<?php echo date( 'Y' ); ?> WordPress Accessibility Day
 				</p>
 			</div>	
 			<nav id="footer-navigation" class="footer-navigation navigation" aria-label="Footer">
