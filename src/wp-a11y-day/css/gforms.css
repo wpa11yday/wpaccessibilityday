@@ -109,5 +109,6 @@
 /* Override Gravity Forms insufficient color contrast. */
 #primary .gform_wrapper.gravity-theme .gf_step_active .gf_step_number {
 	background: #dfe3e9;
-	color: #506372;
+	border-color: #dfe3e9;
+	color: #405362;
 }
