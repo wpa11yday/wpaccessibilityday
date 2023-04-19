@@ -1018,6 +1018,10 @@ embed,iframe,object {
 	background:var(--color-light-blue)
 }
 
+.gradient-background,.main-navigation,.site-footer,.entry-meta {
+	background:radial-gradient(circle,var(--color-light-blue) 52%,var(--color-light-purple) 100%)
+}
+
 .angled {
 	background:#ebf0f6;
 	background:radial-gradient(circle,rgba(235,240,246,1) 52%,rgba(239,230,240,1) 100%);

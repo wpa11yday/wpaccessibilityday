@@ -214,10 +214,6 @@
 	max-width:1280px
 }
 
-.wpad-attendees li:nth-of-type(odd),.wp-block-group.schedule:nth-of-type(odd), .sponsor-levels-container,.gradient-background,.main-navigation,.site-footer,.entry-meta {
-	background:radial-gradient(circle,var(--color-light-blue) 52%,var(--color-light-purple) 100%)
-}
-
 .lead-organizers .wp-block-group__inner-container {
 	display:grid;
 	grid-template-columns:1fr
