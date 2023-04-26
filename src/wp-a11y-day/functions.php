@@ -245,6 +245,16 @@ function wp_accessibility_day_scripts() {
 	wp_enqueue_style( 'wp-accessibility-day-event', get_template_directory_uri() . '/css/event.css', array(), $event_ver );
 	wp_enqueue_script( 'wp-accessibility-day-navigation', get_template_directory_uri() . '/js/navigation.js', array(), $js_ver, true );
 	wp_enqueue_script( 'wp-accessibility-day-time', get_template_directory_uri() . '/js/talk-time.js', array(), $ts_ver, true );
+	$start = strtotime( get_option( 'wpad_start_time' ) );
+	$end   = strtotime( get_option( 'wpad_end_time' ) );
+	$args = array(
+		'pointer'      => gmdate( 'jS', $end ),
+		'replaceStart' => ' UTC on ' . gmdate( 'F jS', $start ),
+		'replaceEnd'   => ' UTC on ' . gmdate( 'F jS', $end ),
+		'start'        => gmdate( 'Y-m-d', $start ) . 'T',
+		'end'          => gmdate( 'Y-m-d', $end ) . 'T',
+	);
+	wp_localize_script( 'wp-accessibility-day-time', 'tz', $args );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

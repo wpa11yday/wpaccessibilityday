@@ -9,15 +9,14 @@
 			var id    = $( this ).attr( 'id' );
 			var label = $( 'label[for=' + id + ']' );
 			var labelText = label.text();
-			if ( -1 !== labelText.indexOf( '8th' ) ) {
-				var time = labelText.replace( ' UTC on September 28th', '' );
+			if ( -1 !== labelText.indexOf( tz.pointer ) ) {
+				var time = labelText.replace( tz.replaceEnd, '' );
 				time = ( time.length === 4 ) ? '0' + time : time;
-				console.log( time );
-				var date = '2023-09-27T' + time  + ':00Z';
+				var date = tz.end + time  + ':00Z';
 			} else {
-				var time = labelText.replace( ' UTC on September 27th', '' );
+				var time = labelText.replace( tz.replaceStart, '' );
 				time = ( time.length === 4 ) ? '0' + time : time;
-				var date = '2023-09-28T' + time + ':00Z';
+				var date = tz.start + time + ':00Z';
 			}
 			var utc   = Date.parse( date );
 			var userTime = new Date( utc ).toLocaleTimeString().replace( ':00', '' );
