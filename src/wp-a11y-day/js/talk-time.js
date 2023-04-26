@@ -1,6 +1,7 @@
 (function ($) {
 	'use strict';
 	$(function () {
+		var zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 		/**
 		 * Render speaker application input times to local timezones.
 		 */
@@ -8,14 +9,15 @@
 			var id    = $( this ).attr( 'id' );
 			var label = $( 'label[for=' + id + ']' );
 			var labelText = label.text();
-			if ( -1 !== labelText.indexOf( '2nd' ) ) {
-				var time = labelText.replace( ' UTC on November 2nd', '' );
+			if ( -1 !== labelText.indexOf( '8th' ) ) {
+				var time = labelText.replace( ' UTC on September 28th', '' );
 				time = ( time.length === 4 ) ? '0' + time : time;
-				var date = '2022-11-02T' + time  + ':00Z';
+				console.log( time );
+				var date = '2023-09-27T' + time  + ':00Z';
 			} else {
-				var time = labelText.replace( ' UTC on November 3rd', '' );
+				var time = labelText.replace( ' UTC on September 27th', '' );
 				time = ( time.length === 4 ) ? '0' + time : time;
-				var date = '2022-11-03T' + time + ':00Z';
+				var date = '2023-09-28T' + time + ':00Z';
 			}
 			var utc   = Date.parse( date );
 			var userTime = new Date( utc ).toLocaleTimeString().replace( ':00', '' );
