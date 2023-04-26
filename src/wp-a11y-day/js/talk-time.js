@@ -2,6 +2,10 @@
 	'use strict';
 	$(function () {
 		var zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+		// Handle IE fallback.
+		if ( undefined === zone ) {
+			zone = 'your local time';
+		}
 		/**
 		 * Render speaker application input times to local timezones.
 		 */
