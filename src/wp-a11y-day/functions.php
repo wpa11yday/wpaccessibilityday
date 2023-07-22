@@ -80,41 +80,6 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 			'editor-color-palette',
 			array(
 				array(
-					'name'  => __( 'Dark Gray', 'wp-accessibility-day' ),
-					'slug'  => 'dark-gray',
-					'color' => '#2F3B41',
-				),
-				array(
-					'name'  => __( 'Mid Gray', 'wp-accessibility-day' ),
-					'slug'  => 'mid-gray',
-					'color' => '#b2bdc2',
-				),
-				array(
-					'name'  => __( 'Light Gray', 'wp-accessibility-day' ),
-					'slug'  => 'light-gray',
-					'color' => '#EBF0F6',
-				),
-				array(
-					'name'  => __( 'Dark Purple', 'wp-accessibility-day' ),
-					'slug'  => 'dark-purple',
-					'color' => '#7F1177',
-				),
-				array(
-					'name'  => __( 'Light Purple', 'wp-accessibility-day' ),
-					'slug'  => 'light-purple',
-					'color' => '#EFE6F0',
-				),
-				array(
-					'name'  => __( 'Dark Blue', 'wp-accessibility-day' ),
-					'slug'  => 'dark-blue',
-					'color' => '#115A7F',
-				),
-				array(
-					'name'  => __( 'Light Blue', 'wp-accessibility-day' ),
-					'slug'  => 'light-blue',
-					'color' => '#e4eff5',
-				),
-				array(
 					'name'  => __( 'Black', 'wp-accessibility-day' ),
 					'slug'  => 'black',
 					'color' => '#000000',
@@ -122,7 +87,82 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 				array(
 					'name'  => __( 'White', 'wp-accessibility-day' ),
 					'slug'  => 'white',
-					'color' => '#FFFFFF',
+					'color' => '#ffffff',
+				),
+				array(
+					'name'  => __( 'Blossom', 'wp-accessibility-day' ),
+					'slug'  => 'blossom',
+					'color' => '#DAA6BA',
+				),
+				array(
+					'name'  => __( 'Sweet Corn', 'wp-accessibility-day' ),
+					'slug'  => 'sweet-corn',
+					'color' => '#fadd82',
+				),
+				array(
+					'name'  => __( 'Peach', 'wp-accessibility-day' ),
+					'slug'  => 'peach',
+					'color' => '#f3ad90',
+				),
+				array(
+					'name'  => __( 'Yellow Green', 'wp-accessibility-day' ),
+					'slug'  => 'yellow-green',
+					'color' => '#dee67b',
+				),
+				array(
+					'name'  => __( 'Light Blue', 'wp-accessibility-day' ),
+					'slug'  => 'light-blue',
+					'color' => '#7dd8f1',
+				),
+				array(
+					'name'  => __( 'Green', 'wp-accessibility-day' ),
+					'slug'  => 'green',
+					'color' => '#9cdd7b',
+				),
+				array(
+					'name'  => __( 'Light Black', 'wp-accessibility-day' ),
+					'slug'  => 'light-black',
+					'color' => '#252525',
+				),
+				array(
+					'name'  => __( 'Light Gray', 'wp-accessibility-day' ),
+					'slug'  => 'light-gray',
+					'color' => '#ced9df',
+				),
+				array(
+					'name'  => __( 'Dark Blue', 'wp-accessibility-day' ),
+					'slug'  => 'dark-blue',
+					'color' => '#0096bf',
+				),
+				array(
+					'name'  => __( 'Light Pink', 'wp-accessibility-day' ),
+					'slug'  => 'light-pink',
+					'color' => '#fff3f8',
+				),
+				array(
+					'name'  => __( 'Light Sweet Corn', 'wp-accessibility-day' ),
+					'slug'  => 'light-sweet-corn',
+					'color' => '#fff7e3',
+				),
+				array(
+					'name'  => __( 'Light Peach', 'wp-accessibility-day' ),
+					'slug'  => 'light-peach',
+					'color' => '#ffeee9',
+				),
+				array(
+					'name'  => __( 'Light Yellow', 'wp-accessibility-day' ),
+					'slug'  => 'light-yellow',
+					'color' => '#fffee6',
+				),
+				array(
+					'name'  => __( 'Lightest Blue', 'wp-accessibility-day' ),
+					'slug'  => 'lightest-blue',
+					'color' => '#e9fbff',
+				),
+				array(
+					'name'  => __( 'Light Green', 'wp-accessibility-day' ),
+					'slug'  => 'light-green',
+					'color' => '#eeffe1',
 				),
 			)
 		);
