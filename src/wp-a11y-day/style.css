@@ -1052,7 +1052,7 @@ embed,iframe,object {
 
 body,a,h1,h2,h3,h4,h5,h6,input,select,button,optgroup,textarea {
 	color:var(--color-dark-gray);
-	font-family:'Noto Serif',sans-serif;
+	font-family:'Sora',sans-serif;
 	font-weight:400
 }
 
