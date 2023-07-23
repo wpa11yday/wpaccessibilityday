@@ -758,11 +758,6 @@ label[for=matomo_optout_checkbox] {
 	font-size: 1.125rem;
 }
 
-#bottom-credits .site-logo svg {
-	margin-right:10px;
-	width:40px
-}
-
 #bottom-credits .site-logo p {
 	margin:0
 }
@@ -1049,7 +1044,23 @@ h2.event-time {
 
 .home .entry-header {
 	background: var(--wp--preset--color--light-yellow);
-	padding: 100px 0;
+	background: linear-gradient(to top, #ffffff 0%,#ffffff 130px,var(--wp--preset--color--light-yellow) 131px,var(--wp--preset--color--light-yellow) 100%); 
+	padding: 100px 0 0;
+}
+
+.home .entry-header .entry-header-subscribe {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.home .entry-header .entry-header-subscribe .gform_wrapper {
+	background: var(--wp--preset--color--sweet-corn);
+	padding: 32px;
+	margin-top: 24px;
+}
+
+.home .entry-header .entry-header-subscribe .gform_wrapper h2 {
+	margin: 0;
 }
 
 .site-branding {
@@ -1176,10 +1187,6 @@ h2.event-time {
 	margin: 10px;
 }
 
-#colophon .site-logo svg {
-	transform:rotate(-4deg)
-}
-
 #masthead .utility-navigation {
 	padding-left:10px;
 	margin:0 0 auto auto
@@ -1298,14 +1305,19 @@ h3#reply-title small {
 }
 
 .entry-header {
-	position:relative
+	position:relative;
+	display: grid;
+}
+
+.home .entry-header .widget_text {
+	order: -1;
+	padding-right: 25%;
+	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 .entry-header .subtitle {
-	font-size:40px;
-	font-size:2.5rem;
 	font-weight:600;
-	line-height:1.4
 }
 
 .entry-header .subtitle .event-date {
