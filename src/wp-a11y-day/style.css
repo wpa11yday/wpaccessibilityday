@@ -558,7 +558,7 @@ figure.box-shadow {
 	border-radius:20px;
 	margin:8px 0;
 	background:transparent;
-	color:var(--wp--preset--color-dark-blue)
+	color:var(--wp--preset--color--dark-blue)
 }
 
 .nav-social {

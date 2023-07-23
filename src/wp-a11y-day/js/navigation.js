@@ -47,7 +47,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 				}
 			)
 		);
-		dropdownToggle.append( $( '<span class="dashicons dashicons-arrow-down" aria-hidden="true"></span>' ) );
+		dropdownToggle.append( $( '<span class="dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>' ) );
 
 		//console.log($(this).text());
 		$(this).after( dropdownToggle );
@@ -70,10 +70,10 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 		e.preventDefault();
 		$(this).toggleClass( 'toggled-on' );
 		$(this).nextAll( '.sub-menu' ).toggleClass( 'toggled-on' );
-		if ( dashicon.hasClass( 'dashicons-arrow-down' ) ) {
-			dashicon.removeClass( 'dashicons-arrow-down' ).addClass( 'dashicons-arrow-up' );
+		if ( dashicon.hasClass( 'dashicons-arrow-down-alt2' ) ) {
+			dashicon.removeClass( 'dashicons-arrow-down-alt2' ).addClass( 'dashicons-arrow-up-alt2' );
 		} else {
-			dashicon.removeClass( 'dashicons-arrow-up' ).addClass( 'dashicons-arrow-down' );
+			dashicon.removeClass( 'dashicons-arrow-up-alt2' ).addClass( 'dashicons-arrow-down-alt2' );
 		}
 		// jscs:disable
 		$(this).attr( 'aria-expanded', $(this).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
