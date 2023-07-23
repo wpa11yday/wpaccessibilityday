@@ -28,11 +28,11 @@
 			<?php
 			if ( is_front_page() ) {
 				?>
-			<p class="site-title"><span class="wrapper"><?php echo wpad_site_logo(); ?> <span><?php bloginfo( 'name' ); ?></span></span></p>
+			<p class="site-title"><span class="wrapper"><?php echo wpad_site_logo( get_bloginfo( 'name' ) ); ?></span></p>
 				<?php
 			} else {
 				?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" class="wrapper"><?php echo wpad_site_logo(); ?> <span><?php bloginfo( 'name' ); ?></span></a></p>
+			<p class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" class="wrapper"><?php echo wpad_site_logo( get_bloginfo( 'name' ) ); ?></a></p>
 				<?php
 			}
 			?>
