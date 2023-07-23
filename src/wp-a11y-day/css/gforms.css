@@ -3,6 +3,14 @@
 	columns:2
 }
 
+#page .gform_wrapper.gravity-theme .gfield_required {
+	color: black;
+	font-style: normal;
+	text-transform: lowercase;
+	font-size: 14px;
+	font-size: .875rem;
+}
+
 .gform_wrapper.gravity-theme .field_description_above .gfield_description,.gform_wrapper.gravity-theme .gfield_label {
 	margin-bottom:0;
 	padding-bottom:0
