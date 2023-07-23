@@ -49,7 +49,7 @@
 					?>
 				</nav><!-- #utility-navigation -->
 				<div class="utility-dark-mode placeholder">
-					<button type="button" aria-pressed="true" aria-label="Light mode"><span class="icon-light" aria-hidden="true"></span></button><button type="button" aria-pressed="false" aria-label="Dark mode"><span class="icon-dark" aria-hidden="true"></span></button>
+					<button type="button" aria-pressed="true" aria-label="Light mode"><span class="fa-regular fa-sun" aria-hidden="true"></span></button><button type="button" aria-pressed="false" aria-label="Dark mode"><span class="fa-solid fa-moon" aria-hidden="true"></span></button>
 				</div>
 			</div>
 			<nav id="main-navigation" class="main-navigation navigation" aria-label="Main">

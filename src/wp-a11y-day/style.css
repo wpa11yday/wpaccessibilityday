@@ -751,8 +751,8 @@ label[for=matomo_optout_checkbox] {
 	margin: 10px;
 	text-align:left;
 	position: relative;
-	top: -64px;
-	top: -4rem;
+	top: -72px;
+	top: -4.5rem;
 }
 
 #colophon #bottom-credits .lockup {
@@ -1504,6 +1504,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	width: 32px;
 	height: 32px;
 	display: inline-block;
+	text-align: center;
 }
 
 .utility-dark-mode button:nth-of-type(1) {
@@ -1522,12 +1523,17 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	border-left: none;
 	border-radius: 32px;
 	z-index: 2;
+	position: relative;
 }
 
 .utility-dark-mode button span {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
+}
+
+.utility-dark-mode button span::before {
+	line-height: 1.875;
 }
 
 #wpad-archive {
