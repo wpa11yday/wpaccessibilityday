@@ -212,7 +212,7 @@ address {
 	margin:0 0 1.5em
 }
 
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary,.entry-header .entry-title a {
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary,entry-header .entry-title a {
 	display:block
 }
 
@@ -380,12 +380,11 @@ blockquote cite {
 	font-size:.8em
 }
 
-
 .entry-header .entry-title {
 	font-size:48px;
 	font-size:3rem;
 	line-height:1.4;
-	margin-top:10px
+	margin-top: 0;
 }
 
 .archive .entry-header .entry-title,.blog .entry-header .entry-title {
@@ -802,16 +801,17 @@ footer .widget {
 }
 
 .home .entry-header {
-	margin:60px auto 0;
-	text-align:left
+	text-align:left;
 }
 
-.home h1 {
+
+.home .entry-header h1.entry-title {
 	color:var(--color-black);
 	margin-bottom:0;
 	font-size: 120px;
 	font-size: 7.5rem;
 	line-height: 1.06667;
+	padding-right: 25%
 }
 
 .home .wp-block-latest-posts {
@@ -843,13 +843,6 @@ span.large-number {
 .page-links {
 	clear:both;
 	margin:0 0 1.5em
-}
-
-.entry-header,.page-header,.entry-footer,.posts-navigation,.post-navigation,.page-navigation,.comments-area,.not-found .page-content,.search .entry-summary {
-	margin:1.5em auto;
-	padding-left:36px;
-	padding-right:36px;
-	max-width:1280px
 }
 
 .entry-footer span {
@@ -1006,17 +999,13 @@ code,kbd,tt,var {
 }
 
 .single .nav-breadcrumbs,.archive .nav-breadcrumbs,.blog .nav-breadcrumbs,.page-template-page-sidebar .nav-breadcrumbs {
-	max-width:1280px;
+	max-width:1100px;
 	margin:0 auto;
-	padding-left:36px;
-	padding-right:36px
 }
 
-.nav-breadcrumbs,.entry-header,.entry-content > *,.entry-footer,.site-footer > *,#comments {
-	max-width:960px;
+.nav-breadcrumbs,.entry-header > *,.entry-content > *,.entry-footer,.site-footer > *,#comments {
+	max-width:1100px;
 	margin:0 auto;
-	padding-left:36px;
-	padding-right:36px
 }
 
 .entry-content > p,.entry-content > h2,.entry-content > h3,.entry-content > h4,.entry-content > h5,.entry-content > h6,.entry-content > ul,.entry-content > ol {
@@ -1042,9 +1031,13 @@ h2.event-time {
 #masthead {
 	display:grid;
 	grid-template-columns:1fr;
-	margin:0 36px;
-	padding-top:30px;
-	padding-bottom:30px
+	padding:30px 36px;
+	background: var(--wp--preset--color--light-yellow);
+}
+
+.home .entry-header {
+	background: var(--wp--preset--color--light-yellow);
+	padding: 100px 0;
 }
 
 .site-branding {
@@ -1486,6 +1479,43 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 .reverse-focus a:focus,.reverse-focus a:hover {
 	outline-color:#fff
+}
+
+.utility-dark-mode {
+	display: flex;
+}
+
+.utility-dark-mode button {
+	all: unset;
+	background: var(--wp--preset--color--light-yellow);
+	border: 2px solid black;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+
+.utility-dark-mode button:nth-of-type(1) {
+	border-radius: 32px 0 0 32px;
+	border-right: none;
+}
+
+.utility-dark-mode button:nth-of-type(2) {
+	border-radius: 0 32px 32px 0;
+	border-left: none;
+}
+
+.utility-dark-mode button[aria-pressed=true] span {
+	background: var(--wp--preset--color--sweet-corn);
+	border: 1px solid #000;
+	border-left: none;
+	border-radius: 32px;
+	z-index: 2;
+}
+
+.utility-dark-mode button span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
 }
 
 #wpad-archive {
