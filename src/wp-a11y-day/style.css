@@ -205,7 +205,9 @@ body,button,input,select,optgroup,textarea {
 }
 
 h1,h2,h3,h4,h5,h6 {
-	clear:both
+	clear:both;
+	margin-bottom: 1.25rem;
+	margin-top: 0;
 }
 
 blockquote {
@@ -747,15 +749,20 @@ label[for=matomo_optout_checkbox] {
 
 #colophon #bottom-credits .site-logo {
 	margin: 10px;
-	display:flex;
-	flex-wrap:wrap;
 	text-align:left;
-	align-items:start;
+	position: relative;
+	top: -64px;
+	top: -4rem;
+}
+
+#colophon #bottom-credits .lockup {
+	padding-bottom: .5rem;
 }
 
 #colophon #bottom-credits .tag-us {
 	font-size: 18px;
 	font-size: 1.125rem;
+	padding-bottom: 4rem;
 }
 
 #bottom-credits .site-logo p {
@@ -1048,6 +1055,7 @@ h2.event-time {
 	padding: 100px 0 0;
 }
 
+.footer-navigation-menus,
 .home .entry-header .entry-header-subscribe {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -1127,11 +1135,6 @@ h2.event-time {
 	margin:10px auto;
 	width:100%;
 	max-width:888px
-}
-
-.footer-navigation-menus {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 }
 
 .navigation .menu a {

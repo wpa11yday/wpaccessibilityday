@@ -21,11 +21,14 @@
 	<div id="bottom-credits">
 		<div class="wrap">
 			<div class="site-logo">
+				<p class="lockup">
+					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/lockup.png'; ?>" alt="WpA11yDay" width="250" />
+				</p>
 				<?php $year = date( 'Y', strtotime( get_option( 'wpad_start_time' ) ) ); ?>
-				<p>
+				<p class="tag-us">
 					Tag us! <a href="https://twitter.com/hashtag/WPA11yDay">#WPA11yDay</a> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a>
 				</p>
-				<p>
+				<p clss="copyright">
 					©2020&ndash;<?php echo date( 'Y' ); ?> WordPress Accessibility Day
 				</p>
 			</div>
