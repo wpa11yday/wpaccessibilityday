@@ -1,9 +1,4 @@
 /* Gravity Forms */
-#matomo_opted_out_intro {
-	padding:1rem;
-	border:2px solid var(--color-dark-purple)
-}
-
 #input_8_36 {
 	columns:2
 }
@@ -48,8 +43,8 @@
 }
 
 .gform_wrapper .gfield.buttonized input[type="radio"]:checked+label,.gform_wrapper .gfield.buttonized input[type="checkbox"]:checked+label {
-	border-color:var(--color-dark-blue);
-	background-color:var(--color-dark-blue);
+	border-color:var(--wp--preset--color--dark-blue);
+	background-color:var(--wp--preset--color--dark-blue);
 	color:#fff;
 	overflow:hidden
 }
@@ -64,9 +59,9 @@
 }
 
 .gform_wrapper .gfield.buttonized input[type="radio"]:focus+label,.gform_wrapper .gfield.buttonized input[type="checkbox"]:focus+label,.gform_wrapper .gfield.buttonized input[type="radio"]:hover+label,.gform_wrapper .gfield.buttonized input[type="checkbox"]:hover+label {
-	border-color:var(--color-dark-blue);
+	border-color:var(--wp--preset--color--dark-blue);
 	outline-offset:2px;
-	outline:2px solid var(--color-dark-purple)
+	outline:2px solid var(--wp--preset--color--light-blue)
 }
 
 @media only screen and (max-width: 600px) {

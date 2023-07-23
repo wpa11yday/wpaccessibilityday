@@ -39,7 +39,7 @@
 		</div><!-- .site-branding -->
 		<div class="site-utilities">
 			<div class="utility-tools">
-				<nav id="utility-navigation" class="utility-navigation navigation" aria-label="Utilities">
+				<nav id="utility-navigation" class="utility-navigation navigation" aria-label="Social">
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-2',
@@ -47,7 +47,7 @@
 							'depth'          => 1,
 						) );
 					?>
-				</nav><!-- #site-navigation -->
+				</nav><!-- #utility-navigation -->
 				<div class="utility-dark-mode placeholder">
 					<button type="button" aria-pressed="true" aria-label="Light mode"><span class="icon-light" aria-hidden="true"></span></button><button type="button" aria-pressed="false" aria-label="Dark mode"><span class="icon-dark" aria-hidden="true"></span></button>
 				</div>

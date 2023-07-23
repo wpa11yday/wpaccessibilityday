@@ -21,22 +21,34 @@
 	<div id="bottom-credits">
 		<div class="wrap">
 			<div class="site-logo">
-				<?php 
-					echo do_shortcode('[logo]');
-				?>
+				<?php $year = date( 'Y', strtotime( get_option( 'wpad_start_time' ) ) ); ?>
 				<p>
-					©<?php echo date( 'Y' ); ?> WordPress Accessibility Day
+					Tag us! <a href="https://twitter.com/hashtag/WPA11yDay">#WPA11yDay</a> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a>
 				</p>
-			</div>	
-			<nav id="footer-navigation" class="footer-navigation navigation" aria-label="Footer">
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'menu-3',
-						'menu_id'        => 'footer-menu',
-						'depth'          => 1,
-					) );
-				?>
-			</nav><!-- #site-navigation -->
+				<p>
+					©2020&ndash;<?php echo date( 'Y' ); ?> WordPress Accessibility Day
+				</p>
+			</div>
+			<div class="footer-navigation-menus">
+				<nav id="footer-navigation" class="footer-navigation navigation" aria-label="Footer">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-3',
+							'menu_id'        => 'footer-menu',
+							'depth'          => 1,
+						) );
+					?>
+				</nav><!-- #footer-navigation -->
+				<nav id="footer-utility-navigation" class="utility-navigation navigation" aria-label="Social">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'utility-menu',
+							'depth'          => 1,
+						) );
+					?>
+				</nav><!-- #footer-utility-navigation -->
+			</div>
 		</div><!-- #wrap -->
 	</div><!-- #bottom-credits -->
 </footer><!-- #colophon -->
