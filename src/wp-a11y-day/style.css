@@ -705,29 +705,23 @@ label[for=matomo_optout_checkbox] {
 	margin-bottom:0
 }
 
-.entry-meta,.entry-footer,.site-footer {
-	color:var(--dark-gray)
-}
-
 .entry-meta {
 	padding:9px;
 	margin-bottom:20px;
 }
 
 .entry-header img {
-	border-radius:30px!important;
 	width:100%
 }
 
 .single-post .entry-footer {
-	border-top:2px solid var(--color-dark-purple);
 	padding-top:8px;
 	margin-top:36px
 }
 
 .site-footer {
-	padding:50px 0 0;
 	background: var(--wp--preset--color--light-pink);
+	background: linear-gradient(to bottom, #ffffff 0%,#ffffff 90px,var(--wp--preset--color--light-pink) 91px,var(--wp--preset--color--light-pink) 100%); 
 }
 
 #footer-sidebar-columns {
@@ -1336,16 +1330,12 @@ label {
 }
 
 input[type="text"],input[type="password"],input[type="email"],select,textarea {
-	background:var(--wp--preset--color--black);
+	background:var(--wp--preset--color--light-pink);
+	color: #111;
 	border:1px solid var(--wp--preset--color--black);
 	display:block;
 	margin-bottom:12px;
 	width:100%
-}
-
-aside input[type="text"], aside input[type="password"], aside input[type="email"], aside select,aside textarea {
-	background: var(--wp--preset--color--light-pink);
-	color: #111;
 }
 
 input[type="text"],input[type="password"],input[type="email"],select {
