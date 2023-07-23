@@ -24,44 +24,44 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wp-accessibility-day' ); ?></a>
 	<header id="masthead">
-		<div class="header-1 site-header">
-			<div class="site-branding">
-				<?php
-				if ( is_front_page() ) {
-					?>
-				<p class="site-title"><span class="wrapper"><?php echo wpad_site_logo(); ?> <span><?php bloginfo( 'name' ); ?></span></span></p>
-					<?php
-				} else {
-					?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" class="wrapper"><?php echo wpad_site_logo(); ?> <span><?php bloginfo( 'name' ); ?></span></a></p>
-					<?php
-				}
+		<div class="site-branding">
+			<?php
+			if ( is_front_page() ) {
 				?>
-			</div><!-- .site-branding -->
-			<div class="site-utilities">
-			<nav id="utility-navigation" class="utility-navigation navigation" aria-label="Utilities">
+			<p class="site-title"><span class="wrapper"><?php echo wpad_site_logo(); ?> <span><?php bloginfo( 'name' ); ?></span></span></p>
+				<?php
+			} else {
+				?>
+			<p class="site-title"><a href="<?php echo esc_url( home_url() ); ?>" class="wrapper"><?php echo wpad_site_logo(); ?> <span><?php bloginfo( 'name' ); ?></span></a></p>
+				<?php
+			}
+			?>
+		</div><!-- .site-branding -->
+		<div class="site-utilities">
+			<div class="utility-tools">
+				<nav id="utility-navigation" class="utility-navigation navigation" aria-label="Utilities">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'utility-menu',
+							'depth'          => 1,
+						) );
+					?>
+				</nav><!-- #site-navigation -->
+				<div class="utility-dark-mode placeholder">
+					<button type="button" aria-pressed="true" aria-label="Light mode"><span class="icon-light" aria-hidden="true"></span></button><button type="button" aria-pressed="false" aria-label="Dark mode"><span class="icon-dark" aria-hidden="true"></span></button>
+				</div>
+			</div>
+			<nav id="main-navigation" class="main-navigation navigation" aria-label="Main">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'wp-accessibility-day' ); ?></button>
 				<?php
 					wp_nav_menu( array(
-						'theme_location' => 'menu-2',
-						'menu_id'        => 'utility-menu',
-						'depth'          => 1,
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
 					) );
 				?>
 			</nav><!-- #site-navigation -->
-
-			<?php dynamic_sidebar( 'event-date-widget-area' ); ?>
-
-			</div>
-		</div><!-- .header-1 -->
-		<nav id="main-navigation" class="main-navigation navigation" aria-label="Main">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'wp-accessibility-day' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 	<?php
 	if ( ! is_front_page() && function_exists( 'yoast_breadcrumb' ) ) {
