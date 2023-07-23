@@ -66,7 +66,7 @@
 	<?php
 	if ( ! is_front_page() && function_exists( 'yoast_breadcrumb' ) ) {
 		?>
-		<nav aria-label="Breadcrumb navigation" class="nav-breadcrumbs">
+		<nav aria-label="Breadcrumbs" class="nav-breadcrumbs">
 		<?php
 		yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 		?>
