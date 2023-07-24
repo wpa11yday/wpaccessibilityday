@@ -28,7 +28,7 @@
 				<p class="tag-us">
 					Tag us! <a href="https://twitter.com/hashtag/WPA11yDay">#WPA11yDay</a> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a>
 				</p>
-				<p clss="copyright">
+				<p class="copyright">
 					©2020&ndash;<?php echo date( 'Y' ); ?> WordPress Accessibility Day
 				</p>
 			</div>
