@@ -1534,19 +1534,19 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	all: unset;
 	background: var(--wp--preset--color--light-yellow);
 	border: 2px solid black;
-	width: 32px;
-	height: 32px;
+	width: 2rem;
+	height: 2rem;
 	display: inline-block;
 	text-align: center;
 }
 
 .utility-dark-mode button:nth-of-type(1) {
-	border-radius: 32px 0 0 32px;
+	border-radius: 2rem 0 0 2rem;
 	border-right: none;
 }
 
 .utility-dark-mode button:nth-of-type(2) {
-	border-radius: 0 32px 32px 0;
+	border-radius: 0 2rem 2rem 0;
 	border-left: none;
 }
 
@@ -1554,15 +1554,15 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	background: var(--wp--preset--color--sweet-corn);
 	border: 1px solid #000;
 	border-left: none;
-	border-radius: 32px;
+	border-radius: 2rem;
 	z-index: 2;
 	position: relative;
 }
 
 .utility-dark-mode button span {
 	display: inline-block;
-	width: 30px;
-	height: 30px;
+	width: 1.875rem;
+	height: 1.875rem;
 }
 
 .utility-dark-mode button span::before {
