@@ -201,7 +201,7 @@ td,th {
 body,button,input,select,optgroup,textarea {
 	font-size:16px;
 	font-size:1rem;
-	line-height:1.8
+	line-height:1.5
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -292,7 +292,7 @@ ul,ol {
 }
 
 .entry-content > ul,.entry-content > ol {
-	margin:36px 0 36px 1.5em
+	margin:24px 0 24px 1.5em
 }
 
 ul {
@@ -747,7 +747,7 @@ label[for=matomo_optout_checkbox] {
 
 .single-post .entry-footer {
 	padding-top:8px;
-	margin-top:36px
+	margin-top:24px
 }
 
 .site-footer {
@@ -761,7 +761,7 @@ label[for=matomo_optout_checkbox] {
 
 #bottom-credits {
 	max-width:100%;
-	padding: 30px 36px;
+	padding: 30px 24px;
 }
 
 #bottom-credits .wrap {
@@ -1031,18 +1031,13 @@ code,kbd,tt,var {
 	font-size:1.3rem
 }
 
-.single .nav-breadcrumbs > p,.archive .nav-breadcrumbs > p,.blog .nav-breadcrumbs > p,.page-template-page-sidebar .nav-breadcrumbs > p {
-	max-width:1100px;
-	margin:0 auto;
-}
-
 .entry-header > *,.entry-content > *,.entry-footer,.site-footer > *,#comments {
 	max-width:1100px;
 	margin:0 auto;
 }
 
 .entry-content > p,.entry-content > h2,.entry-content > h3,.entry-content > h4,.entry-content > h5,.entry-content > h6,.entry-content > ul,.entry-content > ol {
-	margin:36px auto
+	margin:24px auto
 }
 
 .entry-content > .alignfull {
@@ -1064,12 +1059,31 @@ h2.event-time {
 #masthead {
 	display:grid;
 	grid-template-columns:1fr;
-	padding:30px 36px;
+	padding:30px 24px;
+}
+
+#masthead, .entry-header, .nav-breadcrumbs {
 	background: var(--wp--preset--color--light-yellow);
 }
 
+.entry-header {
+	padding-bottom: 40px;
+	margin-bottom: 40px;
+	background: linear-gradient(to top, #ffffff 0%,#ffffff 25px,var(--wp--preset--color--light-yellow) 26px,var(--wp--preset--color--light-yellow) 100%);
+}
+
+.nav-breadcrumbs > p,
+.entry-header .entry-header-content {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.entry-header h1, 
+.entry-header .page-excerpt {
+	padding-right: 50%;
+}
+
 .home .entry-header {
-	background: var(--wp--preset--color--light-yellow);
 	background: linear-gradient(to top, #ffffff 0%,#ffffff 130px,var(--wp--preset--color--light-yellow) 131px,var(--wp--preset--color--light-yellow) 100%); 
 	padding: 100px 0 0;
 }
@@ -1655,7 +1669,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	}
 
 	button.menu-toggle {
-		padding:18px 36px
+		padding:18px 24px
 	}
 
 	.main-navigation .menu-primary-navigation-container {

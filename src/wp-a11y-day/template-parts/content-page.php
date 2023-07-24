@@ -11,13 +11,20 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="entry-header-content">
 		<?php
 		the_title( '<h1 class="entry-title">', '</h1>' );
 		if ( is_front_page() ) {
 			dynamic_sidebar( 'event-date-widget-area' );
 		}
+		if ( ! is_front_page() ) {
+			echo '<div class="page-excerpt">';
+			the_excerpt();
+			echo '</div>';
+		}
 		do_action( 'wpad_entry_header' );
 		?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
