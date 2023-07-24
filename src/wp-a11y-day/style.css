@@ -494,12 +494,22 @@ figure.box-shadow {
 	color:var(--color-dark-purple)
 }
 
-.main-navigation .current-menu-item > a,
+.main-navigation > .current-menu-item {
+	border-bottom: 4px solid var(--wp--preset--color--dark-blue);
+}
+
+.main-navigation li ul .current-menu-item::before {
+	font-family: dashicons;
+	content: '\f139';
+	color: var(--wp--preset--color--dark-blue);
+}
+
+.main-navigation .sub-menu li {
+	display: flex;
+}
+
 .main-navigation .sub-menu a:hover,.main-navigation .sub-menu a:focus {
-	outline: 2px solid;
-	outline-offset: 2px;
-	outline-color:var(--color-dark-purple);
-	background: #fff
+	
 }
 
 .main-navigation .menu-item-has-children {
@@ -561,7 +571,6 @@ figure.box-shadow {
 .main-navigation .dropdown-toggle {
 	padding:0 4px;
 	border-radius:20px;
-	margin:8px 0;
 	background:transparent;
 	color:var(--wp--preset--color--dark-blue)
 }
@@ -704,11 +713,27 @@ label[for=matomo_optout_checkbox] {
 }
 
 .nav-breadcrumbs {
-	margin-top:60px!important
+	color: var(--wp--preset--color--dark-blue);
+	font-weight: 700;
+}
+
+.nav-breadcrumbs span > span {
+	color: black;
+	font-weight: 400;
+}
+
+.nav-breadcrumbs span:nth-of-type(1) {
+	margin-right: 12px;
+}
+
+.nav-breadcrumbs span:nth-of-type(2) {
+	margin-left: 12px;
 }
 
 .nav-breadcrumbs p {
-	margin-bottom:0
+	margin-bottom:0;
+	margin-top:0;
+	padding: 12px 0;
 }
 
 .entry-meta {
@@ -790,6 +815,7 @@ label[for=matomo_optout_checkbox] {
 
 .home .entry-header {
 	text-align:left;
+	display: grid;
 }
 
 
@@ -1012,12 +1038,12 @@ code,kbd,tt,var {
 	font-size:1.3rem
 }
 
-.single .nav-breadcrumbs,.archive .nav-breadcrumbs,.blog .nav-breadcrumbs,.page-template-page-sidebar .nav-breadcrumbs {
+.single .nav-breadcrumbs > p,.archive .nav-breadcrumbs > p,.blog .nav-breadcrumbs > p,.page-template-page-sidebar .nav-breadcrumbs > p {
 	max-width:1100px;
 	margin:0 auto;
 }
 
-.nav-breadcrumbs,.entry-header > *,.entry-content > *,.entry-footer,.site-footer > *,#comments {
+.entry-header > *,.entry-content > *,.entry-footer,.site-footer > *,#comments {
 	max-width:1100px;
 	margin:0 auto;
 }
@@ -1155,11 +1181,12 @@ h2.event-time {
 }
 
 .navigation .menu > li {
-	margin:0 6px
+	margin: 0 16px 0 0;
+	border-bottom: 4px solid transparent;
 }
 
-.navigation .menu li a {
-	padding:4px
+.navigation .menu > li.current-menu-item {
+	border-bottom: 4px solid var(--wp--preset--color--dark-blue);
 }
 
 #bottom-credits .navigation .menu li a {
@@ -1309,7 +1336,6 @@ h3#reply-title small {
 
 .entry-header {
 	position:relative;
-	display: grid;
 }
 
 .home .entry-header .widget_text {
