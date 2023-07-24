@@ -798,13 +798,6 @@ label[for=matomo_optout_checkbox] {
 	display: block;
 }
 
-.has-sidebar {
-	display:grid;
-	column-gap:72px;
-	max-width:1100px;
-	margin:0 auto
-}
-
 .border-radius .wpa-ld {
 	border-radius:30px
 }
@@ -1578,10 +1571,6 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 	.utility-navigation a {
 		padding:0 .5em
-	}
-
-	.has-sidebar {
-		grid-template-columns:66.6666% auto
 	}
 
 	#masthead {
