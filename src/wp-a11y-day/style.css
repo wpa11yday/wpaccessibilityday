@@ -486,6 +486,7 @@ figure.box-shadow {
 
 .main-navigation a:hover {
 	border-bottom: 2px solid var(--wp--preset--color--dark-blue);
+	outline: none;
 }
 
 .main-navigation .sub-menu {
@@ -1139,6 +1140,10 @@ h2.event-time {
 	max-width: 250px;
 }
 
+#utility-menu a:hover {
+	outline: none;
+}
+
 #utility-menu a:hover,#utility-menu a:focus {
 	text-decoration:underline;
 	border-radius:4px
@@ -1233,6 +1238,7 @@ h2.event-time {
 	padding: 0;
 	margin-bottom: 2px;
 	border-bottom: 2px solid transparent;
+	outline: none;
 }
 
 #bottom-credits .navigation .menu li a:hover,
