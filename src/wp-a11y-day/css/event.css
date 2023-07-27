@@ -32,7 +32,7 @@
 }
 
 .wpcsp-session-speaker img,.wpcsp-speaker-grid img,.wpcsp-speakers .wpcsp-speaker-image {
-	border-radius:20px;
+	border-radius: 0;
 	margin-bottom:5px
 }
 
@@ -44,7 +44,30 @@
 
 .wpcsp-speaker-pronouns {
 	font-size:1.5rem;
-	color:var(--color-dark-blue)
+}
+
+.entry-content .wpcsp-speaker:nth-of-type(1n) img {
+	filter: url('#wp-duotone-pink');
+}
+
+.entry-content .wpcsp-speaker:nth-of-type(2n) img {
+	filter: url('#wp-duotone-light-orange');
+}
+
+.entry-content .wpcsp-speaker:nth-of-type(3n) img {
+	filter: url('#wp-duotone-yellow-green');
+}
+
+.entry-content .wpcsp-speaker:nth-of-type(4n) img {
+	filter: url('#wp-duotone-yellow');
+}
+
+.entry-content .wpcsp-speaker:nth-of-type(5n) img {
+	filter: url('#wp-duotone-blue');
+}
+
+.entry-content .wpcsp-speaker:nth-of-type(6n) img {
+	filter: url('#wp-duotone-green');
 }
 
 .wpcsp_speaker .wp-block-latest-posts.wp-block-latest-posts__list li {
@@ -57,20 +80,17 @@
 }
 
 .wpcsp_speaker .wpcsp-speaker-country .dashicons-location:before {
-	color:var(--color-dark-purple);
 	font-size:30px
 }
 
 .wpcs-session-sponsor {
-	border:2px solid var(--color-dark-blue);
 	padding:5px;
 	border-radius:12px;
 	margin-bottom:1rem;
-	background:var(--color-light-blue)
 }
 
 .wp-block-group.schedule {
-	padding:1em 36px
+	padding:1rem 32px
 }
 
 .wpcsp-sponsor-description a img, .lightning .wp-block-columns {
