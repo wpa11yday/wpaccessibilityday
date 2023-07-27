@@ -17,15 +17,14 @@
 		if ( has_post_thumbnail() ) :
 			the_post_thumbnail( 'large' );
 		endif;
-		echo '</div>';
-
-
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php wp_accessibility_day_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
-		endif; ?>
+		endif;
+		echo '</div>';
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
