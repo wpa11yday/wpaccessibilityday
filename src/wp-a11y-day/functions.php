@@ -96,8 +96,8 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 					'color' => '#DAA6BA',
 				),
 				array(
-					'name'  => __( 'Sweet Corn', 'wp-accessibility-day' ),
-					'slug'  => 'sweet-corn',
+					'name'  => __( 'Yellow', 'wp-accessibility-day' ),
+					'slug'  => 'yellow',
 					'color' => '#fadd82',
 				),
 				array(
@@ -141,8 +141,8 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 					'color' => '#fff3f8',
 				),
 				array(
-					'name'  => __( 'Light Sweet Corn', 'wp-accessibility-day' ),
-					'slug'  => 'light-sweet-corn',
+					'name'  => __( 'Light Orange', 'wp-accessibility-day' ),
+					'slug'  => 'light-orange',
 					'color' => '#fff7e3',
 				),
 				array(
@@ -317,6 +317,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * SVG loaders.
+ */
+require get_template_directory() . '/inc/svg.php';
 
 use WP_Accessibility_Day\Theme;
 
