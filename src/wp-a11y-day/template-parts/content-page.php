@@ -24,9 +24,13 @@
 			echo '</div>';
 		}
 		do_action( 'wpad_entry_header' );
-		if ( ! is_front_page() ) { ?>
+		if ( ! is_front_page() ) {
+			?>
 		</div>
-		<?php } ?>
+			<?php 
+			echo wpad_header_svg();
+		}
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
