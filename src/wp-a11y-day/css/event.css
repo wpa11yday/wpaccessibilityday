@@ -61,37 +61,6 @@
 	font-size:30px
 }
 
-.sponsor-levels h3 {
-	color:var(--color-dark-purple);
-	margin:0
-}
-
-.sponsor-levels .price {
-	margin:0;
-	font-weight:700
-}
-
-.sponsor-spots {
-	color:var(--color-dark-blue);
-	margin-top:0;
-	font-size:1rem;
-	font-weight:700
-}
-
-.sponsor-benefits {
-	margin-left:0;
-	padding-left:0
-}
-
-.sponsor-benefits li {
-	list-style:none;
-	border-bottom:1px solid #105a7f;
-	margin-bottom:10px;
-	padding-bottom:10px;
-	text-align:center;
-	font-size:1rem
-}
-
 .wpcs-session-sponsor {
 	border:2px solid var(--color-dark-blue);
 	padding:5px;

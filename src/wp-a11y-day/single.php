@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-<div id="outer" class="has-sidebar">
 	<main id="primary" class="site-main">
 
 	<?php
@@ -17,8 +16,8 @@ get_header(); ?>
 		get_template_part( 'template-parts/content', get_post_type() );
 
 		the_post_navigation( array(
-			'prev_text' => '&larr; %title',
-			'next_text' => '%title &rarr;',
+			'prev_text' => '<span class="dashicons dashicons-arrow-left-alt" aria-hidden="true"></span> %title',
+			'next_text' => '%title <span class="dashicons dashicons-arrow-right-alt" aria-hidden="true"></span>',
 		) );
 
 		// If comments are open or we have at least one comment, load up the comment template.
@@ -30,10 +29,5 @@ get_header(); ?>
 	?>
 
 	</main><!-- #primary -->
-
-<?php
-get_sidebar();
-?>
-</div>
 <?php
 get_footer();
