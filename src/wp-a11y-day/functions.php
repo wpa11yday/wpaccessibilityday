@@ -37,6 +37,7 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 352, 196, array( 'top', 'left' ) );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
@@ -117,7 +118,7 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 				array(
 					'name'  => __( 'Green', 'wp-accessibility-day' ),
 					'slug'  => 'green',
-					'color' => '#dee67b',
+					'color' => '#9cdd7b',
 				),
 				array(
 					'name'  => __( 'Light Black', 'wp-accessibility-day' ),
@@ -132,7 +133,7 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 				array(
 					'name'  => __( 'Dark Blue', 'wp-accessibility-day' ),
 					'slug'  => 'dark-blue',
-					'color' => '#0096bf',
+					'color' => '#0076af',
 				),
 				array(
 					'name'  => __( 'Light Pink', 'wp-accessibility-day' ),
