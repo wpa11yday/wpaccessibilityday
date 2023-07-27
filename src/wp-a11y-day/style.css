@@ -409,7 +409,7 @@ blockquote cite {
 }
 
 .entry-list {
-	max-width:1100px;
+	max-width:1120px;
 	margin: auto;
 	display:grid;
 	grid-template-columns:repeat(2,minmax(0,1fr));
@@ -811,7 +811,7 @@ label[for=matomo_optout_checkbox] {
 }
 
 #footer-sidebar-columns {
-	max-width:1100px
+	max-width:1120px
 }
 
 #bottom-credits {
@@ -820,7 +820,7 @@ label[for=matomo_optout_checkbox] {
 }
 
 #bottom-credits .wrap {
-	max-width:1100px;
+	max-width:1120px;
 	margin:0 auto;
 	display:grid;
 	grid-gap:30px;
@@ -1092,8 +1092,8 @@ code,kbd,tt,var {
 	font-size:1.3rem
 }
 
-.entry-header > *,.entry-content > *,.entry-footer,.site-footer > *,#comments {
-	max-width:1100px;
+.entry-content > *,.entry-footer,.site-footer > *,#comments {
+	max-width:960px;
 	margin:0 auto;
 }
 
@@ -1105,8 +1105,10 @@ code,kbd,tt,var {
 	max-width:100%
 }
 
+.entry-header > *,
 .entry-content > .alignwide {
-	max-width:1100px;
+	max-width:1120px;
+	margin: 0 auto;
 }
 
 h2.event-time {
