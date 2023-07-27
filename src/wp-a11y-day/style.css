@@ -746,9 +746,11 @@ label[for=matomo_optout_checkbox] {
 
 .nav-breadcrumbs span:nth-of-type(1) {
 	margin-right: 12px;
+	margin-left: 0;
 }
 
-.nav-breadcrumbs span:nth-of-type(2) {
+.nav-breadcrumbs span {
+	margin-right: 12px;
 	margin-left: 12px;
 }
 
