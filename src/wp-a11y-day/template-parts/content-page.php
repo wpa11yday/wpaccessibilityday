@@ -18,7 +18,7 @@
 		if ( is_front_page() ) {
 			dynamic_sidebar( 'event-date-widget-area' );
 		}
-		if ( ! is_front_page() ) {
+		if ( ! is_front_page() && has_excerpt() ) {
 			echo '<div class="page-excerpt">';
 			the_excerpt();
 			echo '</div>';
