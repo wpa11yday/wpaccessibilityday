@@ -275,17 +275,20 @@ add_action( 'after_setup_theme', 'wp_accessibility_day_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function wp_accessibility_day_scripts() {
-	$style_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/style.css' ) );
-	$gform_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/gforms.css' ) );
-	$event_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/event.css' ) );
-	$js_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/navigation.js' ) );
-	$ts_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/talk-time.js' ) );
+	$style_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/style.css' ) );
+	$dark_style_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/dark-mode.css' ) );
+	$gform_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/gforms.css' ) );
+	$event_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/event.css' ) );
+	$js_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/navigation.js' ) );
+	$ts_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/talk-time.js' ) );
+	$cs_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/color-scheme.js' ) );
 
 	wp_enqueue_style( 'wp-accessibility-day-style', get_stylesheet_uri(), array(), $style_ver );
 	wp_enqueue_style( 'wp-accessibility-day-gforms', get_template_directory_uri() . '/css/gforms.css', array(), $gform_ver );
 	wp_enqueue_style( 'wp-accessibility-day-event', get_template_directory_uri() . '/css/event.css', array(), $event_ver );
 	wp_enqueue_script( 'wp-accessibility-day-navigation', get_template_directory_uri() . '/js/navigation.js', array(), $js_ver, true );
 	wp_enqueue_script( 'wp-accessibility-day-time', get_template_directory_uri() . '/js/talk-time.js', array(), $ts_ver, true );
+	wp_enqueue_script( 'wp-accessibility-color-scheme', get_template_directory_uri() . '/js/color-scheme.js', array(), $cs_ver, true );
 	$start = strtotime( get_option( 'wpad_start_time' ) );
 	$end   = strtotime( get_option( 'wpad_end_time' ) );
 	$args = array(
@@ -296,6 +299,11 @@ function wp_accessibility_day_scripts() {
 		'end'          => gmdate( 'Y-m-d', $end ) . 'T',
 	);
 	wp_localize_script( 'wp-accessibility-day-time', 'tz', $args );
+
+	$args = array(
+		'darkstylesheet' => get_template_directory_uri() . '/css/dark-mode.css?v=' . $dark_style_ver,
+	);
+	wp_localize_script( 'wp-accessibility-color-scheme', 'wpA11YdayColorScheme', $args );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
