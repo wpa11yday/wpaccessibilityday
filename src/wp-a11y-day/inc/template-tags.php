@@ -26,7 +26,7 @@ if ( ! function_exists( 'wp_accessibility_day_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted %s', 'post date', 'wp-accessibility-day' ),
+			esc_html_x( '%s', 'post date', 'wp-accessibility-day' ),
 			'<span class="posted-on">' . $time_string . '</span>'
 		);
 

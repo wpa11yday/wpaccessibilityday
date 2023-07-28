@@ -37,7 +37,7 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 352, 196, array( 'top', 'left' ) );
+		add_image_size( 'archive-image', 704, 392, array( 'left', 'top' ) );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

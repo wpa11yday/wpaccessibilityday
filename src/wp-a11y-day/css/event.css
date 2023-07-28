@@ -46,27 +46,23 @@
 	font-size:1.5rem;
 }
 
-.entry-content .wpcsp-speaker:nth-of-type(1n) img {
+.wpcsp-speaker:nth-of-type(1n) img {
 	filter: url('#wp-duotone-pink');
 }
 
-.entry-content .wpcsp-speaker:nth-of-type(2n) img {
-	filter: url('#wp-duotone-light-orange');
-}
-
-.entry-content .wpcsp-speaker:nth-of-type(3n) img {
+.wpcsp-speaker:nth-of-type(2n) img {
 	filter: url('#wp-duotone-yellow-green');
 }
 
-.entry-content .wpcsp-speaker:nth-of-type(4n) img {
+.wpcsp-speaker:nth-of-type(3n) img {
 	filter: url('#wp-duotone-yellow');
 }
 
-.entry-content .wpcsp-speaker:nth-of-type(5n) img {
+.wpcsp-speaker:nth-of-type(4n) img {
 	filter: url('#wp-duotone-blue');
 }
 
-.entry-content .wpcsp-speaker:nth-of-type(6n) img {
+.wpcsp-speaker:nth-of-type(5n) img {
 	filter: url('#wp-duotone-green');
 }
 
