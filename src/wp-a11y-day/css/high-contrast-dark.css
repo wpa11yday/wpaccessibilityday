@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+# High Contrast Dark (Light Mode Inverted Colors)
+--------------------------------------------------------------*/
+
+body {
+	--bg: Black;
+	--fg: White;
+	--accent1: DarkBlue;
+	--accent1s1: Blue;
+	--accent1s2: Aqua;
+	--accent2: Green;
+	--accent2s1: LimeGreen;
+	--accent3: Orange;
+	--accent3s1: Gold;
+	--accent4: Yellow;
+	--accent4s1: LightYellow;
+	--accent5: Coral;
+	--accent6: Magenta;
+	--s1: #333;
+	--s2: #666;
+	--s3: #ccc;
+}

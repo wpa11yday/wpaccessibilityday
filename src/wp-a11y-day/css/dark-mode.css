@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 body {
-  --bg: #333;
+	--bg: #333;
 	--fg: var(--white);
 	--accent1: var(--lightest-blue);
 	--accent1s1: var(--light-blue);
