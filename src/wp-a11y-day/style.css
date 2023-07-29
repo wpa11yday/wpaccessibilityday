@@ -103,7 +103,7 @@ body {
 	--text-color: var(--fg);
 	--button-outline-focus: var(--accent1);
 	--entry-bg: var(--bg);
-	--entry-header-bg: var(var(--accent4s1));
+	--entry-header-bg: var(--accent4s1);
 	--icon-grid-fill: var(--accent4);
 	--entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 25px,var(--accent4s1) 26px,var(--accent4s1) 100%);
 	--template-pink-entry-header: var(--accent5);
