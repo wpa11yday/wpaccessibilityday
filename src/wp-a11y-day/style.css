@@ -555,8 +555,17 @@ blockquote cite {
 	display:grid
 }
 
+.single-post .entry-header .header-section {
+	grid-template-columns: 1fr 1fr;
+	column-gap: 24px;
+}
+
 .header-section img {
 	order: -1
+}
+
+.single-post .entry-header .header-section img {
+	order: initial;
 }
 
 .entry-list {
@@ -577,7 +586,7 @@ blockquote cite {
 	font-size: 1.5rem;
 }
 
-.entry-list .entry-meta {
+.entry-meta {
 	font-size: .875rem;
 }
 
@@ -871,18 +880,23 @@ figure.box-shadow {
 }
 
 .widget-area {
-	margin:30px
+	margin:32px
 }
 
-.widget .menu a {
-	padding: 5px;
+.widget {
+	margin-bottom: 78px;
+}
+
+.widget li a {
+	font-weight: 400;
+	padding: 0 0 0 20px;
+	margin-bottom: 24px;
+	display: block;
 }
 
 .widget a[aria-current=page] {
-	background:var(--widget-current-page-bg);
-	color:var(--widget-current-page-color);
-	border-radius:5px;
-	text-decoration:none
+	border-left: 4px solid var(--widget-current-page-color);
+	font-weight: 700;
 }
 
 #footer-sidebar-columns {
@@ -961,6 +975,17 @@ label[for=matomo_optout_checkbox] {
 	right: 0;
 	top: -2rem;
 	z-index: 0;
+}
+
+.single-post .entry-header img {
+	margin-bottom: 0;
+}
+
+.single-post .single-post {
+	display: grid;
+	grid-template-columns: 66.6666% 33.3333%;
+	max-width: 1120px;
+	margin: 0 auto;
 }
 
 .single-post .entry-footer {
@@ -1309,6 +1334,10 @@ h2.event-time {
 	background: var(--entry-header-gradient)
 }
 
+.single-post .entry-header {
+	padding-bottom: 0;
+}
+
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
 .page-template-page-pink .nav-breadcrumbs {
@@ -1374,6 +1403,10 @@ h2.event-time {
 .entry-header h1, 
 .entry-header .page-excerpt {
 	padding-right: 50%;
+}
+
+.single-post .entry-header h1 {
+	padding-right: 2rem;
 }
 
 .home .entry-header {
@@ -1534,11 +1567,7 @@ h2.event-time {
 }
 
 #sidebar-widgets .widget.widget_recent_entries li,#sidebar-widgets .widget .menu li {
-	margin-bottom:1rem
-}
-
-#sidebar-widgets .widget.widget_recent_entries a,#sidebar-widgets .widget .menu a {
-	display:block
+	margin-bottom:1.5rem
 }
 
 #colophon nav {
