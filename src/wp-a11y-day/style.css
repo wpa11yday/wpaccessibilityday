@@ -1393,8 +1393,13 @@ h2.event-time {
 	margin-top: 24px;
 }
 
+#footer-sidebar-columns .widget-sidebar-column:nth-of-type(1),
 .home .entry-header .entry-header-subscribe > div:nth-of-type(1) {
 	background: url(/wp-content/themes/wp-a11y-day/assets/figure-pattern.svg) left 3rem no-repeat;
+}
+
+#footer-sidebar-columns .widget-sidebar-column:nth-of-type(1) {
+	background-repeat: repeat-x;
 }
 
 .home .entry-header .entry-header-subscribe .gform_wrapper h2 {
