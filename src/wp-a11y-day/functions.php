@@ -277,6 +277,8 @@ add_action( 'after_setup_theme', 'wp_accessibility_day_content_width', 0 );
 function wp_accessibility_day_scripts() {
 	$style_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/style.css' ) );
 	$dark_style_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/dark-mode.css' ) );
+	$hc_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/high-contrast.css' ) );
+	$hc_dark_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/high-contrast-dark.css' ) );
 	$gform_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/gforms.css' ) );
 	$event_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/event.css' ) );
 	$js_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/navigation.js' ) );
@@ -301,7 +303,9 @@ function wp_accessibility_day_scripts() {
 	wp_localize_script( 'wp-accessibility-day-time', 'tz', $args );
 
 	$args = array(
-		'darkstylesheet' => get_template_directory_uri() . '/css/dark-mode.css?v=' . $dark_style_ver,
+		'darkstylesheet'   => get_template_directory_uri() . '/css/dark-mode.css?v=' . $dark_style_ver,
+		'hcstylesheet'     => get_template_directory_uri() . '/css/high-contrast.css?v=' . $hc_ver,
+		'hcdarkstylesheet' => get_template_directory_uri() . '/css/high-contrast-dark.css?v=' . $hc_dark_ver,
 	);
 	wp_localize_script( 'wp-accessibility-color-scheme', 'wpA11YdayColorScheme', $args );
 
