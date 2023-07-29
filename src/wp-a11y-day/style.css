@@ -1389,6 +1389,7 @@ h2.event-time {
 
 .site-branding .site-title img {
 	max-width: 250px;
+	display: block;
 }
 
 #utility-menu a:hover {
