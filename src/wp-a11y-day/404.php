@@ -11,24 +11,22 @@ get_header(); ?>
 	
 	<main id="primary" class="site-main">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-accessibility-day' ); ?></h1>
+			<header class="entry-header">
+				<div class="entry-header-content">
+					<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'wp-accessibility-day' ); ?></h1>
+				</div>
 			</header><!-- .page-header -->
 
-			<div class="page-content">
+			<div class="entry-content">
 				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'wp-accessibility-day' ); ?></p>
 
 				<?php
 					get_search_form();
 
 					the_widget( 'WP_Widget_Recent_Posts' );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
 				?>
 
 			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
 
 	</main><!-- #primary -->
 

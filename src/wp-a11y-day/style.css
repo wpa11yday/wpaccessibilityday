@@ -358,7 +358,7 @@ address {
 	margin:0 0 1.5em
 }
 
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary,entry-header .entry-title a {
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary,.entry-header .entry-title a {
 	display:block
 }
 
@@ -537,6 +537,17 @@ blockquote cite {
 .archive .entry-header .entry-title,.blog .entry-header .entry-title {
 	font-size:36px;
 	font-size:2rem
+}
+
+.entry-content > .search-form {
+	margin: 32px auto;
+	background: var(--accent4);
+	padding: 1.5rem;
+}
+
+.search-form .search-field {
+	display: grid;
+	grid-template-columns: auto 8rem;
 }
 
 .entry-header .header-section {
@@ -1246,8 +1257,10 @@ code,kbd,tt,var {
 	position: relative;
 	z-index: 5;
 	background: var(--entry-bg);
+	margin-bottom: 80px;
 }
 
+.search-result,
 .entry-content > *,.entry-footer,.site-footer > *,#comments {
 	max-width:960px;
 	margin:0 auto;
@@ -1457,11 +1470,12 @@ h2.event-time {
 	border-bottom: 4px solid var(--utility-nav-item-border-color-hover);
 }
 
+.site-main .posts-navigation,
 .site-main .post-navigation {
 	border-bottom:none;
 	margin:10px auto;
 	width:100%;
-	max-width:888px
+	max-width:960px
 }
 
 .navigation .menu a {
