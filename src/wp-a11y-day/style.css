@@ -590,6 +590,10 @@ blockquote cite {
 	font-size: .875rem;
 }
 
+.entry-meta .post-edit-link {
+	margin-left: 3rem;
+}
+
 .entry-list article {
 	background: var(--entry-bg);
 	border: 4px solid var(--entry-border-color);
@@ -895,7 +899,7 @@ figure.box-shadow {
 }
 
 .widget a[aria-current=page] {
-	border-left: 4px solid var(--widget-current-page-color);
+	border-left: 4px solid var(--widget-current-page-bg);
 	font-weight: 700;
 }
 
