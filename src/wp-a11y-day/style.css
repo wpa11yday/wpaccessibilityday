@@ -60,7 +60,8 @@ body {
 	--mark-color: var(--fg);
 	--abbr-border: var(--s2);
 	--button-shadow: var(--accent4);
-	--button-color: var(--fg);
+	--button-bg: var(--fg);
+	--button-color: var(--bg);
 	--button-shadow-hover: var(--fg);
 	--button-color-hover: var(--bg);
 	--button-shadow-active: var(--button-shadow-hover);
