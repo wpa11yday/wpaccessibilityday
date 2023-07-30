@@ -140,6 +140,7 @@ body {
 	--input-bg-focus: var(--bg);
 	--input-color: var(--s3);
 	--input-border-color: var(--fg);
+	--input-border-color: var(--fg);
 	--button-bg-hover: var(--accent4);
 	--button-color-hover: var(--fg);
 	--gallery-figure-bg: var(--bg);
@@ -1272,7 +1273,7 @@ a {
 	font-size:1.25rem
 }
 
-button:hover,button:focus,.button:hover,.button:focus,a:hover,a:focus {
+a:hover,a:focus {
 	outline:2px solid var(--button-outline-focus);
 	outline-offset:2px;
 	text-decoration:none;
