@@ -28,6 +28,8 @@ body {
 	--home-entry-header-bg: var(--accent3s1);
 	--button-bg: var(--bg);
 	--button-color: var(--fg);
+	--dark-mode-button-bg: var(--accent1s1);
+	--dark-mode-button-color: var(--bg);
 	
 }
 

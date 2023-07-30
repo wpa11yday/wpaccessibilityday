@@ -154,6 +154,7 @@ body {
 	--sponsorship-microsponsors-border-color: var(--s1);
 	--reverse-focus-outline-focus: var(--bg);
 	--dark-mode-button-bg: var(--accent4s1);
+	--dark-mode-button-color: var(--fg);
 	--dark-mode-button-border-color: var(--fg);
 	--dark-mode-button-bg-pressed: var(--accent4);
 	--dark-mode-button-border-color-pressed: var(--dark-mode-button-border-color);
@@ -1966,6 +1967,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 .utility-dark-mode button {
 	all: unset;
 	background: var(--dark-mode-button-bg);
+	color: var(--dark-mode-button-color);
 	border: 2px solid var(--dark-mode-button-border-color);
 	width: 2rem;
 	height: 2rem;
