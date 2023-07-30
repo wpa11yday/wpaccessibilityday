@@ -1295,6 +1295,10 @@ code,kbd,tt,var {
 	margin-bottom: 80px;
 }
 
+#sidebar-widgets {
+	z-index: 5;
+}
+
 .search-result,
 .entry-content > *,.entry-footer,.site-footer > *,#comments {
 	max-width:960px;
