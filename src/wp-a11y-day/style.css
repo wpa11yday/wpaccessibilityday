@@ -948,7 +948,7 @@ label[for=matomo_optout_checkbox] {
 }
 
 .nav-breadcrumbs span > span {
-	color: black;
+	color: var(--fg);
 	font-weight: 400;
 }
 
@@ -1240,7 +1240,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 body {
-	background:var(--body-bg);
+	background: var(--body-bg);
 }
 
 .sticky,.bypostauthor,.gallery-caption {
@@ -1256,7 +1256,7 @@ body {
 }
 
 a {
-	color: black;
+	color: var(--fg);
 	font-weight: 700;
 	text-decoration: underline;
 }
