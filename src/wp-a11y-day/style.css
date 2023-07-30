@@ -1956,8 +1956,6 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	line-height: 1.875;
 }
 
-.utility-dark-mode button:hover,
-.utility-dark-mode button:focus,
 .utility-dark-mode button:hover span,
 .utility-dark-mode button:focus span  {
 	background: var(--dark-mode-button-bg-hover);
