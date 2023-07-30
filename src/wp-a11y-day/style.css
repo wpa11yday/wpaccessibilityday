@@ -992,9 +992,10 @@ label[for=matomo_optout_checkbox] {
 
 .single-post .single-post {
 	display: grid;
-	grid-template-columns: 66.6666% 33.3333%;
+	grid-template-columns: 66.6666% 1fr;
 	max-width: 1120px;
 	margin: 0 auto;
+	column-gap: 24px;
 }
 
 .single-post .entry-footer {
