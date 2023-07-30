@@ -19,4 +19,16 @@ body {
 	--s1: var(--dark-gray);
 	--s2: var(--gray);
 	--s3: var(--light-gray);
+
+	--entry-header-bg: var(--bg);
+	--entry-header-gradient: var(--bg);
+	--footer-bg: var(--bg);
+	--footer-bg-gradient: var(--bg);
+	--home-entry-header-gradient: var(--bg);
+	--home-entry-header-bg: var(--accent3s1);
+	--button-bg: var(--bg);
+	--button-color: var(--fg);
+	
 }
+
+
