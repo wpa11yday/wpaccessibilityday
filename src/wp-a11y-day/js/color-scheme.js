@@ -12,6 +12,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	const head = themeStyleSheet.parentNode;
 	const darkModeStyleSheet = document.createElement('link');
 	const highContrastStyleSheet = document.createElement('link');
+	const logo = document.querySelector( '.site-branding img' );
 
 
 	darkModeStyleSheet.setAttribute('rel', 'stylesheet');
@@ -90,9 +91,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		switch (action) {
 			case 'remove':
 				head.removeChild(darkModeStyleSheet);
+				logo.setAttribute( 'src', wpA11YdayColorScheme.lightModeLogo );
 			break;
 			default:
 				head.insertBefore(darkModeStyleSheet, themeStyleSheet.nextSibling)
+				logo.setAttribute( 'src', wpA11YdayColorScheme.darkModeLogo );
+
 		}
 	}
 
