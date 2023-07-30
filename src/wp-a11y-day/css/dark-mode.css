@@ -30,7 +30,8 @@ body {
 	--button-color: var(--fg);
 	--dark-mode-button-bg: var(--accent1s1);
 	--dark-mode-button-color: var(--bg);
-	
+	--home-entry-header-subscribe-color: var(--bg);
+	--input-color: var(--bg);
 }
 
 

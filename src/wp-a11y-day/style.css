@@ -121,6 +121,7 @@ body {
 	--template-peach-icon-grid-fill: var(--accent3);
 	--home-entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 130px,var(--accent4s1) 131px,var(--accent4s1) 100%); 
 	--home-entry-header-bg: var(--accent4);
+	--home-entry-header-subscribe-color: var(--fg);
 	--utility-menu-current-bg: var(--accent1);
 	--utility-menu-current-color: var(--bg);
 	--utility-menu-current-outline-hover: var(--accent1);
@@ -1433,6 +1434,10 @@ h2.event-time {
 .home .entry-header .entry-header-subscribe {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+
+.home .entry-header .entry-header-subscribe .gform_wrapper *:not(input) {
+	color: var(--home-entry-header-subscribe-color);
 }
 
 .home .entry-header .entry-header-subscribe .gform_wrapper {
