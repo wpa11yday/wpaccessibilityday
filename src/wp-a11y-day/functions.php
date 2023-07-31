@@ -583,7 +583,7 @@ add_action( 'wp_body_open', 'wpad_archive_header' );
  */
 function wpad_email_form_in_header() {
 	if ( is_front_page() ) {
-		echo '<div class="entry-header-subscribe"><div></div>' . do_shortcode( '[gravityform id="1"]' ) . '</div>';
+		echo '<div class="entry-header-subscribe"><div>' . wpad_figure_svg() . '</div>' . do_shortcode( '[gravityform id="1"]' ) . '</div>';
 	}
 }
 add_action( 'wpad_entry_header', 'wpad_email_form_in_header' );

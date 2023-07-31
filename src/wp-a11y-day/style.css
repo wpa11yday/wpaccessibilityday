@@ -999,11 +999,19 @@ label[for=matomo_optout_checkbox] {
 	z-index: 1;
 }
 
-.entry-header svg {
+.entry-header svg:not(.entry-header-subscribe svg) {
 	position: absolute;
 	right: 0;
 	top: -2rem;
 	z-index: 0;
+}
+
+.entry-header-subscribe svg {
+	margin-top: 3rem;
+}
+
+.entry-header-subscribe #figure-pattern {
+	fill: var(--accent4);
 }
 
 .single-post .entry-header img {
@@ -1468,8 +1476,7 @@ h2.event-time {
 	margin-top: 24px;
 }
 
-#footer-sidebar-columns .widget-sidebar-column:nth-of-type(1),
-.home .entry-header .entry-header-subscribe > div:nth-of-type(1) {
+#footer-sidebar-columns .widget-sidebar-column:nth-of-type(1) {
 	background: url(/wp-content/themes/wp-a11y-day/assets/figure-pattern.svg) left 3rem no-repeat;
 }
 

@@ -58,3 +58,7 @@ a:has(.text-format-sr-only) {
 .main-navigation .dropdown-toggle:focus {
 	color: var(--accent1s2);
 }
+
+.entry-header-subscribe #figure-pattern {
+	fill: var(--fg);
+}
