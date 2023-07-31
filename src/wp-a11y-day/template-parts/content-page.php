@@ -11,7 +11,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( ! is_front_page() ) { ?>
+		<?php
+		if ( is_front_page() ) {
+			echo '<div class="header-svg-container">';
+		}
+		if ( ! is_front_page() ) { ?>
 		<div class="entry-header-content">
 		<?php }
 		the_title( '<h1 class="entry-title">', '</h1>' );
@@ -29,6 +33,8 @@
 		</div>
 			<?php 
 			echo wpad_header_svg();
+		} else {
+			echo '</div>';
 		}
 		?>
 	</header><!-- .entry-header -->
