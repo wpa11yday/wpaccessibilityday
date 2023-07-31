@@ -192,6 +192,22 @@ a {
 	background-color:transparent
 }
 
+.underline-button,
+a:has(.text-format-sr-only) {
+	text-decoration:none;
+	border-bottom: 4px solid var(--accent1);
+}
+
+.underline-button::after,
+a:has(.text-format-sr-only)::after {
+	font-family: dashicons;
+	content: '\f344';
+	color: var(--accent1);
+	margin-left: 4px;
+	position:relative;
+	top: 4px;
+}
+
 a:active,a:hover {
 	outline:0
 }
@@ -1090,6 +1106,10 @@ label[for=matomo_optout_checkbox] {
 .home .wp-block-latest-posts a,
 .home .wp-block-latest-posts time {
 	padding: 0 24px;
+}
+
+.home .wp-block-latest-posts time {
+	margin-bottom: 24px;
 }
 
 .home .wp-block-latest-posts a {

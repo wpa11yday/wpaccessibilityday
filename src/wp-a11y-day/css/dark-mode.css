@@ -3,7 +3,8 @@
 --------------------------------------------------------------*/
 
 body {
-	--bg: #333;
+	--black: #000;
+	--bg: #252525;
 	--fg: var(--white);
 	--accent1: var(--lightest-blue);
 	--accent1s1: var(--light-blue);
@@ -20,12 +21,12 @@ body {
 	--s2: var(--gray);
 	--s3: var(--light-gray);
 
-	--entry-header-bg: var(--bg);
-	--entry-header-gradient: var(--bg);
-	--footer-bg: var(--bg);
-	--footer-bg-gradient: var(--bg);
-	--home-entry-header-gradient: var(--bg);
-	--home-entry-header-bg: var(--accent3s1);
+	--entry-header-bg: var(--black);
+	--entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 25px,var(--black) 26px,var(--black) 100%);
+	--home-entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 130px,var(--black) 131px,var(--black) 100%);
+	--footer-bg: var(--black);
+	--footer-bg-gradient: linear-gradient(to bottom, var(--bg) 0%,var(--bg) 90px,var(--black) 91px,var(--black) 100%);
+	--home-entry-header-bg: var(--accent4s1);
 	--button-bg: var(--bg);
 	--button-color: var(--fg);
 	--dark-mode-button-bg: var(--accent1s1);
@@ -34,4 +35,19 @@ body {
 	--input-color: var(--bg);
 }
 
+.wp-block-latest-posts__list * {
+	color: var(--black);
+}
 
+.footer-sidebar .widget-sidebar-column:nth-of-type(2) *:not(input) {
+	color: var(--black);
+}
+
+.footer-sidebar .widget-sidebar-column:nth-of-type(2) {
+	background: var(--accent3s1);
+}
+
+.underline-button,
+a:has(.text-format-sr-only) {
+	border-bottom: 4px solid var(--accent1s1);
+}
