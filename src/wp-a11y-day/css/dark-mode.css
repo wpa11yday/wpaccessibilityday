@@ -51,3 +51,8 @@ body {
 a:has(.text-format-sr-only) {
 	border-bottom: 4px solid var(--accent1s1);
 }
+
+.main-navigation .dropdown-toggle:hover,
+.main-navigation .dropdown-toggle:focus {
+	color: var(--accent1s2);
+}
