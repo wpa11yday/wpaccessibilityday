@@ -33,6 +33,7 @@ body {
 	--light-yellow: var(--wp--preset--color--light-yellow);
 	--light-pink: var(--wp--preset--color--light-pink);
 	--blossom: var(--wp--preset--color--blossom);
+	--yellow-green: var(--wp--preset--color--yellow-green);
 	--white: #fff;
 	--black: var(--wp--preset--color--black);
 	--light-gray: var(--wp--preset--color--light-gray);
@@ -53,6 +54,7 @@ body {
 	--accent4s1: var(--light-yellow);
 	--accent5: var(--light-pink);
 	--accent6: var(--blossom);
+	--accent7: var(--yellow-green);
 	--s1: var(--light-gray);
 	--s2: var(--gray);
 	--s3: var(--dark-gray);

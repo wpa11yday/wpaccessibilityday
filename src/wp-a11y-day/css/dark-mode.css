@@ -17,6 +17,7 @@ body {
 	--accent4s1: var(--yellow);
 	--accent5: var(--light-pink);
 	--accent6: var(--blossom);
+	--accent7: var(--yellow-green);
 	--s1: var(--dark-gray);
 	--s2: var(--gray);
 	--s3: var(--light-gray);
@@ -33,6 +34,7 @@ body {
 	--dark-mode-button-color: var(--bg);
 	--home-entry-header-subscribe-color: var(--bg);
 	--input-color: var(--bg);
+	--entry-title-color: var(--accent7);
 }
 
 .wp-block-latest-posts__list * {
