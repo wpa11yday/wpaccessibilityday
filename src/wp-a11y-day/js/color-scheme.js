@@ -13,6 +13,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	const darkModeStyleSheet = document.createElement('link');
 	const highContrastStyleSheet = document.createElement('link');
 	const logo = document.querySelector( '.site-branding img' );
+	const lockup = document.querySelector( '.lockup img' );
 
 
 	darkModeStyleSheet.setAttribute('rel', 'stylesheet');
@@ -92,10 +93,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			case 'remove':
 				head.removeChild(darkModeStyleSheet);
 				logo.setAttribute( 'src', wpA11YdayColorScheme.lightModeLogo );
+				lockup.setAttribute( 'src', wpA11YdayColorScheme.lightModeLockup );
 			break;
 			default:
 				head.insertBefore(darkModeStyleSheet, themeStyleSheet.nextSibling)
 				logo.setAttribute( 'src', wpA11YdayColorScheme.darkModeLogo );
+				lockup.setAttribute( 'src', wpA11YdayColorScheme.darkModeLockup );
 
 		}
 	}
