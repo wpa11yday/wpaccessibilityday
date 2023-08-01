@@ -2128,8 +2128,8 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	.entry-header > *, 
 	.widget-area > *,
 	.entry-content > * {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 
 	.header-svg-container {
