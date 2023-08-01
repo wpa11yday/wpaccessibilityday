@@ -912,7 +912,7 @@ figure.box-shadow {
 	margin:32px
 }
 
-.widget {
+#sidebar-widgets .widget {
 	margin-bottom: 78px;
 }
 
@@ -2121,11 +2121,19 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		margin-bottom: 1rem;
 	}
 
+	.header-svg-container h1,
+	.header-svg-container .widget_text,
+	.header-svg-container 
+	.nav-breadcrumbs > p,
 	.entry-header > *, 
 	.widget-area > *,
 	.entry-content > * {
 		padding-left: 1rem;
 		padding-right: 1rem;
+	}
+
+	.header-svg-container {
+		padding: 0;
 	}
 
 	button.menu-toggle {
@@ -2161,7 +2169,12 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 	.entry-header h1.entry-title {
 		font-size:36px;
-		font-size:2rem
+		font-size:2rem;
+		padding-right: 1rem;
+	}
+
+	.entry-header svg:not(.entry-header-subscribe svg) {
+		top: 0;
 	}
 
 	.entry-list {
