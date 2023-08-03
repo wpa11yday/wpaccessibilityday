@@ -176,6 +176,8 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'wp_accessibility_day_setup' );
 
+add_post_type_support( 'page', 'excerpt' );
+
 /**
  * Register Widgets.
  */
