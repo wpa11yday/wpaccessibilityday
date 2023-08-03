@@ -73,28 +73,33 @@
 }
 
 @media only screen and (max-width: 600px) {
-	#gform_1 {
+	#gform_1, #gform_24 {
 		display:block!important
 	}
 
+	#gform_24 .gform_footer,#gform_24 .gform_page_footer,
 	#gform_1 .gform_footer,#gform_1 .gform_page_footer {
 		margin:0!important;
 		padding:0!important
 	}
 }
 
+#gform_24,
 #gform_1 {
 	display:flex
 }
 
+#gform_24 .gform-body,
 #gform_1 .gform-body {
 	width:75%
 }
 
+#gform_24 .gform-footer,
 #gform_1 .gform-footer {
 	padding:0
 }
 
+#gform_24 .gform_footer input,
 #gform_1 .gform_footer input {
 	margin:0;
 	padding:14px 24px;
