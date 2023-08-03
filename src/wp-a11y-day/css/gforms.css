@@ -116,3 +116,7 @@
 #primary .gform_ajax_spinner {
 	margin-left: 10px;
 }
+
+#primary .gform_wrapper.gravity-theme .gfield_required {
+	padding-left: .25rem;
+}
