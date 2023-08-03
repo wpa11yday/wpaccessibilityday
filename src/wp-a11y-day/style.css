@@ -1408,6 +1408,24 @@ code,kbd,tt,var {
 	padding-top: 56px;
 }
 
+#primary .stylized-2col-section {
+	max-width: 100%;
+	padding: 120px 0;
+	background: url(/wp-content/themes/wp-a11y-day/assets/involved.svg) 50% 50% no-repeat;
+}
+
+#primary .stylized-2col-section .wp-block-columns {
+	max-width: 740px;
+	margin: 0 auto;
+}
+
+#primary .stylized-2col-section .wp-block-column {
+	padding: 40px;
+	background: var(--bg);
+	font-size: 1.125rem;
+	border: 4px solid var(--sponsorship-microsponsors-border-color);
+}
+
 h2.event-time {
 	max-width:640px
 }
