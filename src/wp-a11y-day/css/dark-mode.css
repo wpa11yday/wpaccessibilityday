@@ -107,3 +107,8 @@ a:has(.text-format-sr-only) {
 .page-template-page-pink .entry-header {
 	background: var(--entry-header-gradient)
 }
+
+.wp-block-group.schedule.active {
+	background: var(--black);
+	color: var(--accent5);
+}
