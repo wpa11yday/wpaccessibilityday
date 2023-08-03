@@ -198,7 +198,7 @@ a {
 }
 
 button.toggle-details,
-.underline-button {
+.is-style-button-underline a {
 	text-decoration:none;
 	border-bottom: 4px solid var(--accent1);
 	background: transparent;
@@ -217,16 +217,16 @@ button.toggle-details .dashicons::before {
 }
 
 button.toggle-details:hover,
-.underline-button:hover,
+.is-style-button-underline a:hover,
 button.toggle-details:focus,
-.underline-button:focus {
+.is-style-button-underline a:focus {
 	background: transparent;
 	box-shadow: none;
 	outline: 2px solid;
 	outline-offset: 2px;
 }
 
-.underline-button::after {
+.is-style-button-underline a::after {
 	font-family: dashicons;
 	content: '\f344';
 	color: var(--accent1);

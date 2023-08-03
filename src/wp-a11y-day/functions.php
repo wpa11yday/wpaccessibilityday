@@ -633,3 +633,17 @@ function wpad_people_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'wpad_people_class', 10, 1 );
+
+/**
+ * Enqueue block editor customizations.
+ */
+function wpad_enqueue_block_editor_scripts() {
+	wp_enqueue_script(
+		'theme-block-editor-js',
+		get_stylesheet_directory_uri() . '/js/blocks.js',
+		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), // specify dependencies to avoid race condition
+		'1.0',
+		true
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'wpad_enqueue_block_editor_scripts' );
