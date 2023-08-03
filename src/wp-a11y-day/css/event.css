@@ -86,7 +86,71 @@
 }
 
 .wp-block-group.schedule {
-	padding:1rem 32px
+	padding:40px 60px;
+	max-width: 1120px;
+	border-bottom: 4px solid var(--s1);
+}
+
+.wp-block-group.schedule.active {
+	background: var(--accent5);
+}
+
+.wp-block-group.schedule:last-of-type() {
+	border-bottom: none;
+}
+
+.schedule .talk-header {
+	display: block;
+}
+
+.schedule .talk-header .speakers {
+	margin-top: 24px;
+}
+
+.schedule .talk-header h2 .time-wrapper {
+	display: flex;
+	column-gap: 24px;
+	align-items: end;
+}
+
+.schedule .talk-header h2 .localtime {
+	margin-bottom: .25rem;
+	font-weight: 400;
+}
+
+.schedule .talk-header h2 {
+	padding-left: 8px;
+	margin-bottom: 24px;
+	border-left: 8px solid var(--accent6);
+}
+
+.schedule .talk-wrapper {
+	padding: 16px;
+	display:grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 32px;
+}
+
+.schedule .talk-wrapper div:nth-of-type(2) {
+	align-self: end;
+}
+
+.schedule .wp-block-columns.inside {
+	column-gap: 40px;
+}
+
+.schedule .wp-block-columns.inside .wp-block-column:nth-of-type(2) {
+	max-width: 40%;
+}
+
+@media screen and (max-width: 60em) {
+	.schedule .wp-block-columns.inside .wp-block-column:nth-of-type(2) {
+		max-width: 100%;
+	}
+	.schedule .talk-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 .wpcsp-sponsor-description a img, .lightning .wp-block-columns {
@@ -102,11 +166,16 @@
 }
 
 .schedule img {
-	border-radius:12px
+	max-width: 100px;
 }
 
 .schedule .wp-block-column h3 {
 	margin-top:0
+}
+
+.single-wpcs_session .wpcsp-session-speaker,
+.schedule .wpcsp-session-speaker {
+	column-gap: 24px;
 }
 
 .wpad-microsponsors {
@@ -232,19 +301,6 @@
 
 .donate-list {
 	font-weight:100!important
-}
-
-/* Media queries */
-@media screen and (min-width: 960px) {
-	.wp-block-group.schedule {
-		transform:skew(-3deg,-1deg);
-		max-width:960px
-	}
-
-	.wp-block-group.schedule .wp-block-group__inner-container {
-		transform:skew(3deg,1deg);
-		padding:1em
-	}
 }
 
 @media screen and (min-width: 60em) {
