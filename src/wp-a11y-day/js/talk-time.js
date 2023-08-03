@@ -29,94 +29,29 @@
 			label.html( '<span class="localtime">' + userTime + ' on ' + userDate + ' (' + zone + ')</span>' );
 		});
 
-		const streamtext = document.getElementById( 'streamtext' );
-		const transcript = document.querySelector( '#transcript button' );
-		const chat       = document.querySelector( '#chat button' );
-
-		if ( transcript ) {
-			if ( readCookie( 'streamtext.hidden' ) ) {
-				streamtext.classList.add( 'hidden' );
-				transcript.setAttribute( 'aria-expanded', 'false' );
-			}
-
-			transcript.addEventListener( 'click', function() {
-				if ( streamtext.classList.contains( 'hidden' ) ) {
-					streamtext.classList.remove( 'hidden' );
-					transcript.setAttribute( 'aria-expanded', 'true' );
-					eraseCookie( 'streamtext.hidden' );
-				} else {
-					streamtext.classList.add( 'hidden' );
-					transcript.setAttribute( 'aria-expanded', 'false' );
-					createCookie( 'streamtext.hidden', 1 );
-				}
-			});
-		}
-
-		if ( chat ) {
-			if ( readCookie( 'slido.hidden' ) ) {
-				slido.classList.add( 'hidden' );
-				chat.setAttribute( 'aria-expanded', 'false' );
-			}
-
-			chat.addEventListener( 'click', function() {
-				if ( slido.classList.contains( 'hidden' ) ) {
-					slido.classList.remove( 'hidden' );
-					chat.setAttribute( 'aria-expanded', 'true' );
-					eraseCookie( 'slido.hidden' );
-				} else {
-					slido.classList.add( 'hidden' );
-					chat.setAttribute( 'aria-expanded', 'false' );
-					createCookie( 'slido.hidden', 1 );
-				}
-			});
-		}
-
-		// Cookie handler, non-$ style
-		function createCookie(name, value, days) {
-			if (days) {
-				var date = new Date();
-				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-				var expires = "; expires=" + date.toGMTString();
-			} else {
-				var expires = '';
-			}
-
-			document.cookie = name + "=" + value + expires + "; path=/; SameSite=Strict;";
-		}
-
-		function readCookie(name) {
-			var nameEQ = name + "=";
-			var ca = document.cookie.split(';');
-			for (var i = 0; i < ca.length; i++) {
-				var c = ca[i];
-				while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-			}
-
-			return null;
-		}
-
-		function eraseCookie(name) {
-			createCookie(name, "");
-		}
-
 	var toggleDetails = document.querySelectorAll( '.toggle-details' );
 	if ( null !== toggleDetails ) {
 		toggleDetails.forEach( (el) => {
-			var parentEl = el.parentNode.parentNode;
+			var parentEl = el.closest( '.session' );
 			var target   = parentEl.querySelector( '.inside' );
 			if ( 'false' === el.getAttribute( 'aria-expanded' ) ) {
 				target.classList.add( 'hidden' );
+			} else {
+				parentEl.classList.add( 'active' );
 			}
 			el.addEventListener( 'click', function(e) {
 				var expanded = this.getAttribute( 'aria-expanded' );
 				if ( 'true' === expanded ) {
 					target.classList.add( 'hidden' );
+					parentEl.classList.remove( 'active' );
+
 					this.setAttribute( 'aria-expanded', 'false' );
 					this.firstChild.classList.add( 'dashicons-plus' );
 					this.firstChild.classList.remove( 'dashicons-minus' );
 				} else {
 					target.classList.remove( 'hidden' );
+					parentEl.classList.add( 'active' );
+
 					this.setAttribute( 'aria-expanded', 'true' );
 					this.firstChild.classList.add( 'dashicons-minus' );
 					this.firstChild.classList.remove( 'dashicons-plus' );
