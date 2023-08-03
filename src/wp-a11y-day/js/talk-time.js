@@ -32,7 +32,7 @@
 	var toggleDetails = document.querySelectorAll( '.toggle-details' );
 	if ( null !== toggleDetails ) {
 		toggleDetails.forEach( (el) => {
-			var parentEl = el.closest( '.session' );
+			var parentEl = el.closest( '.schedule' );
 			var target   = parentEl.querySelector( '.inside' );
 			if ( 'false' === el.getAttribute( 'aria-expanded' ) ) {
 				target.classList.add( 'hidden' );
