@@ -8,7 +8,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	const lightModeButton = document.querySelector('button[aria-label="Enable light mode"]');
 	const darkModeButton = document.querySelector('button[aria-label="Enable dark mode"]');
 	const colorSchemeCookieName = 'wpadColorScheme';
-	const themeStyleSheet = document.getElementById('wp-accessibility-day-style-css');
+	const themeStyleSheet = document.getElementById('wp-accessibility-day-event-css');
 	const head = themeStyleSheet.parentNode;
 	const darkModeStyleSheet = document.createElement('link');
 	const highContrastStyleSheet = document.createElement('link');
