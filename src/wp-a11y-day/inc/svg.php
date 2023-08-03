@@ -11,7 +11,7 @@
  * @return string
  */
 function wpad_figure_svg() {
-	return '<svg width="447.332723px" height="23px" viewBox="0 0 447.332723 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	return '<svg aria-hidden="true" focusable="false" width="447.332723px" height="23px" viewBox="0 0 447.332723 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>figure pattern</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="figure-pattern" fill="#FADD82">
@@ -48,7 +48,7 @@ function wpad_figure_svg() {
  * @return string
  */
 function wpad_header_svg() {
-	return '<svg width="701.000441px" height="256.000393px" viewBox="0 0 701.000441 256.000393" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	return '<svg aria-hidden="true" focusable="false" width="701.000441px" height="256.000393px" viewBox="0 0 701.000441 256.000393" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>icon grid</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="icon-grid" fill="#000000" fill-rule="nonzero">
@@ -139,7 +139,7 @@ function wpad_header_svg() {
 function wpad_partial_ring( $direction ) {
 	$svg = '';
 	if ( 'right' === $direction ) {
-		$svg = '<svg width="325px" height="326px" viewBox="0 0 325 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		$svg = '<svg aria-hidden="true" focusable="false" width="325px" height="326px" viewBox="0 0 325 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>partial ring right copy</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="partial-ring-right-copy">
@@ -150,7 +150,7 @@ function wpad_partial_ring( $direction ) {
     </g>
 </svg>';
 	} else {
-		$svg = '<svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		$svg = '<svg aria-hidden="true" focusable="false" width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>partial ring left copy</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="partial-ring-left-copy" transform="translate(0.000000, -0.000000)">
