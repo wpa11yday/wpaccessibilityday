@@ -527,6 +527,7 @@ table {
 	width:100%
 }
 
+.wp-block-button:not(.is-style-button-underline) a,
 button,input[type="button"],input[type="reset"],input[type="submit"] {
 	border:1px solid;
 	border-radius:3px;
@@ -536,6 +537,7 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	color: var(--button-color);
 }
 
+.wp-block-button:not(.is-style-button-underline) a:hover, .wp-block-button:not(.is-style-button-underline) a:focus,
 button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {
 	box-shadow: 4px 4px 0 var(--button-shadow-hover);
 	color: var(--button-color-hover);
@@ -701,8 +703,8 @@ figure.box-shadow {
 	margin:30px auto
 }
 
-.button-small a {
-	font-size:1.1rem!important;
+.wp-block-button.button-small a {
+	font-size:1rem;
 	padding:10px 18px
 }
 
@@ -1852,14 +1854,17 @@ input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,
 	background:var(--input-bg-focus)
 }
 
+.wp-block-button:not(.is-style-button-underline) a,
 input[type="submit"],button,.button {
 	background:var(--button-bg);
 	color:var(--button-color);
 	border:none;
+	border-radius: 0;
 	font-weight:600;
 	padding:12px 24px
 }
 
+.wp-block-button:not(.is-style-button-underline) a:hover, .wp-block-button:not(.is-style-button-underline) a:focus,
 input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,.button:hover,.button:focus {
 	background:var(--button-bg-hover);
 	color:var(--button-color-hover);
