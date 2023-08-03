@@ -1411,7 +1411,7 @@ code,kbd,tt,var {
 #primary .stylized-2col-section {
 	max-width: 100%;
 	padding: 120px 0;
-	background: url(/wp-content/themes/wp-a11y-day/assets/involved.svg) 50% 50% no-repeat;
+	background: url(/wp-content/themes/wp-a11y-day/assets/get-involved.svg) 50% 50% no-repeat;
 }
 
 #primary .stylized-2col-section .wp-block-columns {
@@ -2262,6 +2262,10 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 	.entry-list {
 		grid-template-columns:1fr
+	}
+
+	#primary .stylized-2col-section {
+		background-size: contain;
 	}
 
 	#colophon #bottom-credits .site-logo {
