@@ -57,7 +57,7 @@ body {
 	background: var(--accent3s1);
 }
 
-.underline-button {
+.is-style-button-underline a {
 	border-bottom: 4px solid var(--accent1s1);
 }
 
