@@ -194,6 +194,7 @@ a {
 	background-color:transparent
 }
 
+button.toggle-details,
 .underline-button,
 a:has(.text-format-sr-only) {
 	text-decoration:none;
@@ -2257,12 +2258,5 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	#bottom-credits .wrap {
 		grid-template-columns:1fr;
 		grid-gap:5px
-	}
-}
-
-/* Breakpoint on very small screens only. */
-@media screen and (max-width: 40em) {
-	#primary .gb-grid-wrapper-72cb1313 .gb-inside-container {
-		padding:0
 	}
 }
