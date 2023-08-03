@@ -38,6 +38,7 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'archive-image', 704, 392, array( 'left', 'top' ) );
+		add_image_size( 'large-square', 720, 720, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
