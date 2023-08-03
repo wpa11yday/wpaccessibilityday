@@ -609,3 +609,27 @@ function wpad_admin_notification() {
 		}
 	}
 }
+
+/**
+ * Define classes on body to differentiate between types of people.
+ *
+ * @param array $classes Classes on post type.
+ *
+ * @return array
+ */
+function wpad_people_class( $classes ) {
+	if ( is_singular( 'wpcsp_speaker' ) ) {
+		if ( has_term( 'lead-organizers', 'wpcsp_speaker_level' ) || has_term( 'organizers', 'wpcsp_speaker_level' ) ) {
+			$classes[] = 'organizer';
+		}
+		if ( has_term( 'speakers', 'wpcsp_speaker_level' ) ) {
+			$classes[] = 'speaker';
+		}
+		if ( has_term( 'volunteers', 'wpcsp_speaker_level' ) ) {
+			$classes[] = 'volunteer';
+		}
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'wpad_people_class', 10, 1 );
