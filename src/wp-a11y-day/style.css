@@ -491,6 +491,15 @@ ol {
 	list-style-position:inside
 }
 
+.list-2col {
+	column-count: 2;
+	column-gap: 32px;
+}
+
+.list-2col li {
+	break-inside: avoid;
+}
+
 li > ul,li > ol {
 	margin-bottom:0;
 	margin-left:1.5em
