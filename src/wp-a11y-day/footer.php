@@ -42,15 +42,15 @@
 						) );
 					?>
 				</nav><!-- #footer-navigation -->
-				<nav id="footer-utility-navigation" class="utility-navigation navigation" aria-label="Social">
+				<div id="footer-utility-navigation" class="utility-navigation navigation">
 					<?php
 						wp_nav_menu( array(
-							'theme_location' => 'menu-2',
-							'menu_id'        => 'utility-menu',
+							'theme_location' => 'menu-4',
+							'menu_id'        => 'social-menu',
 							'depth'          => 1,
 						) );
 					?>
-				</nav><!-- #footer-utility-navigation -->
+				</div><!-- #footer-utility-navigation -->
 			</div>
 		</div><!-- #wrap -->
 	</div><!-- #bottom-credits -->

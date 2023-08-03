@@ -43,8 +43,9 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'wp-accessibility-day' ),
-			'menu-2' => esc_html__( 'Utility', 'wp-accessibility-day' ),
+			'menu-2' => esc_html__( 'Social', 'wp-accessibility-day' ),
 			'menu-3' => esc_html__( 'Footer', 'wp-accessibility-day' ),
+			'menu-4' => esc_html__( 'Footer Social', 'wp-accessibility-day' ),
 		) );
 
 		/*
