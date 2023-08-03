@@ -23,12 +23,8 @@
 }
 
 .single-wpcsp_speaker .has-post-thumbnail .wpcsp-speaker-grid {
-	max-width:1200px;
-	padding-top:20px
-}
-
-.single-wpcsp_speaker #breadcrumbs {
-	padding:0 36px
+	max-width:1120px;
+	grid-column-gap: 40px;
 }
 
 .wpcsp-session-speaker img,.wpcsp-speaker-grid img,.wpcsp-speakers .wpcsp-speaker-image {
@@ -99,11 +95,12 @@
 	border-bottom: none;
 }
 
+.schedule .talk-header a,
 .schedule .talk-header {
 	display: block;
 }
 
-.schedule .talk-header .speakers {
+.schedule .talk-header .talk-speakers {
 	margin-top: 24px;
 }
 
@@ -133,6 +130,11 @@
 
 .schedule .talk-wrapper div:nth-of-type(2) {
 	align-self: end;
+}
+
+.schedule .talk-description {
+	font-size: 1.125rem;
+	padding: 16px;
 }
 
 .schedule .wp-block-columns.inside {
@@ -176,6 +178,33 @@
 .single-wpcs_session .wpcsp-session-speaker,
 .schedule .wpcsp-session-speaker {
 	column-gap: 24px;
+}
+
+.single-wpcsp_speaker .wpcsp-speaker-details p {
+	font-weight: 400;
+	font-size: 1.125rem;
+}
+
+.wpcsp_sponsor .wpcsp-sponsor-social-icon-link, .single-wpcsp_speaker .wpcsp-speaker-social-icon-link {
+	line-height: 1;
+}
+
+.wpcsp_speaker .entry-content {
+	background: var(--wpcsp-speaker-gradient);
+}
+
+.wpcsp_sponsor .entry-content {
+	background: var(--wpcsp-sponsor-gradient);
+}
+
+.wpcsp_speaker.wpcsp_speaker_level-organizers .entry-content,
+.wpcsp_speaker.wpcsp_speaker_level-lead-organizers .entry-content {
+	background: var(--wpcsp-organizer-gradient);
+}
+
+.wpcsp_sponsor .wpcsp-sponsor-social, .single-wpcsp_speaker .wpcsp-speaker-social {
+	margin-top: 24px;
+	margin-bottom: 96px;
 }
 
 .wpad-microsponsors {

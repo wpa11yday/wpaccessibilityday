@@ -164,6 +164,9 @@ body {
 	--dark-mode-button-bg-hover: var(--accent1);
 	--dark-mode-button-color-hover: var(--bg);
 	--wpad-archive-bg: var(--accent1s1);
+	--wpcsp-speaker-gradient: linear-gradient(to bottom, var(--accent4s1) 0%,var(--accent4s1) 300px,var(--bg) 301px,var(--bg) 100%);
+	--wpcsp-organizer-gradient: linear-gradient(to bottom, var(--accent3s1) 0%,var(--accent3s1) 300px,var(--bg) 301px,var(--bg) 100%);
+	--wpcsp-sponsor-gradient: linear-gradient(to bottom, var(--accent5) 0%,var(--accent5) 300px,var(--bg) 301px,var(--bg) 100%);
 }
 
 html {
@@ -195,14 +198,35 @@ a {
 }
 
 button.toggle-details,
-.underline-button,
-a:has(.text-format-sr-only) {
+.underline-button {
 	text-decoration:none;
 	border-bottom: 4px solid var(--accent1);
+	background: transparent;
+	box-shadow: none;
+	padding: 0;
+	font-size: 1.125rem;
+	border-radius: 0;
+	line-height: 1.5;
+	color: var(--text-color);
 }
 
-.underline-button::after,
-a:has(.text-format-sr-only)::after {
+button.toggle-details .dashicons,
+button.toggle-details .dashicons::before {
+	line-height: inherit;
+	color: var(--accent1);
+}
+
+button.toggle-details:hover,
+.underline-button:hover,
+button.toggle-details:focus,
+.underline-button:focus {
+	background: transparent;
+	box-shadow: none;
+	outline: 2px solid;
+	outline-offset: 2px;
+}
+
+.underline-button::after {
 	font-family: dashicons;
 	content: '\f344';
 	color: var(--accent1);
@@ -978,6 +1002,7 @@ label[for=matomo_optout_checkbox] {
 	margin-left: 0;
 }
 
+#breadcrumbs > span > a,
 .nav-breadcrumbs span {
 	margin-right: 12px;
 	margin-left: 12px;
@@ -1386,6 +1411,9 @@ h2.event-time {
 	padding-bottom: 0;
 }
 
+.sponsor #masthead,
+.sponsor .entry-header,
+.sponsor .nav-breadcrumbs,
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
 .page-template-page-pink .nav-breadcrumbs {
@@ -1428,6 +1456,9 @@ h2.event-time {
 	background: var(--template-green-entry-header-gradient)
 }
 
+.organizer #masthead,
+.organizer .entry-header,
+.organizer .nav-breadcrumbs,
 .page-template-page-peach #masthead,
 .page-template-page-peach .entry-header,
 .page-template-page-peach .nav-breadcrumbs {
