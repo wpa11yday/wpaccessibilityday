@@ -40,6 +40,14 @@ body {
 	--input-border-color: var(--bg);
 }
 
+h2 {
+	color: var(--accent1s1);
+}
+
+h3 {
+	color: var(--accent3s1);
+}
+
 .sponsorship *:not(h2),
 .wp-block-latest-posts__list * {
 	color: var(--black);
@@ -56,6 +64,11 @@ body {
 
 .footer-sidebar .widget-sidebar-column:nth-of-type(2) {
 	background: var(--accent3s1);
+}
+
+#footer-navigation a,
+#footer-utility-navigation a {
+	color: var(--accent4s1);
 }
 
 .is-style-button-underline a {
@@ -113,4 +126,8 @@ body {
 .wp-block-group.schedule.active {
 	background: var(--black);
 	color: var(--accent5);
+}
+
+.highlight-text p {
+	color: var(--bg);
 }

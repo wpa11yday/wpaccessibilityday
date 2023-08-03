@@ -388,7 +388,7 @@ td,th {
 body,button,input,select,optgroup,textarea {
 	font-size:16px;
 	font-size:1rem;
-	line-height:1.5
+	line-height:1.6
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -1344,8 +1344,8 @@ a {
 }
 
 #primary {
-	font-size:20px;
-	font-size:1.25rem
+	font-size:18px;
+	font-size:1.125rem
 }
 
 a:hover,a:focus {
@@ -1520,6 +1520,35 @@ h2.event-time {
 	background: var(--template-peach-entry-header-gradient)
 }
 
+.page-template-page-peach .highlight-text {
+	background-color: var(--accent1s1);
+}
+
+.page-template-page-pink .highlight-text {
+	background-color: var(--accent2s1);
+}
+
+.page-template-page-blue .highlight-text {
+	background-color: var(--accent4s1);
+}
+
+.page-template-page-green .highlight-text {
+	background-color: var(--accent3s1);
+}
+
+.highlight-text {
+	background: url(/wp-content/themes/wp-a11y-day/assets/figure.svg) 240px 100px no-repeat;
+	background-size: contain;
+	display: grid;
+	align-items: center;
+}
+
+.highlight-text p {
+	line-height: 1.3;
+	padding: 40px 140px 40px 40px;
+	margin-bottom: 0;
+}
+
 .nav-breadcrumbs > p,
 .entry-header .entry-header-content {
 	max-width: 1120px;
@@ -1529,6 +1558,10 @@ h2.event-time {
 .entry-header h1, 
 .entry-header .page-excerpt {
 	padding-right: 50%;
+}
+
+.entry-header .page-excerpt {
+	min-height: 6rem;
 }
 
 .single-post .entry-header h1 {
