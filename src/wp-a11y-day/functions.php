@@ -589,3 +589,16 @@ function wpad_email_form_in_header() {
 	}
 }
 add_action( 'wpad_entry_header', 'wpad_email_form_in_header' );
+
+add_action( 'admin_notices', 'wpad_admin_notification' );
+/**
+ * Display notice if content freeze active.
+ */
+function wpad_admin_notification() {
+	if ( ! str_contains( home_url(), 'staging' ) ) {
+		$message = 'Content freeze currently active. Do not edit content in production. Estimated reopening 22:00 UTC August 3rd, 2023.';
+		if ( $message ) {
+			echo "<div class='message updated notice'><p>$message</p></div>";
+		}
+	}
+}
