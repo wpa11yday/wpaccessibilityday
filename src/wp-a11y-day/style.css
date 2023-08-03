@@ -1663,6 +1663,7 @@ h2.event-time {
 	margin-bottom:1.5rem
 }
 
+#footer-utility-navigation,
 #colophon nav {
 	margin: 10px;
 }
@@ -2231,7 +2232,8 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		display: block;
 		text-align:center
 	}
-	
+
+	#footer-utility-navigation,
 	#colophon nav {
 		margin: 0;
 	}
