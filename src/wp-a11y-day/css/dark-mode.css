@@ -30,6 +30,8 @@ body {
 	--home-entry-header-bg: var(--accent4s1);
 	--button-bg: var(--bg);
 	--button-color: var(--fg);
+	--button-bg-hover: var(--accent4s1);
+	--button-color-hover: var(--bg);
 	--dark-mode-button-bg: var(--accent1s1);
 	--dark-mode-button-color: var(--bg);
 	--home-entry-header-subscribe-color: var(--bg);
@@ -55,8 +57,7 @@ body {
 	background: var(--accent3s1);
 }
 
-.underline-button,
-a:has(.text-format-sr-only) {
+.underline-button {
 	border-bottom: 4px solid var(--accent1s1);
 }
 
