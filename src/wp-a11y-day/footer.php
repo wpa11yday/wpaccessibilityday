@@ -26,7 +26,7 @@
 				</p>
 				<?php $year = date( 'Y', strtotime( get_option( 'wpad_start_time' ) ) ); ?>
 				<p class="tag-us">
-					Tag us! <a href="https://twitter.com/hashtag/WPA11yDay">#WPA11yDay</a> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a>
+					Tag us! <a href="https://twitter.com/hashtag/WPA11yDay">#WPA11yDay</a> <?php if ( get_option( 'wpad_start_time' ) ) { ?> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a> <?php } ?>
 				</p>
 				<p class="copyright">
 					©2020&ndash;<?php echo date( 'Y' ); ?> WordPress Accessibility Day
