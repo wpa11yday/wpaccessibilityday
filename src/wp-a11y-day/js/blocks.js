@@ -13,4 +13,9 @@ wp.domReady( () => {
       name: "button-underline",
       label: "Underline"
     });
+
+    wp.blocks.registerBlockStyle("core/button", {
+      name: "arrow",
+      label: "Arrow"
+    });
 } );
