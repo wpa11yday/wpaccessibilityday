@@ -268,6 +268,22 @@ function wp_accessibility_day_widgets_init() {
 add_action( 'widgets_init', 'wp_accessibility_day_widgets_init' );
 
 /**
+ * Register block styles.
+ *
+ * @return void
+ */
+function wp_accessibility_day_block_styles() {
+    register_block_style(
+        'core/button', // name of your block
+        array(
+            'name'  => 'arrow', // part of the class that gets added to the block.
+            'label' => __( 'Arrow Block', 'wp-accessibility-day' ),
+        )
+    );
+}
+add_action( 'init', 'wp_accessibility_day_block_styles' );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
