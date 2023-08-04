@@ -84,6 +84,18 @@ h3 {
 	fill: var(--fg);
 }
 
+.entry-header svg g:not(.entry-header-subscribe svg g) {
+	fill: var(--bg);
+}
+
+.gform_wrapper .gfield.buttonized input[type="radio"]:checked+label,.gform_wrapper .gfield.buttonized input[type="checkbox"]:checked+label {
+	color:var(--bg);
+}
+
+.gform_wrapper .gfield.buttonized .gfield_radio label,.gform_wrapper .gfield.buttonized .gfield_checkbox label {
+	color: var(--bg);
+}
+
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
 .page-template-page-pink .entry-header .entry-title,

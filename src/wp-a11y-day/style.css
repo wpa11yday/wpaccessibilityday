@@ -531,6 +531,15 @@ table {
 	width:100%
 }
 
+#utility-menu {
+	align-items: center;
+}
+
+#utility-menu .wp-block-button a {
+	padding: 12px 24px;
+	font-size: 1rem;
+}
+
 .wp-block-button:not(.is-style-button-underline) a,
 button,input[type="button"],input[type="reset"],input[type="submit"] {
 	border:1px solid;
@@ -2125,6 +2134,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 .utility-dark-mode {
 	display: flex;
+	padding-top: .25rem;
 }
 
 .utility-dark-mode button {
@@ -2215,6 +2225,9 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	}
 	.home .entry-header .widget_text {
 		font-size: 1.125rem;
+	}
+	#utility-menu .wp-block-button a {
+		display: none;
 	}
 	h1, .entry-header h1.entry-title {
 		font-size: 2rem;
