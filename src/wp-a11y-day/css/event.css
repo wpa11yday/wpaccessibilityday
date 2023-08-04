@@ -32,6 +32,7 @@
 	margin-bottom:5px
 }
 
+.wpcsp-sponsor-social-icon .dashicons,
 .wpcsp-speaker-social-icon .dashicons {
 	font-size:24px;
 	width:24px;
@@ -204,6 +205,14 @@
 
 .wpcsp_sponsor .wpcsp-sponsor-social-icon-link, .single-wpcsp_speaker .wpcsp-speaker-social-icon-link {
 	line-height: 1;
+}
+
+.wpcsp_sponsor .wpcsp-sponsor-social-icon, .single-wpcsp_speaker .wpcsp-speaker-social-icon {
+	margin-right: 6px;
+}
+
+.wpcsp-sponsor-website-link {
+	margin-bottom: 40px;
 }
 
 .wpcsp_speaker .entry-content {

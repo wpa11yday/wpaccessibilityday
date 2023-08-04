@@ -1458,9 +1458,9 @@ h2.event-time {
 	padding-bottom: 0;
 }
 
-.sponsor #masthead,
-.sponsor .entry-header,
-.sponsor .nav-breadcrumbs,
+.single-wpcsp_sponsor #masthead,
+.single-wpcsp_sponsor .entry-header,
+.single-wpcsp_sponsor .nav-breadcrumbs,
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
 .page-template-page-pink .nav-breadcrumbs {
