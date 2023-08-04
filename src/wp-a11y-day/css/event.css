@@ -42,25 +42,42 @@
 	font-size:1.5rem;
 }
 
-.wpcsp-speaker:nth-of-type(1n) img {
+.lead-organizers .wpcsp-speaker:nth-of-type(1n) img {
 	filter: url('#wp-duotone-pink');
 }
 
-.wpcsp-speaker:nth-of-type(2n) img {
+.lead-organizers .wpcsp-speaker:nth-of-type(2n) img {
 	filter: url('#wp-duotone-yellow-green');
 }
 
-.wpcsp-speaker:nth-of-type(3n) img {
+.lead-organizers .wpcsp-speaker:nth-of-type(3n) img {
+	filter: url('#wp-duotone-light-orange');
+}
+
+.organizers .wpcsp-speaker:nth-of-type(6n+1) img {
 	filter: url('#wp-duotone-yellow');
 }
 
-.wpcsp-speaker:nth-of-type(4n) img {
+.organizers .wpcsp-speaker:nth-of-type(6n+2) img {
 	filter: url('#wp-duotone-blue');
 }
 
-.wpcsp-speaker:nth-of-type(5n) img {
+.organizers .wpcsp-speaker:nth-of-type(6n+3) img {
 	filter: url('#wp-duotone-green');
 }
+
+.organizers .wpcsp-speaker:nth-of-type(6n+4) img {
+	filter: url('#wp-duotone-pink');
+}
+
+.organizers .wpcsp-speaker:nth-of-type(6n+5) img {
+	filter: url('#wp-duotone-yellow-green');
+}
+
+.organizers .wpcsp-speaker:nth-of-type(6n+6) img {
+	filter: url('#wp-duotone-light-orange');
+}
+
 
 .wpcsp_speaker .wp-block-latest-posts.wp-block-latest-posts__list li {
 	list-style:square
