@@ -28,14 +28,39 @@ get_header(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<div class="entry-content">
-					<?php the_title( '<h1 class="entry-title sr-only">', '</h1>' ); ?>
 					<div class="wpcsp-sponsor-grid">
+					<div class="primary-title">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php if ( $levels ) { ?>
+					<p class="wpcsp-sponsor-level"><?php echo $levels . $levels_label; ?></p>
+						<?php
+						}
+						if ( $website_url ) { ?>
+							<p class="wpcsp-sponsor-website-link wp-block-button"><a rel="sponsored nofollow" href="<?php echo esc_url( $website_url ); ?>">Visit the <?php echo get_the_title(); ?> Website</a></p>
+						<?php }
+						$social_icons = wpcsp_get_social_links( get_the_ID() );
+						if ( $social_icons ) {
+							?>
+							<ul class="wpcsp-sponsor-social">
+								<?php foreach ( $social_icons as $social_icon ) { ?>
+									<li class="wpcsp-sponsor-social-icon"><?php echo $social_icon; ?></li>
+								<?php } ?>
+							</ul>
+						<?php
+						}
+						?>
+						</div>
 						<div class="wpcsp-media">
+							<div class="logo">
 							<?php
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail( 'full', array( 'alt' => get_the_title() ) );}
 							?>
-
+							</div>
+						</div>
+					</div>
+					<div class="wpcsp-sponsor-grid">
+						<div class="wpcsp-media">
 							<?php if ( $swag ) { ?>
 								<div class="wpcsp-sponsor-swag">
 									<h2>Attendee Swag</h2> 
@@ -52,24 +77,8 @@ get_header(); ?>
 						</div>
 						<div>
 							<?php the_title( '<h2>About ', '</h1>' ); ?>
-							<?php if ( $levels ) { ?>
-								<p class="wpcsp-sponsor-level"><?php echo $levels . $levels_label; ?></p>
-							<?php
-							}
-							if ( $website_url ) { ?>
-								<p class="wpcsp-sponsor-website-link wp-block-button"><a rel="sponsored nofollow" href="<?php echo esc_url( $website_url ); ?>">Visit the <?php echo get_the_title(); ?> Website</a></p>
-							<?php }
-							$social_icons = wpcsp_get_social_links( get_the_ID() );
-							if ( $social_icons ) {
-								?>
-								<ul class="wpcsp-sponsor-social">
-									<?php foreach ( $social_icons as $social_icon ) { ?>
-										<li class="wpcsp-sponsor-social-icon"><?php echo $social_icon; ?></li>
-									<?php } ?>
-								</ul>
-							<?php
-							}
-							the_content(); ?>
+
+							<?php the_content(); ?>
 
 						</div>
 

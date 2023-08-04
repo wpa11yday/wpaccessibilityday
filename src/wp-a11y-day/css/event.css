@@ -22,6 +22,7 @@
 	margin-bottom:15px
 }
 
+.single-wpcsp_sponsor .has-post-thumbnail .wpcsp-sponsor-grid,
 .single-wpcsp_speaker .has-post-thumbnail .wpcsp-speaker-grid {
 	max-width:1120px;
 	grid-column-gap: 40px;
@@ -30,6 +31,35 @@
 .wpcsp-session-speaker img,.wpcsp-speaker-grid img,.wpcsp-speakers .wpcsp-speaker-image {
 	border-radius: 0;
 	margin-bottom:5px
+}
+
+.wpcsp-media .logo {
+	padding: 1rem;
+	background: #fff;
+	display: grid;
+	align-items: center;
+	min-height: 360px;
+	border: 1px solid;
+}
+
+.wpcsp-sponsor-grid:nth-of-type(1) .wpcsp-media {
+	order: -1;
+}
+
+.single-wpcsp_sponsor .wpcsp-sponsor-swag {
+	border: none;
+	margin-top: 40px;
+	background: var(--accent4);
+	color: var(--fg);
+	border-radius: 0;
+}
+
+.single-wpcsp_sponsor .wpcsp-sponsor-swag h2 {
+	font-size: 1.5rem;
+}
+
+#primary .wpcsp-media .logo img {
+	margin: 0;
 }
 
 .wpcsp-sponsor-social-icon .dashicons,
