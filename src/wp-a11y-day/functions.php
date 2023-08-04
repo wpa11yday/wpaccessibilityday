@@ -605,6 +605,7 @@ add_action( 'admin_notices', 'wpad_admin_notification' );
 function wpad_admin_notification() {
 	if ( ! str_contains( home_url(), 'staging' ) ) {
 		$message = 'Content freeze currently active. Do not edit content in production. Estimated reopening 22:00 UTC August 3rd, 2023.';
+		$message = '';
 		if ( $message ) {
 			echo "<div class='message updated notice'><p>$message</p></div>";
 		}
