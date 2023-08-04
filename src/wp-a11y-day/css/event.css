@@ -69,10 +69,9 @@
 	margin: 80px auto 40px;
 }
 
-#primary .wpcsp-sponsors .wpcsp-sponsor-level .wpcsp-sponsor-level-platinum h2 {
+#primary .wpcsp-sponsors .wpcsp-sponsor-level.wpcsp-sponsor-level-platinum h2 {
 	border-top: none;
 	margin-top: 0;
-	padding-top: 0;
 }
 
 #primary .wpcsp-sponsors .wpcsp-sponsor-level .wpcsp-sponsor-level-heading {
