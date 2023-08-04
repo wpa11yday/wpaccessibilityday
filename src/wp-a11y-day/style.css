@@ -1477,6 +1477,8 @@ h2.event-time {
 .single-wpcsp_sponsor .nav-breadcrumbs,
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
+.page-template-page-pink .entry-header h1, 
+.page-template-page-pink .entry-header .page-excerpt,
 .page-template-page-pink .nav-breadcrumbs {
 	background: var(--template-pink-entry-header);
 }
@@ -1491,6 +1493,8 @@ h2.event-time {
 
 .page-template-page-blue #masthead,
 .page-template-page-blue .entry-header,
+.page-template-page-blue .entry-header h1, 
+.page-template-page-blue .entry-header .page-excerpt,
 .page-template-page-blue .nav-breadcrumbs {
 	background: var(--template-blue-entry-header-bg)
 }
@@ -1505,6 +1509,8 @@ h2.event-time {
 
 .page-template-page-green #masthead,
 .page-template-page-green .entry-header,
+.page-template-page-green .entry-header h1, 
+.page-template-page-green .entry-header .page-excerpt,
 .page-template-page-green .nav-breadcrumbs {
 	background: var(--template-green-entry-header-bg)
 }
@@ -1522,6 +1528,8 @@ h2.event-time {
 .organizer .nav-breadcrumbs,
 .page-template-page-peach #masthead,
 .page-template-page-peach .entry-header,
+.page-template-page-peach .entry-header h1, 
+.page-template-page-peach .entry-header .page-excerpt,
 .page-template-page-peach .nav-breadcrumbs {
 	background: var(--template-peach-entry-header-bg)
 }
@@ -1571,7 +1579,7 @@ h2.event-time {
 
 .entry-header h1, 
 .entry-header .page-excerpt {
-	padding-right: 50%;
+	margin-right: 50%;
 }
 
 .entry-header .page-excerpt {

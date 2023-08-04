@@ -104,6 +104,8 @@ h3 {
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
 .page-template-page-pink .entry-header .entry-title,
+.page-template-page-pink .entry-header h1, 
+.page-template-page-pink .entry-header .page-excerpt,
 .page-template-page-pink .nav-breadcrumbs {
 	background: var(--black);
 	color: var(--template-pink-entry-header);
@@ -112,6 +114,8 @@ h3 {
 .page-template-page-blue #masthead,
 .page-template-page-blue .entry-header,
 .page-template-page-blue .entry-header .entry-title,
+.page-template-page-blue .entry-header h1, 
+.page-template-page-blue .entry-header .page-excerpt,
 .page-template-page-blue .nav-breadcrumbs {
 	background: var(--black);
 	color: var(--template-blue-entry-header-bg)
@@ -120,6 +124,8 @@ h3 {
 .page-template-page-green #masthead,
 .page-template-page-green .entry-header,
 .page-template-page-green .entry-header .entry-title,
+.page-template-page-green .entry-header h1, 
+.page-template-page-green .entry-header .page-excerpt,
 .page-template-page-green .nav-breadcrumbs {
 	background: var(--black);
 	color: var(--template-green-entry-header-bg)
@@ -128,6 +134,8 @@ h3 {
 .page-template-page-peach #masthead,
 .page-template-page-peach .entry-header,
 .page-template-page-peach .entry-header .entry-title,
+.page-template-page-peach .entry-header h1, 
+.page-template-page-peach .entry-header .page-excerpt,
 .page-template-page-peach .nav-breadcrumbs {
 	background: var(--black);
 	color: var(--template-peach-entry-header-bg)
