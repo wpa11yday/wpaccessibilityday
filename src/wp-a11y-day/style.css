@@ -544,10 +544,11 @@ table {
 button,input[type="button"],input[type="reset"],input[type="submit"] {
 	border:1px solid;
 	border-radius:3px;
-	line-height:1;
+	line-height:1.5;
 	padding:.6em 1em .4em;
 	box-shadow: 4px 4px 0 var(--button-shadow);
 	color: var(--button-color);
+	display: inline-block;
 }
 
 .wp-block-button:not(.is-style-button-underline) a:hover, .wp-block-button:not(.is-style-button-underline) a:focus,
