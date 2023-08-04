@@ -1507,6 +1507,9 @@ h2.event-time {
 	background: var(--template-blue-entry-header-gradient);
 }
 
+.blog #masthead,
+.blog #primary > .entry-header,
+.blog .nav-breadcrumbs,
 .page-template-page-green #masthead,
 .page-template-page-green .entry-header,
 .page-template-page-green .entry-header h1, 
@@ -1515,10 +1518,12 @@ h2.event-time {
 	background: var(--template-green-entry-header-bg)
 }
 
+.blog #icon-grid,
 .page-template-page-green #icon-grid {
 	fill: var(--template-green-icon-grid-fill);
 }
 
+.blog #primary > .entry-header,
 .page-template-page-green .entry-header {
 	background: var(--template-green-entry-header-gradient)
 }

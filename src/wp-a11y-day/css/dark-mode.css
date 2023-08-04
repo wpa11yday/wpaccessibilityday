@@ -121,6 +121,9 @@ h3 {
 	color: var(--template-blue-entry-header-bg)
 }
 
+.blog #masthead,
+.blog #primary > .entry-header,
+.blog .nav-breadcrumbs,
 .page-template-page-green #masthead,
 .page-template-page-green .entry-header,
 .page-template-page-green .entry-header .entry-title,

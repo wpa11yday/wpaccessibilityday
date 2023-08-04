@@ -22,8 +22,14 @@ get_header(); ?>
 		if ( is_home() && ! is_front_page() ) : ?>
 			<header class="entry-header">
 				<div class="entry-header-content">
-					<h1 class="page-title"><?php single_post_title(); ?></h1>
+					<h1 class="entry-title"><?php single_post_title(); ?></h1>
+					<?php
+					do_action( 'wpad_entry_header' );
+					?>
 				</div>
+				<?php 
+				echo wpad_header_svg();
+				?>
 			</header>
 			<div class="entry-list">
 		<?php
