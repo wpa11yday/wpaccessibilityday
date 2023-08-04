@@ -401,10 +401,6 @@ h1,h2,h3,h4,h5,h6 {
 	margin-top: 0;
 }
 
-blockquote {
-	margin:0 1.5em
-}
-
 address {
 	margin:0 0 1.5em
 }
@@ -593,14 +589,13 @@ a:hover,a:active {
 }
 
 blockquote {
-	font-style:italic;
 	background: var(--bq-bg);
-	padding:.5em
+	font-size: 1.25rem;
 }
 
 blockquote cite {
 	font-style:normal;
-	font-size:.8em
+	font-size:1rem
 }
 
 .entry-header .entry-title {
@@ -1416,11 +1411,17 @@ code,kbd,tt,var {
 	margin: 0 auto 24px;
 }
 
+blockquote > * {
+	margin: 24px 80px;
+}
+
+blockquote,
 .decoration-left {
 	background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) top left no-repeat;
 	padding-top: 56px;
 }
 
+blockquote.decoration-right,
 .decoration-right {
 	background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) top right no-repeat;
 	padding-top: 56px;
