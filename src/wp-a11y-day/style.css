@@ -538,6 +538,9 @@ table {
 #utility-menu .wp-block-button a {
 	padding: 12px 24px;
 	font-size: 1rem;
+	text-decoration: none;
+	border-radius: 0;
+	border-bottom: none;
 }
 
 .wp-block-button:not(.is-style-button-underline) a,
@@ -555,6 +558,7 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {
 	box-shadow: 4px 4px 0 var(--button-shadow-hover);
 	color: var(--button-color-hover);
+	border-bottom: 1px solid;
 }
 
 button:active,button:focus,input[type="button"]:active,input[type="button"]:focus,input[type="reset"]:active,input[type="reset"]:focus,input[type="submit"]:active,input[type="submit"]:focus {
