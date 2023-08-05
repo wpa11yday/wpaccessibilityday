@@ -5,18 +5,4 @@
 body {
 	--bg: White;
 	--fg: Black;
-	--accent1: Aqua;
-	--accent1s1: Blue;
-	--accent1s2: DarkBlue;
-	--accent2: LimeGreen;
-	--accent2s1: Green;
-	--accent3: Gold;
-	--accent3s1: DarkOrange;
-	--accent4: LightYellow;
-	--accent4s1: Yellow;
-	--accent5: Magenta;
-	--accent6: Coral;
-	--s1: #ccc;
-	--s2: #666;
-	--s3: #333;
 }
