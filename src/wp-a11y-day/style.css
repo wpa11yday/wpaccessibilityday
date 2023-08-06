@@ -1587,7 +1587,7 @@ h2.event-time {
 	margin: 0 auto;
 }
 
-.entry-header h1, 
+.entry-header h1:not(.wpsc-single-session-title), 
 .entry-header .page-excerpt {
 	margin-right: 50%;
 }

@@ -656,13 +656,17 @@ add_action( 'enqueue_block_editor_assets', 'wpad_enqueue_block_editor_scripts' )
  * @param  string $single_template The template path.
  * @return string
  */
-function wpad_set_sponsor_template( $single_template ) {
+function wpad_set_schedule_template( $single_template ) {
 	global $post;
 
 	if ( 'wpcsp_sponsor' === $post->post_type ) {
 		$single_template = get_stylesheet_directory() . '/templates/sponsor-template.php';
 	}
 
+	if ( 'wpcs_session' === $post->post_type ) {
+		$single_template = get_stylesheet_directory() . '/templates/session-template.php';
+	}
+
 	return $single_template;
 }
-add_filter( 'single_template', 'wpad_set_sponsor_template', 15 );
+add_filter( 'single_template', 'wpad_set_schedule_template', 15 );
