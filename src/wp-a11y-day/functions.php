@@ -319,6 +319,10 @@ function wp_accessibility_day_scripts() {
 		'lightModeLockup'  => get_template_directory_uri() . '/assets/lockup.png',
 		'darkModeLockup'   => get_template_directory_uri() . '/assets/lockup-dark.png',
 	);
+	if ( is_wpad_main_site() ) {
+		$args['lightModeLogo'] = get_template_directory_uri() . '/assets/logo-base.png';
+		$args['darkModeLogo']  = get_template_directory_uri() . '/assets/logo-base-dark.png';
+	}
 	wp_localize_script( 'wp-accessibility-color-scheme', 'wpA11YdayColorScheme', $args );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -388,6 +392,16 @@ add_action( 'after_setup_theme', 'wp_accessibility_day_text_domain' );
 Theme::get_instance();
 
 /**
+ * Test whether this is the main site or an event site.
+ *
+ * @return bool
+ */
+function is_wpad_main_site() {
+	// If a start time is set, then this is an event site.
+	return ( get_option( 'wpad_start_time' ) ) ? false : true;
+}
+
+/**
  * This was, I believe, because we made speakers a non-publishing level of user, but assigned them as authors of their own talks.
  *
  * @return array
@@ -405,7 +419,11 @@ add_filter( 'wp_dropdown_users_args', 'wpad_add_subscribers_to_dropdown', 10, 2 
  * @param string $alt Alternative text.
  */
 function wpad_site_logo( $alt = 'WordPress Accessibility Day' ) {
-	return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo.png" alt="' . esc_attr( $alt ) . '" />';
+	if ( is_wpad_main_site() ) {
+		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-base.png" alt="' . esc_attr( $alt ) . '" />';
+	} else {
+		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo.png" alt="' . esc_attr( $alt ) . '" />';
+	}
 }
 add_shortcode( 'logo', 'wpad_site_logo' );
 add_filter( 'widget_text', 'do_shortcode');
