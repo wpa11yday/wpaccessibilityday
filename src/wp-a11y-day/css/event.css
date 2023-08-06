@@ -82,6 +82,14 @@
 	margin: 0;
 }
 
+#primary .lightning-talk {
+	padding: 16px;
+}
+
+#primary .lightning-talk .talk-description {
+	padding: 0;
+}
+
 .wpcsp-sponsor-social-icon .dashicons,
 .wpcsp-speaker-social-icon .dashicons {
 	font-size:24px;
