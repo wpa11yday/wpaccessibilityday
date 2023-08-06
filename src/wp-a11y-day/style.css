@@ -1149,7 +1149,7 @@ label[for=matomo_optout_checkbox] {
 	font-size: 120px;
 	font-size: 7.5rem;
 	line-height: 1.06667;
-	padding-right: 25%
+	margin-right: 25%
 }
 
 .home .wp-block-latest-posts {
