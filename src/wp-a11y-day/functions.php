@@ -450,11 +450,11 @@ function wpad_breadcrumbs( $link_output, $link ) {
 	$id = isset( $link['id'] ) ? $link['id'] : get_queried_object_id();
 
 	if ( 'wpcsp_sponsor' === get_post_type( $id ) ) {
-		return '<a href="' . home_url( '/sponsors/' ) . '">Sponsors</a>' . ' / ' . $link['text'];
+		return '<span><a href="' . home_url( '/sponsors/' ) . '">Sponsors</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
 
 	if ( 'wpcs_session' === get_post_type( $id ) ) {
-		return '<a href="' . home_url( '/schedule/' ) . '">Schedule</a>' . ' / ' . $link['text'];
+		return '<span><a href="' . home_url( '/schedule/' ) . '">Schedule</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
 
 	return $link_output;
