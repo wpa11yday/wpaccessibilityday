@@ -1192,7 +1192,9 @@ label[for=matomo_optout_checkbox] {
 }
 
 .home .wp-block-latest-posts__featured-image img {
-	width:100%
+	width:100%;
+	height: auto !important;
+	max-width: 100% !important;
 }
 
 .home .wp-block-latest-posts a {
