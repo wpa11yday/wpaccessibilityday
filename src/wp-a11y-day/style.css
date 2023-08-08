@@ -977,7 +977,7 @@ figure.box-shadow {
 }
 
 #sidebar-widgets .gform_widget {
-	background-color: var(--template-pink-icon-grid-fill);;
+	background-color: var(--template-pink-icon-grid-fill);
 	padding: 24px;
 }
 
@@ -1031,7 +1031,6 @@ label[for=matomo_optout_checkbox] {
 #page {
 	margin:0 auto;
 	max-width:100%;
-	overflow-x: hidden;
 }
 
 .nav-breadcrumbs {
@@ -2013,11 +2012,6 @@ input[type="submit"],button,.button {
 input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,.button:hover,.button:focus {
 	background:var(--button-bg-hover);
 	color:var(--button-color-hover);
-}
-
-.home .entry-header input[type="submit"]:focus,
-.home .entry-header input[type="submit"]:hover {
-	background:var(--bg);
 }
 
 .wp-block-button.is-style-arrow .wp-block-button__link {
