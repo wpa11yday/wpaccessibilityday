@@ -63,16 +63,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	}
 
 	/**
-	 * Checks if the user is has Inverted Colors on.
-	 *
-	 * @returns {Boolean}
-	 */
-	const isUsingMacInvertedColors = () => {
-		const mediaQueryList = window.matchMedia('(inverted-colors: inverted)');
-		return mediaQueryList.matches;
-	}
-
-	/**
 	 * Checks if the user requested high contrast.
 	 *
 	 * @returns {Boolean}
@@ -109,10 +99,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	if ('dark' === colorschemeCookie || (! colorschemeCookie && prefersDarkScheme)) {
 		toggleButton(darkModeButton, lightModeButton);
 		toggleStyle();
-		highContrastStyleSheet.setAttribute('href', isUsingMacInvertedColors ? wpA11YdayColorScheme.hcstylesheet : wpA11YdayColorScheme.hcdarkstylesheet );
+		
+		highContrastStyleSheet.setAttribute('href', wpA11YdayColorScheme.hcdarkstylesheet );
 	}
 
-	if (isUsingMacInvertedColors() || isHighContrast()) {
+	if (isHighContrast()) {
 		head.appendChild(highContrastStyleSheet);
 	}
 
@@ -123,7 +114,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			toggleButton(lightModeButton, darkModeButton);
 			toggleStyle('remove');
 			setCookie(colorSchemeCookieName, 'light');
-			highContrastStyleSheet.setAttribute('href', isUsingMacInvertedColors ? wpA11YdayColorScheme.hcdarkstylesheet : wpA11YdayColorScheme.hcstylesheet );
+			highContrastStyleSheet.setAttribute('href', wpA11YdayColorScheme.hcstylesheet );
 		}
 	});
 
@@ -134,7 +125,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			toggleButton(darkModeButton, lightModeButton);
 			toggleStyle();
 			setCookie(colorSchemeCookieName, 'dark');
-			highContrastStyleSheet.setAttribute('href', isUsingMacInvertedColors ? wpA11YdayColorScheme.hcstylesheet : wpA11YdayColorScheme.hcdarkstylesheet );
+			highContrastStyleSheet.setAttribute('href', wpA11YdayColorScheme.hcdarkstylesheet );
 		}
 	});
 });
