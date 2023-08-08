@@ -685,6 +685,10 @@ function wpad_set_schedule_template( $single_template ) {
 		$single_template = get_stylesheet_directory() . '/templates/session-template.php';
 	}
 
+	if ( 'wpcsp_speaker' === $post->post_type ) {
+		$single_template = get_stylesheet_directory() . '/templates/speaker-template.php';
+	}
+
 	return $single_template;
 }
 add_filter( 'single_template', 'wpad_set_schedule_template', 15 );
