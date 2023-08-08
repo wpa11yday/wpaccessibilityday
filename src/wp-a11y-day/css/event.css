@@ -39,7 +39,7 @@
 	display: grid;
 	align-items: center;
 	min-height: 360px;
-	border: 1px solid;
+	border: 4px solid var(--sponsorship-microsponsors-border-color);
 }
 
 .wpcsp-sponsor-grid:nth-of-type(1) .wpcsp-media {
@@ -450,4 +450,15 @@
 	#sponsorship-levels .gb-grid-column-c9734134:last-of-type() {
 		margin-bottom:0
 	}
+
+	.wpcsp_sponsor .wpcsp-sponsor-social, .single-wpcsp_speaker .wpcsp-speaker-social {
+		margin-bottom: 24px;
+	}
+
+	.single-wpcsp_sponsor .wpcsp-sponsor-grid:nth-of-type(1) {
+		background: var(--template-pink-entry-header);
+		margin-bottom: 24px;
+		padding-bottom: 24px;
+	}
+	
 }
