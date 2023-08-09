@@ -257,6 +257,10 @@
 	column-gap: 24px;
 }
 
+.wpcsp-speaker-grid:nth-of-type(2) > div:nth-of-type(2) {
+	margin-top: -24px;
+}
+
 .single-wpcsp_speaker .wpcsp-speaker-details p {
 	font-weight: 400;
 	font-size: 1.125rem;

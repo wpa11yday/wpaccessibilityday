@@ -47,7 +47,7 @@ get_header(); ?>
 
 						<?php
 						if ( has_post_thumbnail() ) {
-							the_post_thumbnail( 'full' );
+							the_post_thumbnail( 'large-square' );
 						}
 						if ( $pronouns ) {
 							$pronouns = ' <span class="wpcsp-speaker-pronouns">(' . esc_html( $pronouns ) . ')</span>';
@@ -86,7 +86,11 @@ get_header(); ?>
 									<?php } ?>
 								</ul>
 							<?php } ?>
-
+						</div>
+					</div>
+					<div class="wpcsp-speaker-grid">
+						<div></div>
+						<div>
 							<h2>About <?php echo esc_html( $full_name ); ?></h2>
 
 							<?php the_content(); ?>
@@ -115,11 +119,8 @@ get_header(); ?>
 									<a class="button wpcsp-volunteer-link" href="<?php echo home_url( 'wpad-people/volunteers/' ); ?>">See All Volunteers</a>
 								<?php } ?>
 							</p>
-
 						</div>
-
 					</div>
-
 				</div><!-- .entry-content -->
 
 			</article><!-- #post-${ID} -->
