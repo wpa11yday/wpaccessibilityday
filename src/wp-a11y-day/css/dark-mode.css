@@ -101,6 +101,8 @@ h3 {
 	color: var(--bg);
 }
 
+.single-wpcsp_sponsor #masthead,
+.single-wpcsp_sponsor .nav-breadcrumbs,
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
 .page-template-page-pink .entry-header .entry-title,
@@ -134,6 +136,8 @@ h3 {
 	color: var(--template-green-entry-header-bg)
 }
 
+.organizer #masthead,
+.organizer .nav-breadcrumbs,
 .page-template-page-peach #masthead,
 .page-template-page-peach .entry-header,
 .page-template-page-peach .entry-header .entry-title,
@@ -162,4 +166,18 @@ h3 {
 
 #primary .gform_wrapper.gravity-theme .ginput_total {
 	color: var(--accent1s1);
+}
+
+
+.wpcsp_speaker .entry-content {
+	background: var(--black);
+}
+
+.wpcsp_sponsor .entry-content {
+	background: var(--black);
+}
+
+.wpcsp_speaker.wpcsp_speaker_level-organizers .entry-content,
+.wpcsp_speaker.wpcsp_speaker_level-lead-organizers .entry-content {
+	background: var(--black);
 }
