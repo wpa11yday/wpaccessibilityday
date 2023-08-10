@@ -159,3 +159,7 @@ h3 {
 .highlight-text p {
 	color: var(--bg);
 }
+
+#primary .gform_wrapper.gravity-theme .ginput_total {
+	color: var(--accent1s1);
+}
