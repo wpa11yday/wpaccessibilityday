@@ -118,7 +118,7 @@ h3 {
 .page-template-page-blue .entry-header .page-excerpt,
 .page-template-page-blue .nav-breadcrumbs {
 	background: var(--black);
-	color: var(--template-blue-entry-header-bg)
+	color: var(--accent1s1)
 }
 
 .blog #masthead,
