@@ -224,6 +224,7 @@ button.toggle-details:hover,
 button.toggle-details:focus,
 .is-style-button-underline a:focus {
 	background: transparent;
+	color: var(--fg);
 	box-shadow: none;
 	outline: 2px solid;
 	outline-offset: 2px;
