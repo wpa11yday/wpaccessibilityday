@@ -1081,6 +1081,7 @@ label[for=matomo_optout_checkbox] {
 	left: 50%;
 	top: -2rem;
 	z-index: 0;
+	max-width: 50%;
 }
 
 .entry-header-subscribe svg {
