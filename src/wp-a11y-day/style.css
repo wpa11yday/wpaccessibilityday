@@ -2311,6 +2311,14 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	}
 }
 
+/* Breakpoint for the internal headers that are wider than content.*/
+@media screen and (max-width: 75em) {
+	.nav-breadcrumbs > p,
+	.entry-header .entry-header-content {
+		padding: 0 20px;
+	}
+}
+
 /* Breakpoint on small screens. */
 @media screen and (max-width: 60em) {
 	.home .entry-header {
@@ -2340,7 +2348,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		display:block;
 		margin:.5em auto
 	}
-	
+
 	.main-navigation {
 		width: 100%;
 	}
