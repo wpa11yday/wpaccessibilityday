@@ -2210,6 +2210,10 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	border: 4px solid var(--sponsorship-microsponsors-border-color);
 }
 
+.wpcsp-sponsors .wpcsp-sponsor-level .wpcsp-sponsor-level-heading span {
+	background-color: transparent;
+}
+
 .wpcsp-sponsor-description a {
 	padding: 8px;
 }
