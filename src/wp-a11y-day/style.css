@@ -2210,6 +2210,10 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	border: 4px solid var(--sponsorship-microsponsors-border-color);
 }
 
+.wpcsp-sponsor-description a {
+	padding: 8px;
+}
+
 .gv-grid-col-2-3 {
 	width:100%
 }
