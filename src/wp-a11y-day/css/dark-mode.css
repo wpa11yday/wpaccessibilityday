@@ -181,3 +181,11 @@ h3 {
 .wpcsp_speaker.wpcsp_speaker_level-lead-organizers .entry-content {
 	background: var(--black);
 }
+
+.single-wpcsp_sponsor .wpcsp-sponsor-swag {
+    background: var(--accent1s2);
+}
+
+.single-wpcsp_sponsor .wpcsp-sponsor-swag h2 {
+    color: var(--accent4s1);
+}
