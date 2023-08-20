@@ -435,6 +435,20 @@
 	font-weight:100!important
 }
 
+#opening-remarks {
+	background: transparent;
+}
+
+#opening-remarks .talk-speakers,
+#opening-remarks.schedule .talk-wrapper div:nth-of-type(2) {
+	display:none;
+}
+
+#opening-remarks.schedule .wp-block-columns.inside {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 @media screen and (min-width: 60em) {
 	.lead-organizers .wp-block-group__inner-container {
 		grid-template-columns:1fr 1fr 1fr
