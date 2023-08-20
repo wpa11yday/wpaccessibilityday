@@ -692,3 +692,16 @@ function wpad_set_schedule_template( $single_template ) {
 	return $single_template;
 }
 add_filter( 'single_template', 'wpad_set_schedule_template', 15 );
+
+/**
+ * Re-enable duotone filters in contexts where design requires it.
+ */
+function wpad_duotone_filters() {
+	$array = array( 'organizers', 'speakers', 'volunteers' );
+	foreach ( $array as $page ) {
+		if ( is_page( $page ) ) {
+			add_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+		}
+	}
+}
+add_action( 'parse_query', 'wpad_duotone_filters' );
