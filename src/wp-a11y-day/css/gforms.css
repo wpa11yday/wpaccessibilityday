@@ -73,38 +73,43 @@
 	outline:2px solid var(--accent1)
 }
 
+/**
+ * gform_1: subscription form, main.
+ * gform_18: subscription form, footer (main site), Update Attendee (event site)
+ * gform_24: subscription form, footer (event site).
+ */
 @media only screen and (max-width: 600px) {
-	#gform_1, #gform_24, #gform_18 {
+	#gform_1, #gform_24, footer #gform_18 {
 		display:block!important
 	}
 
 	#gform_24 .gform_footer,#gform_24 .gform_page_footer,
-	#gform_18 .gform_footer,#gform_18 .gform_page_footer,
+	footer #gform_18 .gform_footer, footer #gform_18 .gform_page_footer,
 	#gform_1 .gform_footer,#gform_1 .gform_page_footer {
 		margin:0!important;
 		padding:0!important
 	}
 }
 
-#gform_18,
+footer #gform_18,
 #gform_24,
 #gform_1 {
 	display:flex
 }
 
-#gform_18 .gform-body,
+footer #gform_18 .gform-body,
 #gform_24 .gform-body,
 #gform_1 .gform-body {
 	width:75%
 }
 
-#gform_18 .gform-footer,
+footer #gform_18 .gform-footer,
 #gform_24 .gform-footer,
 #gform_1 .gform-footer {
 	padding:0
 }
 
-#gform_18 .gform_footer input,
+footer #gform_18 .gform_footer input,
 #gform_24 .gform_footer input,
 #gform_1 .gform_footer input {
 	margin:0;
