@@ -38,6 +38,7 @@ body {
 	--input-color: var(--bg);
 	--entry-title-color: var(--accent7);
 	--input-border-color: var(--bg);
+	--share-counts-wrap-color: var(--fg);
 }
 
 #page #gform_wrapper_1 .gfield_required,

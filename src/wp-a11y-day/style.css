@@ -167,6 +167,8 @@ body {
 	--wpcsp-speaker-gradient: linear-gradient(to bottom, var(--accent4s1) 0%,var(--accent4s1) 300px,var(--bg) 301px,var(--bg) 100%);
 	--wpcsp-organizer-gradient: linear-gradient(to bottom, var(--accent3s1) 0%,var(--accent3s1) 300px,var(--bg) 301px,var(--bg) 100%);
 	--wpcsp-sponsor-gradient: linear-gradient(to bottom, var(--accent5) 0%,var(--accent5) 300px,var(--bg) 301px,var(--bg) 100%);
+	--sidebar-form-widget-bg: var(--accent6);
+	--sidebar-form-widget-fg: var(--black);
 }
 
 html {
@@ -977,8 +979,13 @@ figure.box-shadow {
 	font-weight: 700;
 }
 
+#sidebar-widgets .gform_widget,
+#sidebar-widgets .gform_widget h2 {
+	background-color: var(--sidebar-form-widget-bg);
+	color: var(--sidebar-form-widget-fg);
+}
+
 #sidebar-widgets .gform_widget {
-	background-color: var(--template-pink-icon-grid-fill);
 	padding: 24px;
 }
 
