@@ -189,3 +189,7 @@ h3 {
 .single-wpcsp_sponsor .wpcsp-sponsor-swag h2 {
     color: var(--accent4s1);
 }
+
+.wpcsp-sponsor-description a {
+	background-color: var(--fg);
+}
