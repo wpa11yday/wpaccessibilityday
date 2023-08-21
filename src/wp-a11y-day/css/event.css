@@ -449,6 +449,10 @@
 	margin-bottom: 0;
 }
 
+#primary .wpcsp-sponsors .wpcsp-sponsor-level .wpcsp-sponsor-list {
+	margin: 0;
+}
+
 @media screen and (min-width: 60em) {
 	.lead-organizers .wp-block-group__inner-container {
 		grid-template-columns:1fr 1fr 1fr
