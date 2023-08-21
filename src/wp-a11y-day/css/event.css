@@ -492,5 +492,8 @@
 		margin-bottom: 24px;
 		padding-bottom: 24px;
 	}
-	
+
+	.wp-block-group.schedule {
+		padding: 40px 24px;
+	}
 }
