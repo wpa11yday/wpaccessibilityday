@@ -6,3 +6,7 @@ body {
 	--bg: Black;
 	--fg: White;
 }
+
+select:focus {
+	color: white;
+}
