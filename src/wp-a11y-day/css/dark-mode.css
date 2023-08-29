@@ -199,3 +199,7 @@ h3 {
 	color: var(--accent4);
 	background: var(--s1);
 }
+
+select:focus {
+	color: white;
+}
