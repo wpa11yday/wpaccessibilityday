@@ -316,6 +316,7 @@
 
 .wpad-microsponsors,.wpad-attendees {
 	display:grid;
+	row-gap: 16px;
 	padding:0;
 	list-style:none
 }
@@ -335,15 +336,11 @@
 
 .wpad-attendees li h2,.wpad-attendees li h3 {
 	margin:0;
-	font-size:1.1rem
+	font-size:1rem
 }
 
 .wpad-attendees .attendee-info div {
-	font-size:.9rem
-}
-
-.wpad-attendees img {
-	border-radius:8px
+	font-size:.8rem
 }
 
 #page .wpad-donors {
