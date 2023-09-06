@@ -123,7 +123,7 @@ body {
 	--template-peach-icon-grid-fill: var(--accent3);
 	--home-entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 130px,var(--accent4s1) 131px,var(--accent4s1) 100%); 
 	--home-entry-header-bg: var(--accent4);
-	--home-entry-header-subscribe-color: var(--fg);
+	--home-entry-header-cta-color: var(--fg);
 	--utility-menu-current-bg: var(--accent1);
 	--utility-menu-current-color: var(--bg);
 	--utility-menu-current-outline-hover: var(--accent1);
@@ -1083,7 +1083,7 @@ label[for=matomo_optout_checkbox] {
 	
 }
 
-.entry-header svg:not(.entry-header-subscribe svg) {
+.entry-header svg:not(.entry-header-cta svg) {
 	position: absolute;
 	left: 50%;
 	top: -2rem;
@@ -1091,12 +1091,12 @@ label[for=matomo_optout_checkbox] {
 	max-width: 50%;
 }
 
-.entry-header-subscribe svg {
+.entry-header-cta svg {
 	margin-top: 3rem;
 	max-width: 100%;
 }
 
-.entry-header-subscribe #figure-pattern {
+.entry-header-cta #figure-pattern {
 	fill: var(--accent4);
 }
 
@@ -1648,16 +1648,16 @@ h2.event-time {
 }
 
 .footer-navigation-menus,
-.home .entry-header .entry-header-subscribe {
+.home .entry-header .entry-header-cta {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
-.home .entry-header .entry-header-subscribe .gform_wrapper *:not(input) {
-	color: var(--home-entry-header-subscribe-color);
+.home .entry-header .entry-header-cta .widget *:not(input) {
+	color: var(--home-entry-header-cta-color);
 }
 
-.home .entry-header .entry-header-subscribe .gform_wrapper {
+.home .entry-header .entry-header-cta .widget {
 	background: var(--home-entry-header-bg);
 	padding: 32px;
 	margin-top: 24px;
@@ -1671,7 +1671,7 @@ h2.event-time {
 	background-repeat: repeat-x;
 }
 
-.home .entry-header .entry-header-subscribe .gform_wrapper h2 {
+.home .entry-header .entry-header-cta .widget h2 {
 	margin: 0;
 }
 
@@ -1946,7 +1946,7 @@ h3#reply-title small {
 	background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-right.svg) top right no-repeat;
 }
 
-.home .entry-header .widget_text {
+.home .entry-header .widget_text:nth-of-type(1) {
 	order: -1;
 	padding-right: 25%;
 	font-size: 24px;
@@ -2342,7 +2342,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	.home .entry-header h1.entry-title {
 		font-size: 3rem;
 	}
-	.home .entry-header .widget_text {
+	.home .entry-header .widget_text:nth-of-type(1) {
 		font-size: 1.125rem;
 	}
 	#utility-menu .wp-block-button a {
@@ -2359,7 +2359,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		font-size:1.2rem
 	}
 
-	.home .entry-header .entry-header-subscribe, .menu-toggle,.main-navigation.toggled-on .menu-primary-navigation-container {
+	.home .entry-header .entry-header-cta, .menu-toggle,.main-navigation.toggled-on .menu-primary-navigation-container {
 		display:block;
 		margin:.5em auto
 	}
@@ -2443,7 +2443,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		padding-right: 1rem;
 	}
 
-	.entry-header svg:not(.entry-header-subscribe svg) {
+	.entry-header svg:not(.entry-header-cta svg) {
 		top: 0;
 		display: none;
 	}
@@ -2546,7 +2546,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	    background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-right.svg) no-repeat calc(100% - 24px) top/100px;;
 	}
 
-	.home .entry-header .entry-header-subscribe .gform_wrapper {
+	.home .entry-header .entry-header-cta .widget {
 		margin-top: 0;
 	}
 

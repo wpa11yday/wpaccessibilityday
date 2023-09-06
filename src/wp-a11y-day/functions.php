@@ -195,6 +195,16 @@ function wp_accessibility_day_widgets_init() {
 	);
 	register_sidebar(
 		array(
+			'name'          => __( 'Entry Header CTA', 'wp-accessibility-day' ),
+			'id'            => 'entry-header-cta',
+			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+			'after_widget'  => "</div>",
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
 			'name'          => __( 'Sidebar', 'wp-accessibility-day' ),
 			'id'            => 'sidebar-widget-area',
 			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
@@ -611,7 +621,11 @@ add_action( 'wp_body_open', 'wpad_archive_header' );
  */
 function wpad_email_form_in_header() {
 	if ( is_front_page() ) {
-		echo '<div class="entry-header-subscribe"><div>' . wpad_figure_svg() . '</div>' . do_shortcode( '[gravityform id="1"]' ) . '</div>';
+		ob_start();
+		dynamic_sidebar( 'entry-header-cta' );
+		$sidebar = ob_get_contents();
+		ob_end_clean();
+		echo '<div class="entry-header-cta"><div>' . wpad_figure_svg() . '</div>' . $sidebar . '</div>';
 	}
 }
 add_action( 'wpad_entry_header', 'wpad_email_form_in_header' );
