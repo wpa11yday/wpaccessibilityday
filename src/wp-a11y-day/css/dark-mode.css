@@ -34,7 +34,7 @@ body {
 	--button-color-hover: var(--bg);
 	--dark-mode-button-bg: var(--accent1s1);
 	--dark-mode-button-color: var(--bg);
-	--home-entry-header-subscribe-color: var(--bg);
+	--home-entry-header-cta-color: var(--bg);
 	--input-color: var(--bg);
 	--entry-title-color: var(--accent7);
 	--input-border-color: var(--bg);
@@ -86,11 +86,11 @@ h3 {
 	color: var(--accent1s2);
 }
 
-.entry-header-subscribe #figure-pattern {
+.entry-header-cta #figure-pattern {
 	fill: var(--fg);
 }
 
-.entry-header svg g:not(.entry-header-subscribe svg g) {
+.entry-header svg g:not(.entry-header-cta svg g) {
 	fill: var(--bg);
 }
 
