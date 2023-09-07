@@ -542,10 +542,8 @@ table {
 	border-bottom: none;
 }
 
-.wp-block-button:not(.is-style-button-underline, .is-style-arrow) a,
+a.button, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a,
 button,input[type="button"],input[type="reset"],input[type="submit"] {
-	border:1px solid;
-	border-radius:3px;
 	line-height:1.5;
 	padding:.6em 1em .4em;
 	box-shadow: 4px 4px 0 var(--button-shadow);
@@ -553,8 +551,13 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	display: inline-block;
 }
 
-.wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:hover, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:focus,
+.entry-header-cta a.button {
+	box-shadow: 4px 4px 0 white;
+}
+
+a.button:hover, a.button:focus,.wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:hover, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:focus,
 button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {
+	outline: none;
 	box-shadow: 4px 4px 0 var(--button-shadow-hover);
 	color: var(--button-color-hover);
 }
@@ -1653,7 +1656,7 @@ h2.event-time {
 	grid-template-columns: 1fr 1fr;
 }
 
-.home .entry-header .entry-header-cta .widget *:not(input) {
+.home .entry-header .entry-header-cta .widget *:not(input,a) {
 	color: var(--home-entry-header-cta-color);
 }
 
