@@ -508,6 +508,10 @@ li > ul,li > ol {
 	margin-left:1.5em
 }
 
+.post li {
+	margin-bottom: 8px;
+}
+
 dt {
 	font-weight:700
 }
