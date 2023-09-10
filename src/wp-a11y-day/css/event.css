@@ -368,18 +368,6 @@
 	margin:0 -1em
 }
 
-.wp-block-column .slides a {
-	font-size:1rem;
-	padding:4px 6px;
-	border:1px solid var(--color-dark-purple);
-	background:#fff;
-	text-decoration:none
-}
-
-.wp-block-column .slides a:hover,.wp-block-column .slides a:focus {
-	border-bottom:3px solid
-}
-
 .session_id {
 	font-family:courier;
 	margin-left:5px;
@@ -496,5 +484,11 @@
 
 	.wp-block-group.schedule {
 		padding: 40px 24px;
+	}
+
+	.single-wpcsp_sponsor .wpcsp-sponsor-swag {
+		border: none;
+		margin-bottom: 24px;
+		margin-top: 24px;
 	}
 }
