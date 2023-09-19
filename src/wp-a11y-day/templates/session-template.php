@@ -36,13 +36,13 @@ get_header(); ?>
 					<?php
 					if ( $session_date ) {
 						$datatime = gmdate( 'Y-m-d\TH:i:s\Z', $session_time );
-						echo '<h2 class="wpsc-single-session-time talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . ' UTC</span></h2>';
+						echo '<h2 class="wpsc-single-session-time general-session talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . ' UTC</span></h2>';
 					} else {
 						$parent_session = get_post_meta( $session_post->ID, '_wpad_session', true );
 						$session_time   = absint( get_post_meta( $parent_session, '_wpcs_session_time', true ) );
 						$session_date   = ( $session_time ) ? gmdate( 'F j, Y', $session_time ) : '';
 						$datatime       = gmdate( 'Y-m-d\TH:i:s\Z', $session_time );
-						echo '<h2 class="wpsc-single-session-time talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . '</span></h2>';
+						echo '<h2 class="wpsc-single-session-time parent-session talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . '</span></h2>';
 					}
 					?>
 					</div>
