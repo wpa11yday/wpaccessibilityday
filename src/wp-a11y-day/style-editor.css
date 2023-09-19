@@ -6,3 +6,7 @@
 
 /* Width of "full-width" blocks */
 .wp-block[data-align="full"] { max-width: none; }
+
+.wp-block-quote {
+	padding: 0 1.5rem;
+}
