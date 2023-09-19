@@ -17,6 +17,10 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		 */
 		load_theme_textdomain( 'wp-accessibility-day', get_template_directory() . '/languages' );
 
+		// Support editor styles.
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'style-editor.css' );
+
 		// Support responsive embedding.
 		add_theme_support( 'responsive-embeds' );
 
