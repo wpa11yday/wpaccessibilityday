@@ -546,6 +546,7 @@ table {
 	border-bottom: none;
 }
 
+h2 .simpletoc-collapsible,
 a.button, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a,
 button,input[type="button"],input[type="reset"],input[type="submit"] {
 	line-height:1.5;
@@ -559,6 +560,7 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	box-shadow: 4px 4px 0 white;
 }
 
+.simpletoc h2 .simpletoc-collapsible:hover, .simpletoc h2 .simpletoc-collapsible:focus,
 a.button:hover, a.button:focus,.wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:hover, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:focus,
 button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {
 	outline: none;
@@ -2013,6 +2015,7 @@ input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,
 	background:var(--input-bg-focus)
 }
 
+h2 .simpletoc-collapsible,
 .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a,
 input[type="submit"],button,.button {
 	background:var(--button-bg);
@@ -2024,6 +2027,7 @@ input[type="submit"],button,.button {
 	text-decoration: none;
 }
 
+.simpletoc h2 .simpletoc-collapsible:hover, .simpletoc h2 .simpletoc-collapsible:focus,
 .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:hover, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:focus,
 input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,.button:hover,.button:focus {
 	background:var(--button-bg-hover);

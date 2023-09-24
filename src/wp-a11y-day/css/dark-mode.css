@@ -204,6 +204,9 @@ select:focus {
 	color: white;
 }
 
+#simpletoc-content-container.simpletoc-content {
+	background-color: var(--black);
+}
 
 @media screen and (max-width: 60em) {
 	.single-wpcsp_sponsor .wpcsp-sponsor-grid:nth-of-type(1) {
