@@ -131,3 +131,7 @@ footer #gform_18 .gform_footer input,
 #primary .gform_wrapper.gravity-theme .gfield_required {
 	padding-left: .25rem;
 }
+
+#signup-welcome p span {
+	font-weight: 700;
+}

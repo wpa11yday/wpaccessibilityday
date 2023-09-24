@@ -521,9 +521,9 @@ add_action('wp', 'custom_maybe_activate_user', 9);
  */
 function wpad_headers( $headers, $wp ) {
 	// Disable caching on sponsor post type single.
-	if ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) {
+	//if ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) {
 		$headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0';
-	}
+	//}
 
 	return $headers;
 }
@@ -617,7 +617,6 @@ function wpad_archive_header() {
 	}
 }
 add_action( 'wp_body_open', 'wpad_archive_header' );
-
 
 /**
  * Add email form to home page header.
@@ -723,3 +722,11 @@ function wpad_duotone_filters() {
 	}
 }
 add_action( 'parse_query', 'wpad_duotone_filters' );
+
+/**
+ * Remove styling from Gravity Forms User Registration plugin.
+ */
+function wpad_remove_gf_action() {
+	remove_action( 'wp_head', 'wpmu_activate_stylesheet' );
+}
+add_action( 'init', 'wpad_remove_gf_action' );
