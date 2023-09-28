@@ -619,6 +619,16 @@ function wpad_archive_header() {
 add_action( 'wp_body_open', 'wpad_archive_header' );
 
 /**
+ * Display archive site headers.
+ */
+function wpad_webinar_info_header() {
+	if ( current_user_can( 'manage_options' ) ) {
+		echo sprintf( '<aside id="wpad-archive"><p>We have run into an issue with the webinar that requires us to end the Zoom webinar and start a new one. Please check your registered email for an invitation to the new webinar!</p></aside>', $title );
+	}
+}
+add_action( 'wp_body_open', 'wpad_webinar_info_header' );
+
+/**
  * Add email form to home page header.
  *
  */
