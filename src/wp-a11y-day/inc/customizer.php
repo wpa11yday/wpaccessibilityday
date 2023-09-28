@@ -15,6 +15,28 @@ function wp_accessibility_day_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	$wp_customize->add_section( 'wpad_header' , array(
+		'title'       => __( 'Notification', 'wp-accessibility-day' ),
+		'priority'    => 202,
+		'description' => __( 'Add a notification above the header.', 'wp-accessibility-day' ),
+	) );
+
+	$wp_customize->add_setting( 'wpad_banner_text', array( 
+		'default' => '',
+		'sanitize_callback' => 'wp_kses_post', 
+	) );
+
+	// Content Display
+	$wp_customize->add_control( 
+		'aztap_control_banner_text', 
+		array(
+			'label'    => __( 'Notification text', 'wp-accessibility-day' ),
+			'section'  => 'wpad_header',
+			'settings' => 'wpad_banner_text',
+			'type'     => 'textarea',
+		)
+	);
+
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',

@@ -204,6 +204,7 @@ select:focus {
 	color: white;
 }
 
+#wpad-notice p,
 #wpad-archive p {
 	color: var(--bg);
 }

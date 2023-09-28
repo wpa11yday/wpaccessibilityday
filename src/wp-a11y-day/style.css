@@ -164,6 +164,7 @@ body {
 	--dark-mode-button-bg-hover: var(--accent1);
 	--dark-mode-button-color-hover: var(--bg);
 	--wpad-archive-bg: var(--accent1s1);
+	--wpad-notice-bg: var(--accent1s1);
 	--wpcsp-speaker-gradient: linear-gradient(to bottom, var(--accent4s1) 0%,var(--accent4s1) 300px,var(--bg) 301px,var(--bg) 100%);
 	--wpcsp-organizer-gradient: linear-gradient(to bottom, var(--accent3s1) 0%,var(--accent3s1) 300px,var(--bg) 301px,var(--bg) 100%);
 	--wpcsp-sponsor-gradient: linear-gradient(to bottom, var(--accent5) 0%,var(--accent5) 300px,var(--bg) 301px,var(--bg) 100%);
@@ -2306,6 +2307,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	color: var(--dark-mode-button-color-hover);
 }
 
+#wpad-notice,
 #wpad-archive {
 	background: var(--wpad-archive-bg);
 	text-align: center;

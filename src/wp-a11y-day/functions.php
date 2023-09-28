@@ -619,10 +619,14 @@ function wpad_archive_header() {
 add_action( 'wp_body_open', 'wpad_archive_header' );
 
 /**
- * Display archive site headers.
+ * Display customizable banner in header.
  */
 function wpad_webinar_info_header() {
-	echo '<aside id="wpad-archive"><p>We have run into an issue with the webinar that requires us to end the Zoom webinar and start a new one. Please check your registered email for an invitation to the new webinar!</p></aside>';
+	$statement = ( '' !== trim( get_theme_mod( 'wpad_banner_text' ) ) ) ? get_theme_mod( 'wpad_banner_text' ) : '';
+
+	if ( $statement ) {
+		echo '<aside id="wpad-notice">' . wpautop( $statement ) . '</aside>';
+	}
 }
 add_action( 'wp_body_open', 'wpad_webinar_info_header' );
 
