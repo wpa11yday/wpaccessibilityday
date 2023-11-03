@@ -6,7 +6,7 @@ This is the theme used by WordPress Accessibility Day. Version 1.0 (untagged) wa
 
 ## Contributing
 
-Fixes and enhancements for the theme are welcome and encouraged! For more information about contributing, please visit [CONTRIBUTING.md](https://github.com/WordPress/wp-accessibility-day/blob/master/CONTRIBUTING.md).
+Fixes and enhancements for the theme are welcome and encouraged! For more information about contributing, please visit [CONTRIBUTING.md](https://github.com/wpa11yday/wpaccessibilityday/blob/main/CONTRIBUTING.md).
 
 ## Releasing
 
