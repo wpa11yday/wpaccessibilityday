@@ -1,5 +1,18 @@
 <?php
 
+require 'inc/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$wpad_theme_update_checker = PucFactory::buildUpdateChecker(
+	'https://github.com/wpa11yday/wpaccessibilityday',
+	__FILE__,
+	'wp-a11y-day'
+);
+
+// Set the branch that contains the stable release.
+$wpad_theme_update_checker->setBranch( 'main' );
+
+
 if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
