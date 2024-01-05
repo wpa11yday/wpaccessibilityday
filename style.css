@@ -557,6 +557,34 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	display: inline-block;
 }
 
+.able-big-play-button {
+	box-shadow: none;
+}
+
+.able-big-play-button svg {
+	padding: 1rem;
+	border-radius: 12px;
+}
+
+.able-big-play-button:hover,
+.able-big-play-button:focus {
+	color: var(--bg);
+	box-shadow: none;
+}
+
+.able-transcript-area {
+	border-color: var(--light-gray);
+	margin-bottom: 1rem;
+}
+
+.able-transcript {
+	background: transparent;
+}
+
+.able-wrapper {
+	margin: 0;
+}
+
 .entry-header-cta a.button {
 	box-shadow: 4px 4px 0 white;
 }

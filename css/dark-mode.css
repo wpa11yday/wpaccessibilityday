@@ -209,6 +209,15 @@ select:focus {
 	color: var(--bg);
 }
 
+.able-transcript {
+	background: var(--bg);
+}
+
+.able-transcript .able-highlight {
+	color: var(--accent4) !important;
+	outline: 1px solid;
+}
+
 #page .footer-sidebar .widget-sidebar-column:nth-of-type(2) .gform_wrapper.gravity-theme .gfield_required {
 	color: var(--bg);
 }
