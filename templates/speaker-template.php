@@ -38,7 +38,7 @@ get_header(); ?>
 			);
 			$sessions = get_posts( $args );
 			if ( get_post_meta( get_the_ID(), 'wpcsp_user_email', true ) ) {
-				$author = get_user_by( 'email', get_post_meta( 'wpcsp_user_email' ) );
+				$author = get_user_by( 'email', get_post_meta( get_the_ID(), 'wpcsp_user_email', true ) );
 				$args   = array(
 					'numberposts' => -1,
 					'post_type'   => 'post',
