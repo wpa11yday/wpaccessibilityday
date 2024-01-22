@@ -37,6 +37,15 @@ get_header(); ?>
 				),
 			);
 			$sessions = get_posts( $args );
+			if ( get_post_meta( get_the_ID(), 'wpcsp_user_email', true ) ) {
+				$author = get_user_by( 'email', get_post_meta( 'wpcsp_user_email' ) );
+				$args   = array(
+					'numberposts' => -1,
+					'post_type'   => 'post',
+					'author'      => $author->ID,
+				);
+				$posts  = get_posts( $args );
+			}
 			?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -94,6 +103,18 @@ get_header(); ?>
 							<h2>About <?php echo esc_html( $full_name ); ?></h2>
 
 							<?php the_content(); ?>
+
+							<?php if ( $posts ) { ?>
+								<h2>Sessions</h2>
+								<ul>
+									<?php foreach ( $posts as $post ) { ?>
+										<li>
+											<a href="<?php echo get_the_permalink( $post->ID ); ?>"><?php echo esc_html( $post->post_title ); ?></a>
+											<time datetime="<?php echo get_the_date( 'Y-m-d/TH:i:sp', $post->ID ); ?>"><?php echo get_the_date( '', $post->ID ); ?></time>
+										</li>
+									<?php } ?>
+								</ul>
+							<?php } ?>
 
 							<?php if ( $sessions ) { ?>
 								<h2>Sessions</h2>
