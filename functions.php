@@ -581,11 +581,20 @@ add_action( 'gform_after_submission_2', function( $entry ) {
  * @param array  $form Gravity form schema.
  */
 function wpad_map_alt_to_image( $post_id, $feed, $entry, $form ) {
-	// Both alt text fields have ID 42; but I'll track them separately in case of future changes.
-	if ( 11 === (int) $entry['form_id'] ) {
-		$alt_id = 42;
-	} else {
-		$alt_id = 42;
+	$alt_id = false;
+	switch ( $entry['form_id'] ) {
+		case 11:
+			$alt_id = 42;
+			break;
+		case 9:
+			$alt_id = 42;
+			break;
+		case 26:
+			$alt_id = 24;
+			break;
+	}
+	if ( ! $alt_id ) {
+		return;
 	}
 	$alt            = $entry[ $alt_id ];
 	$post_thumbnail = get_post_thumbnail_id( $post_id );
@@ -595,6 +604,8 @@ function wpad_map_alt_to_image( $post_id, $feed, $entry, $form ) {
 add_action( 'gform_advancedpostcreation_post_after_creation_9', 'wpad_map_alt_to_image', 10, 4 );
 // Volunteer onboarding form.
 add_action( 'gform_advancedpostcreation_post_after_creation_11', 'wpad_map_alt_to_image', 10, 4 );
+// Organizer onboarding form.
+add_action( 'gform_advancedpostcreation_post_after_creation_26', 'wpad_map_alt_to_image', 10, 4 );
 
 /**
  * Assign speaker to their session post after submission.
