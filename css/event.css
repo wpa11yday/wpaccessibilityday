@@ -282,6 +282,7 @@
 
 .wpcsp_sponsor .wpcsp-sponsor-social-icon-link, .single-wpcsp_speaker .wpcsp-speaker-social-icon-link {
 	line-height: 1;
+	display: block;
 }
 
 .wpcsp_sponsor .wpcsp-sponsor-social-icon, .single-wpcsp_speaker .wpcsp-speaker-social-icon {
