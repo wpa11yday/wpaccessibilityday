@@ -1819,6 +1819,10 @@ h2.event-time {
 	border-bottom: 4px solid transparent;
 }
 
+#footer-utility-navigation .menu > li {
+	margin-right: 0;
+}
+
 .navigation .menu > li.current-menu-item {
 	border-bottom: 4px solid var(--menu-current-item-border-color);
 }
