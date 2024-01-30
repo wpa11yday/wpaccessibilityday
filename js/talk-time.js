@@ -68,5 +68,10 @@
 		details.replaceWith( '<details>' + details.html() + '</details>' );
 	}
 
+	var emptyLabel = document.querySelector( '#gform_fields_login .gfield_label_before_complex' );
+	if ( emptyLabel ) {
+		emptyLabel.remove();
+	}
+
 	});
 }(jQuery));
