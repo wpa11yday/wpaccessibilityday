@@ -347,7 +347,7 @@ function wp_accessibility_day_scripts() {
 		'lightModeLockup'  => get_template_directory_uri() . '/assets/lockup.png',
 		'darkModeLockup'   => get_template_directory_uri() . '/assets/lockup-dark.png',
 	);
-	if ( is_wpad_main_site() ) {
+	if ( is_wpad_main_site() || 'template' === $year ) {
 		$args['lightModeLogo'] = get_template_directory_uri() . '/assets/logo-base.png';
 		$args['darkModeLogo']  = get_template_directory_uri() . '/assets/logo-base-dark.png';
 	}
@@ -447,10 +447,10 @@ add_filter( 'wp_dropdown_users_args', 'wpad_add_subscribers_to_dropdown', 10, 2 
  * @param string $alt Alternative text.
  */
 function wpad_site_logo( $alt = 'WordPress Accessibility Day' ) {
-	if ( is_wpad_main_site() ) {
+	$year = str_replace( array( 'https://', '.wpaccessibility.day' ), '', home_url() );
+	if ( is_wpad_main_site() || 'template' === $year ) {
 		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-base.png" alt="' . esc_attr( $alt ) . '" />';
 	} else {
-		$year = str_replace( array( 'https://', '.wpaccessibility.day' ), '', home_url() );
 
 		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-' . $year . '.png" alt="' . esc_attr( $alt ) . '" />';
 	}
