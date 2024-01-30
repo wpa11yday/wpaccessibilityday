@@ -337,12 +337,13 @@ function wp_accessibility_day_scripts() {
 	);
 	wp_localize_script( 'wp-accessibility-day-time', 'tz', $args );
 
+	$year = str_replace( array( 'https://', '.wpaccessibility.day' ), '', home_url() );
 	$args = array(
 		'darkstylesheet'   => get_template_directory_uri() . '/css/dark-mode.css?v=' . $dark_style_ver,
 		'hcstylesheet'     => get_template_directory_uri() . '/css/high-contrast.css?v=' . $hc_ver,
 		'hcdarkstylesheet' => get_template_directory_uri() . '/css/high-contrast-dark.css?v=' . $hc_dark_ver,
-		'lightModeLogo'    => get_template_directory_uri() . '/assets/logo.png',
-		'darkModeLogo'     => get_template_directory_uri() . '/assets/logo-dark.png',
+		'lightModeLogo'    => get_template_directory_uri() . '/assets/logo-' . $year . '.png',
+		'darkModeLogo'     => get_template_directory_uri() . '/assets/logo-dark' . $year . '.png',
 		'lightModeLockup'  => get_template_directory_uri() . '/assets/lockup.png',
 		'darkModeLockup'   => get_template_directory_uri() . '/assets/lockup-dark.png',
 	);
@@ -449,7 +450,9 @@ function wpad_site_logo( $alt = 'WordPress Accessibility Day' ) {
 	if ( is_wpad_main_site() ) {
 		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-base.png" alt="' . esc_attr( $alt ) . '" />';
 	} else {
-		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo.png" alt="' . esc_attr( $alt ) . '" />';
+		$year = str_replace( array( 'https://', '.wpaccessibility.day' ), '', home_url() );
+
+		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-' . $year . '.png" alt="' . esc_attr( $alt ) . '" />';
 	}
 }
 add_shortcode( 'logo', 'wpad_site_logo' );
