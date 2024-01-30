@@ -343,7 +343,7 @@ function wp_accessibility_day_scripts() {
 		'hcstylesheet'     => get_template_directory_uri() . '/css/high-contrast.css?v=' . $hc_ver,
 		'hcdarkstylesheet' => get_template_directory_uri() . '/css/high-contrast-dark.css?v=' . $hc_dark_ver,
 		'lightModeLogo'    => get_template_directory_uri() . '/assets/logo-' . $year . '.png',
-		'darkModeLogo'     => get_template_directory_uri() . '/assets/logo-dark' . $year . '.png',
+		'darkModeLogo'     => get_template_directory_uri() . '/assets/logo-dark-' . $year . '.png',
 		'lightModeLockup'  => get_template_directory_uri() . '/assets/lockup.png',
 		'darkModeLockup'   => get_template_directory_uri() . '/assets/lockup-dark.png',
 	);
