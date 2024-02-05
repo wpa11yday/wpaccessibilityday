@@ -33,6 +33,10 @@
 	margin-bottom:5px
 }
 
+.current-talk {
+	background: var(--accent1s1);
+}
+
 .wpcsp-media .logo {
 	padding: 1rem;
 	background: #fff;
