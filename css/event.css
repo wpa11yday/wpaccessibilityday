@@ -37,6 +37,17 @@
 	background: var(--accent1s1);
 }
 
+.wpad-callout {
+	background: var(--accent1s1);
+	padding: 1.5rem 60px;
+	margin: 0 auto 1rem;
+	max-width: 1120px;
+}
+
+.wpad-callout p {
+	margin: 0;
+}
+
 .wpcsp-media .logo {
 	padding: 1rem;
 	background: #fff;
