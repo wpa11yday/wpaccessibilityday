@@ -96,6 +96,11 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		add_theme_support( 'disable-custom-colors' );
 		add_theme_support( 'disable-custom-gradients' );
 
+		/**
+		 * Disable core patterns.
+		 */
+		remove_theme_support( 'core-block-patterns' );
+
 		// Wide alignment.
 		add_theme_support( 'align-wide' );
 
