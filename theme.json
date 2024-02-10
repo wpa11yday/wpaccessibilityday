@@ -2,6 +2,8 @@
     "version": 2,
     "settings": {
         "color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
             "duotone": [
                 {
                     "colors": [ "#000", "#daa6ba" ],
