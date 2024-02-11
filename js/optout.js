@@ -34,6 +34,8 @@
 		var checkbox = document.getElementById( 'matomo_optout_checkbox' );
 		var form     = checkbox.closest( 'form' );
 		var optout   = document.getElementById( 'matomo_opted_out_intro' );
+		var optoutL  = document.getElementById( 'matomo_opted_out_label' );
+		var optinL   = document.getElementById( 'matomo_opted_in_label' );
 		var optafter = document.createElement( 'p' );
 		optafter.setAttribute( 'id', 'matomo_opted_out_intro' );
 		optafter.innerHTML = optout.innerHTML;
@@ -48,12 +50,14 @@
             set_display('matomo_opted_out_label', 'inline');
             set_display('matomo_opted_in_label', 'none');
             by_id('matomo_optout_checkbox').checked = false;
+			wp.a11y.speak( optoutL.innerText + ' ' + optout.innerText );
         } else {
             set_display('matomo_opted_out_intro', 'none');
             set_display('matomo_opted_in_intro', 'block');
             set_display('matomo_opted_out_label', 'none');
             set_display('matomo_opted_in_label', 'inline');
             by_id('matomo_optout_checkbox').checked = true;
+			wp.a11y.speak( optinL.innerText );
         }
     }
     function on_ready(callback) {
