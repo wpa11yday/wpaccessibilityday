@@ -473,7 +473,7 @@ add_filter( 'widget_text', 'shortcode_unautop');
  */
 function wpad_replace_optout( $src ) {
 	if ( false !== strpos( $src, 'optout.js' ) ) {
-		return get_stylesheet_directory_uri() . '/js/optout.js';
+		return get_stylesheet_directory_uri() . '/js/optout.js?v=' . wp_rand( 1000, 2000 );
 	}
 
 	return $src;
