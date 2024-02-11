@@ -548,7 +548,7 @@ table {
 }
 
 h2 .simpletoc-collapsible,
-a.button, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a,
+a.button, .wp-block-button:not(.is-style-button-underline) a,
 button,input[type="button"],input[type="reset"],input[type="submit"] {
 	line-height:1.5;
 	padding:.6em 1em .4em;
@@ -590,7 +590,7 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 }
 
 .simpletoc h2 .simpletoc-collapsible:hover, .simpletoc h2 .simpletoc-collapsible:focus,
-a.button:hover, a.button:focus,.wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:hover, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:focus,
+a.button:hover, a.button:focus,.wp-block-button:not(.is-style-button-underline) a:hover, .wp-block-button:not(.is-style-button-underline) a:focus,
 button:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {
 	outline: none;
 	box-shadow: 4px 4px 0 var(--button-shadow-hover);
@@ -2088,7 +2088,7 @@ input[type="number"]:focus,input[type="url"]:focus,input[type="tel"]:focus,input
 }
 
 h2 .simpletoc-collapsible,
-.wp-block-button:not(.is-style-button-underline, .is-style-arrow) a,
+.wp-block-button:not(.is-style-button-underline) a,
 input[type="submit"],button,.button {
 	background:var(--button-bg);
 	color:var(--button-color);
@@ -2100,41 +2100,10 @@ input[type="submit"],button,.button {
 }
 
 .simpletoc h2 .simpletoc-collapsible:hover, .simpletoc h2 .simpletoc-collapsible:focus,
-.wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:hover, .wp-block-button:not(.is-style-button-underline, .is-style-arrow) a:focus,
+.wp-block-button:not(.is-style-button-underline) a:hover, .wp-block-button:not(.is-style-button-underline) a:focus,
 input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,.button:hover,.button:focus {
 	background:var(--button-bg-hover);
 	color:var(--button-color-hover);
-}
-
-.wp-block-button.is-style-arrow .wp-block-button__link {
-	font-size: max(1rem, 0.5em);
-	font-weight: 400;
-	text-align: left;
-	line-height: 1.1;
-	padding: 1.5em;
-	padding-right: 6rem;
-	position: relative;
-}
-
-.wp-block-button.is-style-arrow .wp-block-button__link:after {
-	content: "\f061";
-	font-family: "Font Awesome 6 Free";
-	font-style: 'normal';
-	font-weight: 900;
-	font-size: max(2rem, 2em);
-	position: absolute;
-	right: 1rem;
-	top: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	box-sizing: border-box;
-}
-
-.wp-block-button.is-style-arrow .wp-block-button__link strong {
-	font-size: max(2rem, 2em);
-	font-weight: 700;
-	display: block;
 }
 
 #primary .alignwide .blocks-gallery-grid {
