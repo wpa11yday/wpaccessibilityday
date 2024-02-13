@@ -34,6 +34,10 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'style-editor.css' );
 
+		if ( ! get_user_meta( get_current_user_id(), 'disable_front_end_styles', true ) ) {
+			add_editor_style( 'style.css' );
+		}
+
 		// Support responsive embedding.
 		add_theme_support( 'responsive-embeds' );
 
