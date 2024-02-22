@@ -46,7 +46,7 @@ get_header(); ?>
 						'author'      => $author->ID,
 					);
 				}
-				$posts  = get_posts( $args );
+				$articles = get_posts( $args );
 			}
 			?>
 
@@ -106,13 +106,13 @@ get_header(); ?>
 
 							<?php the_content(); ?>
 
-							<?php if ( $posts ) { ?>
+							<?php if ( $articles ) { ?>
 								<h2>Posts by <?php echo esc_html( $first_name ); ?></h2>
 								<ul class="wp-block-latest-posts__list has-dates wp-block-latest-posts">
-									<?php foreach ( $posts as $post ) { ?>
+									<?php foreach ( $articles as $article ) { ?>
 										<li>
-											<a class="wp-block-latest-posts__post-title" href="<?php echo get_the_permalink( $post->ID ); ?>"><?php echo esc_html( $post->post_title ); ?></a>
-											<time class="wp-block-latest-posts__post-date" datetime="<?php echo get_the_date( 'Y-m-d\TH:i:sp', $post->ID ); ?>"><?php echo get_the_date( '', $post->ID ); ?></time>
+											<a class="wp-block-latest-posts__post-title" href="<?php echo get_the_permalink( $article->ID ); ?>"><?php echo esc_html( $article->post_title ); ?></a>
+											<time class="wp-block-latest-posts__post-date" datetime="<?php echo get_the_date( 'Y-m-d\TH:i:sp', $article->ID ); ?>"><?php echo get_the_date( '', $article->ID ); ?></time>
 										</li>
 									<?php } ?>
 								</ul>
