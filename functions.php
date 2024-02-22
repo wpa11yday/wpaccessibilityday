@@ -765,6 +765,7 @@ function wpad_duotone_filters() {
 	$array = array( 'organizers', 'speakers', 'volunteers' );
 	foreach ( $array as $page ) {
 		if ( is_page( $page ) ) {
+			// This is deprecated, but there's no alternative provided.
 			add_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 		}
 	}
