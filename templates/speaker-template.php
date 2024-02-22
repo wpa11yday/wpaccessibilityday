@@ -39,11 +39,13 @@ get_header(); ?>
 			$sessions = get_posts( $args );
 			if ( get_post_meta( get_the_ID(), 'wpcsp_user_email', true ) ) {
 				$author = get_user_by( 'email', get_post_meta( get_the_ID(), 'wpcsp_user_email', true ) );
-				$args   = array(
-					'numberposts' => -1,
-					'post_type'   => 'post',
-					'author'      => $author->ID,
-				);
+				if ( is_object( $author ) ) {
+					$args   = array(
+						'numberposts' => -1,
+						'post_type'   => 'post',
+						'author'      => $author->ID,
+					);
+				}
 				$posts  = get_posts( $args );
 			}
 			?>
