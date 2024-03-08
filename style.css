@@ -1440,11 +1440,25 @@ a {
 	color:var(--accent1);
 }
 
-.has-white-color,.has-white-background-color {
+/* Light color assignments. */
+.has-dark-blue-background-color,
+.has-white-color {
 	color:var(--bg)
 }
 
-.has-black-color,.has-black-background-color {
+/* Dark color assignments */
+.has-light-pink-background-color,
+.has-light-blue-background-color,
+.has-lightest-blue-background-color,
+.has-light-green-background-color,
+.has-peach-background-color,
+.has-light-peach-background-color,
+.has-yellow-background-color,
+.has-light-yellow-background-color,
+.has-yellow-green-background-color,
+.has-light-gray-background-color,
+.has-blossom-background-color,
+.has-black-color {
 	color:var(--fg)
 }
 

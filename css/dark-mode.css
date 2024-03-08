@@ -41,6 +41,30 @@ body {
 	--share-counts-wrap-color: var(--fg);
 }
 
+
+
+/* Light color assignments. */
+.has-dark-blue-background-color,
+.has-white-color {
+	color:var(--fg)
+}
+
+/* Dark color assignments */
+.has-light-pink-background-color,
+.has-light-blue-background-color,
+.has-lightest-blue-background-color,
+.has-light-green-background-color,
+.has-peach-background-color,
+.has-light-peach-background-color,
+.has-yellow-background-color,
+.has-light-yellow-background-color,
+.has-yellow-green-background-color,
+.has-light-gray-background-color,
+.has-blossom-background-color,
+.has-black-color {
+	color:var(--bg)
+}
+
 #page #gform_wrapper_1 .gfield_required,
 #page #gform_wrapper_24 .gfield_required {
 	color: var(--bg);
