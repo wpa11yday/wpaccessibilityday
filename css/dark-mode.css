@@ -250,6 +250,10 @@ select:focus {
 	background-color: var(--black);
 }
 
+.gform_wrapper.gravity-theme .gfield_error .gfield_repeater_cell label, .gform_wrapper.gravity-theme .gfield_error label, .gform_wrapper.gravity-theme .gfield_error legend, .gform_wrapper.gravity-theme [aria-invalid="true"] + label, .gform_wrapper.gravity-theme label + [aria-invalid="true"] {
+	color: var(--accent5) !important;
+}
+
 @media screen and (max-width: 60em) {
 	.single-wpcsp_sponsor .wpcsp-sponsor-grid:nth-of-type(1) {
 		background: var(--black);
