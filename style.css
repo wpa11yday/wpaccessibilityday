@@ -1227,6 +1227,13 @@ label[for=matomo_optout_checkbox] {
 	display:initial
 }
 
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+	font-size: 1.2rem;
+	position: static;
+	background: none;
+	color: var(--fg);
+}
+
 .home .entry-header {
 	text-align:left;
 	display: grid;
