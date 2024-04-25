@@ -1,5 +1,6 @@
 /* Pattern: columns-callout-box */
 .callout-box-background {
+  min-height: 100%;
   padding: 40px;
 }
 
