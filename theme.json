@@ -1,6 +1,7 @@
 {
     "version": 2,
     "settings": {
+        "appearanceTools": true,
         "color": {
 			"defaultPalette": false,
 			"defaultGradients": false,

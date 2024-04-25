@@ -1,0 +1,25 @@
+/* Pattern: columns-callout-box */
+.callout-box-background {
+  padding: 40px;
+}
+
+.callout-box-background .wp-block-cover__image-background {
+  margin-left: auto;
+  object-fit: contain;
+  object-position: 110px 100px;
+  width: 330px;
+}
+
+.callout-box-background p {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 60em) {
+  .callout-box-background {
+    padding: 24px;
+  }
+
+  .callout-box-background p {
+    max-width: 100%;
+  }
+}

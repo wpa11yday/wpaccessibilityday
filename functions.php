@@ -33,6 +33,7 @@ if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 		// Support editor styles.
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'style-editor.css' );
+		add_editor_style( 'css/style-shared.css' );
 
 		if ( ! get_user_meta( get_current_user_id(), 'disable_front_end_styles', true ) ) {
 			add_editor_style( 'style.css' );
@@ -320,6 +321,7 @@ add_action( 'after_setup_theme', 'wp_accessibility_day_content_width', 0 );
  */
 function wp_accessibility_day_scripts() {
 	$style_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/style.css' ) );
+	$style_shared_ver      = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/style-shared.css' ) );
 	$dark_style_ver = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/dark-mode.css' ) );
 	$hc_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/high-contrast.css' ) );
 	$hc_dark_ver    = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/css/high-contrast-dark.css' ) );
@@ -330,6 +332,7 @@ function wp_accessibility_day_scripts() {
 	$cs_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/color-scheme.js' ) );
 
 	wp_enqueue_style( 'wp-accessibility-day-style', get_stylesheet_uri(), array(), $style_ver );
+	wp_enqueue_style( 'wp-accessibility-day-style-shared', get_stylesheet_uri() . '/css/style-shared.css', array(), $style_shared_ver );
 	wp_enqueue_style( 'wp-accessibility-day-gforms', get_template_directory_uri() . '/css/gforms.css', array(), $gform_ver );
 	wp_enqueue_style( 'wp-accessibility-day-event', get_template_directory_uri() . '/css/event.css', array(), $event_ver );
 	wp_enqueue_script( 'wp-accessibility-day-navigation', get_template_directory_uri() . '/js/navigation.js', array(), $js_ver, true );
