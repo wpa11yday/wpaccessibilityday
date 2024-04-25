@@ -21,8 +21,8 @@
 
     <!-- wp:column {"backgroundColor":"light-blue"} -->
     <div class="wp-block-column has-light-blue-background-color has-background">
-        <!-- wp:cover {"url":"<?php echo get_template_directory_uri(); ?>/assets/figure.svg","id":3833,"dimRatio":0,"minHeight":334,"className":"callout-box-background"} -->
-        <div class="wp-block-cover callout-box-background" style="min-height:334px">
+        <!-- wp:cover {"url":"<?php echo get_template_directory_uri(); ?>/assets/figure.svg","id":3833,"dimRatio":0,"minHeight":200,"className":"callout-box-background"} -->
+        <div class="wp-block-cover callout-box-background" style="min-height:200px">
             <span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span>
             <img class="wp-block-cover__image-background wp-image-3833" alt="" src="<?php echo get_template_directory_uri(); ?>/assets/figure.svg" data-object-fit="cover"/>
             <div class="wp-block-cover__inner-container">
