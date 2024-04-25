@@ -2,7 +2,7 @@
 /**
  * Title: Columns with Callout Box
  * Slug: wp-accessibility-day/columns-callout-box
- * Categories: columns
+ * Categories: columns, a11y-day-general
  *
  * @package wp-accessibility-day
  */

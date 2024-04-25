@@ -782,3 +782,24 @@ function wpad_remove_gf_action() {
 	remove_action( 'wp_head', 'wpmu_activate_stylesheet' );
 }
 add_action( 'init', 'wpad_remove_gf_action' );
+
+/**
+ * Block Pattern categories
+ */
+function wpad_register_block_patterns() {
+	$block_pattern_categories = array(
+		'a11y-day-general' => array( 'label' => __( 'WP Accessibility Day', 'wp-accessibility-day' ) ),
+	);
+
+	/**
+	 * Filters the theme block pattern categories.
+	 */
+	$block_pattern_categories = apply_filters( 'wpad_block_pattern_categories', $block_pattern_categories );
+
+	foreach ( $block_pattern_categories as $name => $properties ) {
+		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
+			register_block_pattern_category( $name, $properties );
+		}
+	}
+}
+add_action( 'init', 'wpad_register_block_patterns', 9 );
