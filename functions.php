@@ -624,6 +624,9 @@ add_action( 'gform_advancedpostcreation_post_after_creation_9', 'wpad_map_alt_to
 add_action( 'gform_advancedpostcreation_post_after_creation_11', 'wpad_map_alt_to_image', 10, 4 );
 // Organizer onboarding form.
 add_action( 'gform_advancedpostcreation_post_after_creation_26', 'wpad_map_alt_to_image', 10, 4 );
+// Translator onboarding form.
+add_action( 'gform_advancedpostcreation_post_after_creation_35', 'wpad_map_alt_to_image', 10, 4 );
+
 
 /**
  * Assign speaker to their session post after submission.
