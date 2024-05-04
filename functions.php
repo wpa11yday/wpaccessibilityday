@@ -598,14 +598,17 @@ add_action( 'gform_after_submission_2', function( $entry ) {
 function wpad_map_alt_to_image( $post_id, $feed, $entry, $form ) {
 	$alt_id = false;
 	switch ( $entry['form_id'] ) {
-		case 11:
+		case 11: // Volunteer onboarding.
 			$alt_id = 42;
 			break;
-		case 9:
+		case 9: // Speaker onboarding.
 			$alt_id = 42;
 			break;
-		case 26:
+		case 26: // Organizer onboarding.
 			$alt_id = 24;
+			break;
+		case 35: // Translator onboarding.
+			$alt_id = 42;
 			break;
 	}
 	if ( ! $alt_id ) {
