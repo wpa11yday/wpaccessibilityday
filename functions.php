@@ -793,12 +793,19 @@ add_action( 'init', 'wpad_remove_gf_action' );
  * Block Pattern categories
  */
 function wpad_register_block_patterns() {
+	// Array of categories to add
 	$block_pattern_categories = array(
 		'a11y-day-general' => array( 'label' => __( 'WP Accessibility Day', 'wp-accessibility-day' ) ),
 	);
 
 	/**
-	 * Filters the theme block pattern categories.
+	 * Filters the theme block pattern categories so we can register our own.
+	 * 
+	 * @hook wpad_block_pattern_categories
+	 * 
+	 * @param {object} array of categories to add
+	 * 
+	 * @return {object}
 	 */
 	$block_pattern_categories = apply_filters( 'wpad_block_pattern_categories', $block_pattern_categories );
 
