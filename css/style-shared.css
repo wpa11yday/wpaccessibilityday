@@ -24,3 +24,39 @@
     max-width: 100%;
   }
 }
+
+/* Block Style: wpad-decoration-left */
+.is-style-decoration-left {
+  background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) no-repeat 24px top;
+  max-width: 1120px;
+  padding-top: 56px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.is-style-decoration-left > * {
+  max-width: 1040px;
+	margin: 0 0 24px !important;
+  padding-left: 80px;
+}
+
+/* Breakpoint on small screens. */
+@media screen and (max-width: 60em) {
+  .is-style-decoration-left {
+    padding-top: 64px;
+  }
+
+  .is-style-decoration-left > * {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .is-style-decoration-left {
+    padding-top: 104px;
+  }
+
+  .is-style-decoration-left > * {
+    padding-left: 0;
+  }
+}

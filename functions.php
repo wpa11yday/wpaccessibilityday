@@ -332,7 +332,7 @@ function wp_accessibility_day_scripts() {
 	$cs_ver         = gmdate( 'ymd-Gis', filemtime( get_stylesheet_directory() . '/js/color-scheme.js' ) );
 
 	wp_enqueue_style( 'wp-accessibility-day-style', get_stylesheet_uri(), array(), $style_ver );
-	wp_enqueue_style( 'wp-accessibility-day-style-shared', get_stylesheet_uri() . '/css/style-shared.css', array(), $style_shared_ver );
+	wp_enqueue_style( 'wp-accessibility-day-style-shared', get_template_directory_uri() . '/css/style-shared.css', array(), $style_shared_ver );
 	wp_enqueue_style( 'wp-accessibility-day-gforms', get_template_directory_uri() . '/css/gforms.css', array(), $gform_ver );
 	wp_enqueue_style( 'wp-accessibility-day-event', get_template_directory_uri() . '/css/event.css', array(), $event_ver );
 	wp_enqueue_script( 'wp-accessibility-day-navigation', get_template_directory_uri() . '/js/navigation.js', array(), $js_ver, true );
@@ -790,7 +790,7 @@ function wpad_remove_gf_action() {
 add_action( 'init', 'wpad_remove_gf_action' );
 
 /**
- * Block Pattern categories
+ * Register new block pattern categories
  */
 function wpad_register_block_patterns() {
 	// Array of categories to add
@@ -816,3 +816,17 @@ function wpad_register_block_patterns() {
 	}
 }
 add_action( 'init', 'wpad_register_block_patterns', 9 );
+
+/**
+ * Register new block styles
+ */
+function wpad_register_block_styles() {
+	register_block_style(
+		'core/group',
+		array(
+			'name'  => 'decoration-left',
+			'label' => __( 'Decoration Left', 'ow' ),
+			'style_handle' => 'decoration-left'
+		)
+	);
+}
