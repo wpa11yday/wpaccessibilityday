@@ -829,4 +829,13 @@ function wpad_register_block_styles() {
 			'style_handle' => 'decoration-left'
 		)
 	);
+
+	register_block_style(
+		'core/group',
+		array(
+			'name'  => 'stylized-2col',
+			'label' => __( 'Stylized 2 Columns', 'ow' ),
+			'style_handle' => 'stylized-2col'
+		)
+	);
 }
