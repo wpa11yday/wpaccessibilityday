@@ -36,8 +36,8 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 				'<button />',
 				{
 					'class': 'dropdown-toggle',
-					'aria-expanded': false,
-					'aria-haspopup': 'menu',
+					'aria-expanded' : false,
+					'aria-haspopup' : 'menu',
 					'type' : 'button'
 				}
 			).append( $(
@@ -50,15 +50,14 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 		);
 		dropdownToggle.append( $( '<span class="dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>' ) );
 
-		//console.log($(this).text());
 		$(this).after( dropdownToggle );
 	});
 
-	// Toggles the sub-menu when dropdown toggle button clicked
+	// Toggles the sub-menu when dropdown toggle button clicked.
 	menuContainer.find( '.dropdown-toggle' ).on( 'click', function(e) {
 		var dashicon = $( this ).find( '.dashicons' );
 
-		// close open submenus
+		// close open submenus.
 		$( '.dropdown-toggle' ).not(this).each(function(){
 
 			$(this).removeClass( 'toggled-on' );
@@ -82,7 +81,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
 	});
 
-	// Adds a class to sub-menus for styling
+	// Adds a class to sub-menus for styling.
 	$('.sub-menu .menu-item-has-children').parent('.sub-menu').addClass('has-sub-menu');
 
 	$( '.menu-item-has-children a, .sub-menu' ).on( 'mouseover', function(e) {
@@ -93,18 +92,18 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 		$(this).parent( 'li' ).removeClass( 'focus' );
 	});
 
-	// Keyboard navigation
+	// Keyboard navigation.
 	$( '.menu-item a, button.dropdown-toggle' ).on('keydown', function(e) {
 
 		if ( [37,38,39,40,27].indexOf(e.keyCode) == -1 ) {
 			return;
 		}
 		switch (e.keyCode) {
-			case 27: // escape key
+			case 27: // escape key.
 				$(this).parents('ul').first().prev('.dropdown-toggle.toggled-on').focus();
 				$(this).parents('ul').first().prev('.dropdown-toggle.toggled-on').click();
 				break;
-			case 37: // left key
+			case 37: // left key.
 				e.preventDefault();
 				e.stopPropagation();
 				if ( $(this).hasClass('dropdown-toggle') ) {
@@ -121,7 +120,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 					$(this).parents('ul.sub-menu.toggled-on li').children('button.dropdown-toggle').focus();
 				}
 			break;
-			case 39: // right key
+			case 39: // right key.
 				e.preventDefault();
 				e.stopPropagation();
 				if ( $(this).next('button.dropdown-toggle').length ) {
@@ -133,7 +132,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 					$(this).parent().find('ul.sub-menu li:first-child a').focus();
 				}
 			break;
-			case 40: // down key
+			case 40: // down key.
 				e.preventDefault();
 				e.stopPropagation();
 				if ( $(this).next().length ) {
