@@ -37,6 +37,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 				{
 					'class': 'dropdown-toggle',
 					'aria-expanded': false,
+					'aria-haspopup': 'menu',
 					'type' : 'button'
 				}
 			).append( $(
