@@ -39,6 +39,7 @@ body {
 	--entry-title-color: var(--accent7);
 	--input-border-color: var(--bg);
 	--share-counts-wrap-color: var(--fg);
+	--wpad-archive: var(--bg);
 }
 
 
