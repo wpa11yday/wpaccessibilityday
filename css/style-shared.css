@@ -1,84 +1,84 @@
 /* Pattern: columns-callout-box */
 .callout-box-background {
-  min-height: 100%;
-  padding: 40px;
+	min-height: 100%;
+	padding: 40px;
 }
 
 .callout-box-background .wp-block-cover__image-background {
-  margin-left: auto;
-  object-fit: contain;
-  object-position: 110px 100px;
-  width: 330px;
+	margin-left: auto;
+	object-fit: contain;
+	object-position: 110px 100px;
+	width: 330px;
 }
 
 .callout-box-background p {
-  max-width: 300px;
+	max-width: 300px;
 }
 
 @media screen and (max-width: 60em) {
-  .callout-box-background {
-    padding: 24px;
-  }
+	.callout-box-background {
+		padding: 24px;
+	}
 
-  .callout-box-background p {
-    max-width: 100%;
-  }
+	.callout-box-background p {
+		max-width: 100%;
+	}
 }
 
 /* Block Style: wpad-decoration-left */
 .is-style-decoration-left {
-  background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) no-repeat 24px top;
-  max-width: 1120px;
-  padding-top: 56px;
-  padding-left: 24px;
-  padding-right: 24px;
+	background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) no-repeat 24px top;
+	max-width: 1120px;
+	padding-top: 56px;
+	padding-left: 24px;
+	padding-right: 24px;
 }
 .is-style-decoration-left > * {
-  max-width: 1040px;
+	max-width: 1040px;
 	margin: 0 0 24px !important;
-  padding-left: 80px;
+	padding-left: 80px;
 }
 
 /* Block Style: stylized-2col */
 .is-style-stylized-2col {
-  background: url(/wp-content/themes/wp-a11y-day/assets/get-involved.svg) 50% 50% no-repeat;
-  gap: 2em;
-  max-width: 100%;
-  padding: 120px 24px;
+	background: url(/wp-content/themes/wp-a11y-day/assets/get-involved.svg) 50% 50% no-repeat;
+	gap: 2em;
+	max-width: 100%;
+	padding: 120px 24px;
 }
 .is-style-stylized-2col .wp-block-columns {
-  margin: 0 auto;
-  max-width: 740px;
+	margin: 0 auto;
+	max-width: 740px;
 }
 .is-style-stylized-2col .wp-block-column {
-  padding: 40px;
-  background: var(--bg);
-  font-size: 1.125rem;
-  border: 4px solid var(--sponsorship-microsponsors-border-color);
+	padding: 40px;
+	background: var(--bg);
+	font-size: 1.125rem;
+	border: 4px solid var(--sponsorship-microsponsors-border-color);
 }
 
 /* Breakpoint on small screens. */
 @media screen and (max-width: 60em) {
-  /* Block Style: wpad-decoration-left */
-  .is-style-decoration-left {
-    padding-top: 64px;
-  }
-  .is-style-decoration-left > * {
-    padding-left: 60px;
-  }
+	/* Block Style: wpad-decoration-left */
+	.is-style-decoration-left {
+		padding-top: 64px;
+	}
+	.is-style-decoration-left > * {
+		padding-left: 60px;
+	}
 
-  /* Block Style: stylized-2col */
-  .is-style-stylized-2col {
-    background-size: 300%;
-  }
+	/* Block Style: stylized-2col */
+	.is-style-stylized-2col {
+		background-size: 300%;
+	}
 }
 
 @media screen and (max-width: 40em) {
-  /* Block Style: wpad-decoration-left */
-  .is-style-decoration-left {
-    padding-top: 104px;
-  }
-  .is-style-decoration-left > * {
-    padding-left: 0;
-  }
+	/* Block Style: wpad-decoration-left */
+	.is-style-decoration-left {
+		padding-top: 104px;
+	}
+	.is-style-decoration-left > * {
+		padding-left: 0;
+	}
 }
