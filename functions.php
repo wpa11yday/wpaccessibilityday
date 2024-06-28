@@ -825,7 +825,7 @@ function wpad_register_block_styles() {
 		'core/group',
 		array(
 			'name'  => 'decoration-left',
-			'label' => __( 'Decoration Left', 'ow' ),
+			'label' => __( 'Decoration Left', 'wp-accessibility-day' ),
 			'style_handle' => 'decoration-left'
 		)
 	);
@@ -834,7 +834,7 @@ function wpad_register_block_styles() {
 		'core/group',
 		array(
 			'name'  => 'stylized-2col',
-			'label' => __( 'Stylized 2 Columns', 'ow' ),
+			'label' => __( 'Stylized 2 Columns', 'wp-accessibility-day' ),
 			'style_handle' => 'stylized-2col'
 		)
 	);
