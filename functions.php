@@ -839,3 +839,39 @@ function wpad_register_block_styles() {
 		)
 	);
 }
+
+/**
+ * Create Form Editor role.
+ */
+function wpad_add_form_editor() {
+	$exists = get_role( 'form_editor' );
+	if ( ! $exists ) {
+		$editor = get_role( 'editor' );
+		$caps   = $editor->capabilities;
+		$caps['gravityforms_create_form']                    = 1;
+		$caps['gravityforms_delete_forms']                   = 1;
+		$caps['gravityforms_edit_forms']                     = 1;
+		$caps['gravityforms_preview_forms']                  = 1;
+		$caps['gravityforms_view_entries']                   = 1;
+		$caps['gravityforms_edit_entries']                   = 1;
+		$caps['gravityforms_delete_entries']                 = 1;
+		$caps['gravityforms_view_entry_notes']               = 1;
+		$caps['gravityforms_edit_entry_notes']               = 1;
+		$caps['gravityforms_export_entries']                 = 1;
+		$caps['gravityforms_view_settings']                  = 1;
+		$caps['gravityforms_edit_settings']                  = 1;
+		$caps['gravityforms_view_updates']                   = 1;
+		$caps['gravityforms_view_addons']                    = 1;
+		$caps['gravityforms_system_status']                  = 1;
+		$caps['gravityforms_uninstall']                      = 1;
+		$caps['gravityforms_logging']                        = 1;
+		$caps['gravityforms_api_settings']                   = 1;
+		$caps['gravityforms_advancedpostcreation']           = 1;
+		$caps['gravityforms_advancedpostcreation_uninstall'] = 1;
+		$caps['gravityforms_stripe']                         = 1;
+		$caps['gravityforms_stripe_uninstall']               = 1;
+
+		add_role( 'form_editor', 'Form Editor', $caps );
+	}
+}
+add_action( 'admin_init', 'wpad_add_form_editor' );
