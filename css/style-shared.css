@@ -27,16 +27,15 @@
 
 /* Block Style: wpad-decoration-left */
 .is-style-decoration-left {
-	background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) no-repeat 24px top;
+	background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) no-repeat left top;
 	max-width: 1120px;
 	padding-top: 56px;
 	padding-left: 24px;
 	padding-right: 24px;
 }
 .is-style-decoration-left > * {
-	max-width: 1040px;
-	margin: 0 0 24px !important;
-	padding-left: 80px;
+	max-width: 960px;
+	margin: 0 auto 24px !important;
 }
 
 /* Block Style: stylized-2col */
