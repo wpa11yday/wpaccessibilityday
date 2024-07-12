@@ -585,6 +585,24 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 .able-wrapper {
 	margin: 0;
 }
+.able-transcript-area select {
+	height: auto;
+	width: auto;
+	display: inline-block;
+}
+
+.able-left-controls, .able-right-controls {
+	display: flex;
+	gap: 3px;
+	align-items: center;
+}
+
+.able-left-controls div[role=button],
+.able-right-controls div[role=button] {
+	margin: 0;
+	align-content: center;
+	text-align: center;
+}
 
 .entry-header-cta a.button {
 	box-shadow: 4px 4px 0 white;
