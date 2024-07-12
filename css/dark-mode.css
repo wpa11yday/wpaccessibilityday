@@ -263,3 +263,8 @@ select:focus {
 input[data-com-onepassword-filled="dark"] {
 	color: #fff;
 }
+
+.able-big-play-button:hover,
+.able-big-play-button:focus {
+	color: var(--fg);
+}
