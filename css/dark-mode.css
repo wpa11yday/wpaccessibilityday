@@ -258,3 +258,8 @@ select:focus {
 		background: var(--black);
 	}
 }
+
+/* 1Password overrides background, but not color. */
+input[data-com-onepassword-filled="dark"] {
+	color: #fff;
+}
