@@ -582,6 +582,10 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	background: transparent;
 }
 
+.able-transcript-container[lang="he"] {
+	direction: rtl;
+}
+
 .able-wrapper {
 	margin: 0;
 }
