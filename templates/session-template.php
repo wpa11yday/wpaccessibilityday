@@ -24,28 +24,37 @@ get_header(); ?>
 			$session_speakers_i18n = sprintf( __( '<strong>Speaker:</strong> %s', 'wpa-conference' ), $session_speakers_text );
 			$session_speakers_html = ( $session_speakers_text ) ? '<div class="wpsc-single-session-speakers">' . $session_speakers_i18n . '</div>' : null;
 			$session_speakers      = apply_filters( 'wpcs_filter_single_session_speakers', $session_speakers_html, $session_post->ID );
+			$track_name_html       = '';
+			if ( function_exists( 'wpad_get_track_name' ) ) {
+				$track_name      = wpad_get_track_name( $session_post->ID );
+				if ( ! empty( $track_name ) ) {
+					$track_name_html = '<div class="talk-track">' . $track_name . '</div>';
+				}
+			}
 			?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class( 'wpsc-single-session' ); ?>>
 
 				<header class="entry-header">
 					<div class="entry-header-content">
-
-					<?php the_title( '<h1 class="entry-title wpsc-single-session-title">', '</h1>' ); ?>
-					<div class="page-excerpt">
-					<?php
-					if ( $session_date ) {
-						$datatime = gmdate( 'Y-m-d\TH:i:s\Z', $session_time );
-						echo '<h2 class="wpsc-single-session-time general-session talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . ' UTC</span></h2>';
-					} else {
-						$parent_session = get_post_meta( $session_post->ID, '_wpad_session', true );
-						$session_time   = absint( get_post_meta( $parent_session, '_wpcs_session_time', true ) );
-						$session_date   = ( $session_time ) ? gmdate( 'F j, Y', $session_time ) : '';
-						$datatime       = gmdate( 'Y-m-d\TH:i:s\Z', $session_time );
-						echo '<h2 class="wpsc-single-session-time parent-session talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . '</span></h2>';
-					}
-					?>
-					</div>
+						<div class="talk-title-meta">
+						<?php the_title( '<h1 class="entry-title wpsc-single-session-title">', '</h1>' ); ?>
+						<?php echo $track_name_html; ?>
+						</div>
+						<div class="page-excerpt">
+						<?php
+						if ( $session_date ) {
+							$datatime = gmdate( 'Y-m-d\TH:i:s\Z', $session_time );
+							echo '<h2 class="wpsc-single-session-time general-session talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . ' UTC</span></h2>';
+						} else {
+							$parent_session = get_post_meta( $session_post->ID, '_wpad_session', true );
+							$session_time   = absint( get_post_meta( $parent_session, '_wpcs_session_time', true ) );
+							$session_date   = ( $session_time ) ? gmdate( 'F j, Y', $session_time ) : '';
+							$datatime       = gmdate( 'Y-m-d\TH:i:s\Z', $session_time );
+							echo '<h2 class="wpsc-single-session-time parent-session talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . '</span></h2>';
+						}
+						?>
+						</div>
 					</div>
 				</header>
 				<div class="entry-content">
@@ -88,18 +97,24 @@ get_header(); ?>
 						</div>
 						<?php
 					}
-						the_content();
+					if ( function_exists( 'wpad_draw_topics' ) ) {
+						echo wpad_draw_topics( $session_post->ID );
+					}
+					if ( function_exists( 'wpad_draw_langs' ) ) {
+						echo wpad_draw_langs( $session_post->ID );
+					}
+					the_content();
 					?>
-						<div class="wpcs-session-links">
-							<?php
-							wpcs_slides( get_the_ID() );
-							wpcs_resources( get_the_ID() );
-							?>
-						</div>
+					<div class="wpcs-session-links">
 						<?php
-						$speakers = wpcs_session_speakers( get_the_ID(), $session_type );
-						echo $speakers['html'];
+						wpcs_slides( get_the_ID() );
+						wpcs_resources( get_the_ID() );
 						?>
+					</div>
+					<?php
+					$speakers = wpcs_session_speakers( get_the_ID(), $session_type );
+					echo $speakers['html'];
+					?>
 				</div><!-- .entry-content -->
 
 				<?php if ( get_option( 'wpcs_field_schedule_page_url' ) ) { ?>
