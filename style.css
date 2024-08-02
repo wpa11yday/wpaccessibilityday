@@ -2308,6 +2308,11 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	background-color: var(--sponsorship-columns-nth-4-bg)
 }
 
+.sponsorship .sponsor-spots {
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+
 .sponsorship .microsponsors {
 	padding: 40px;
 	border: 4px solid var(--sponsorship-microsponsors-border-color);
