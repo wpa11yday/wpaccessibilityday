@@ -1894,7 +1894,9 @@ h2.event-time {
 }
 
 .navigation .menu li {
-	list-style-type:none
+	list-style-type:none;
+	display:flex;
+	align-items:center;
 }
 
 .navigation .menu > li {
