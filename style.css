@@ -850,8 +850,9 @@ figure.box-shadow {
 	border-bottom: 2px solid var(--main-nav-sub-menu-border-color-hover);
 }
 
-.main-navigation .menu-item-has-children {
-	display:flex
+.main-navigation > li {
+	display:flex;
+	align-items:center;
 }
 
 .main-navigation .current-menu-ancestor {
