@@ -849,7 +849,7 @@ figure.box-shadow {
 	border-bottom: 2px solid var(--main-nav-sub-menu-border-color-hover);
 }
 
-.main-navigation > li {
+.main-navigation .menu > li {
 	display:flex;
 	align-items:center;
 }
