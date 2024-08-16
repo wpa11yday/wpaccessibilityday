@@ -37,6 +37,7 @@ get_header(); ?>
 				),
 			);
 			$sessions = get_posts( $args );
+			$articles = array();
 			if ( get_post_meta( get_the_ID(), 'wpcsp_user_email', true ) ) {
 				$author = get_user_by( 'email', get_post_meta( get_the_ID(), 'wpcsp_user_email', true ) );
 				if ( is_object( $author ) ) {
