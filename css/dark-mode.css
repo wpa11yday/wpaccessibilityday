@@ -268,3 +268,7 @@ input[data-com-onepassword-filled="dark"] {
 .able-big-play-button:focus {
 	color: var(--fg);
 }
+
+.wpad-callout {
+	color: var(--black);
+}
