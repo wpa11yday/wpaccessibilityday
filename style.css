@@ -902,7 +902,9 @@ figure.box-shadow {
 }
 
 .navigation a {
-	display:block;
+	display:flex;
+	height: 100%;
+	align-items: center;
 	text-decoration:none
 }
 
@@ -912,6 +914,7 @@ figure.box-shadow {
 	background:transparent;
 	color:var(--main-nav-toggle-color);
 	box-shadow: none;
+	height: 100%;
 }
 
 .main-navigation .dropdown-toggle:hover,
