@@ -272,3 +272,7 @@ input[data-com-onepassword-filled="dark"] {
 .wpad-callout {
 	color: var(--black);
 }
+
+.wp-block-button a {
+	outline: 1px solid #444;
+}
