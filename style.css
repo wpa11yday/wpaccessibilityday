@@ -923,10 +923,6 @@ figure.box-shadow {
 	color: var(--main-nav-toggle-color-hover);
 }
 
-.nav-social {
-	margin:0!important
-}
-
 .site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation {
 	padding-bottom:60px
 }
@@ -1836,6 +1832,8 @@ h2.event-time {
 #masthead .utility-tools {
 	display: flex;
 	column-gap: 30px;
+	align-items: center;
+	margin-bottom: .5rem;
 }
 
 #masthead .site-utilities time {
@@ -1856,7 +1854,7 @@ h2.event-time {
 }
 
 #masthead .utility-navigation li {
-	margin:0 .5em
+	margin:8px 4px 0;
 }
 
 .utility-navigation.navigation .menu a {
@@ -1945,7 +1943,10 @@ h2.event-time {
 
 #masthead .utility-navigation {
 	padding-left:10px;
-	margin:0 0 auto auto
+	margin:0 0 0 auto;
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
 .utility-navigation ul {
