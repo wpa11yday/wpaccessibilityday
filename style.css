@@ -2151,6 +2151,39 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	color:var(--button-color-hover);
 }
 
+#primary .simpletoc .simpletoc-icon::after {
+	background-color: var(--yellow);
+	color: var(--black);
+	padding: 3px 6px;
+	border-radius: 100%;
+	content: "\002b";
+	font-size: 20px;
+	line-height: 1;
+}
+
+#primary .simpletoc .active .simpletoc-icon::after {
+	content: "\002d";
+}
+
+#primary .simpletoc .active {
+	background-color: var(--black);
+	color: var(--white);
+}
+
+#primary .simpletoc button:focus,
+#primary .simpletoc button:hover {
+	outline: 1px solid var(--black);
+}
+
+#primary .simpletoc button.active:focus,
+#primary .simpletoc button.active:hover {
+	outline: 1px solid var(--white);
+}
+
+.simpletoc-list {
+	margin-top: 1rem;
+}
+
 #primary .alignwide .blocks-gallery-grid {
 	max-width:100%;
 	margin:0
