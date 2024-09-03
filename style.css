@@ -1511,6 +1511,26 @@ code,kbd,tt,var {
 	margin-bottom: 80px;
 }
 
+.edac-simplified-summary {
+	padding: 1.5rem;
+	background: var(--light-peach);
+	color: var(--black);
+}
+
+.edac-simplified-summary h2 {
+	color: var(--black);
+	font-size: 1.2rem;
+	margin-bottom: 0;
+}
+
+.edac-simplified-summary p:last-of-type {
+	margin-bottom: 0;
+}
+
+.edac-simplified-summary p:first-of-type {
+	margin-top: 0;
+}
+
 #sidebar-widgets {
 	z-index: 5;
 }
