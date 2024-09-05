@@ -14,9 +14,14 @@ get_header(); ?>
 		/* Start the Loop */
 		while ( have_posts() ) :
 			the_post();
-			$time_format           = 'H:i';
-			$session_post          = get_post();
-			$session_time          = absint( get_post_meta( $session_post->ID, '_wpcs_session_time', true ) );
+			$time_format        = 'H:i';
+			$session_post       = get_post();
+			$opening_remarks    = get_option( 'wpcs_opening_remarks', false );
+			if ( (int) $opening_remarks === $session_post->ID ) {
+				$session_time = strtotime( get_option( 'wpad_start_time' ) );
+			} else {
+				$session_time = absint( get_post_meta( $session_post->ID, '_wpcs_session_time', true ) );
+			}
 			$session_date          = ( $session_time ) ? gmdate( 'F j, Y', $session_time ) : '';
 			$session_type          = get_post_meta( $session_post->ID, '_wpcs_session_type', true );
 			$session_speakers_text = get_post_meta( $session_post->ID, '_wpcs_session_speakers', true );
