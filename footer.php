@@ -54,6 +54,15 @@
 			</div>
 		</div><!-- #wrap -->
 	</div><!-- #bottom-credits -->
+	<?php
+	if ( is_active_sidebar( 'footer-widget-area' ) ) {
+		?>
+		<div id="footer-sidebar-full" class="footer-sidebar full-width widget-area">
+			<?php dynamic_sidebar( 'footer-widget-area' ); ?>
+		</div>
+		<?php
+	}
+	?>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

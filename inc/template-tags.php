@@ -114,13 +114,6 @@ function wp_accessibility_day_footer_sidebars() {
 			$i ++;
 		}
 	}
-	if ( is_active_sidebar( 'footer-widget-area' ) ) {
-		?>
-		<div id="footer-sidebar-full" class="footer-sidebar full-width widget-area">
-			<?php dynamic_sidebar( 'footer-widget-area' ); ?>
-		</div>
-		<?php
-	}
 	if ( $i > 0 ) {
 		?>
 		<aside id="footer-sidebar-columns" class="footer-sidebar widget-area footer-columns footer-columns-<?php echo $i; ?>" aria-label="Footer Sidebars">
