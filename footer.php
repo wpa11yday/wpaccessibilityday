@@ -29,7 +29,7 @@
 					Tag us! <a href="https://twitter.com/hashtag/WPA11yDay">#WPA11yDay</a> <?php if ( ! is_wpad_main_site() ) { ?> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a> <?php } ?>
 				</p>
 				<p class="copyright">
-					©2020&ndash;<?php echo date( 'Y' ); ?> WordPress Accessibility Day
+					©2020&ndash;<?php echo date( 'Y' ); ?> WP Accessibility Day
 				</p>
 			</div>
 			<div class="footer-navigation-menus">
