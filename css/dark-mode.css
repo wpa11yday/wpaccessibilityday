@@ -276,3 +276,8 @@ input[data-com-onepassword-filled="dark"] {
 .wp-block-button a {
 	outline: 1px solid #444;
 }
+
+.site-footer .widget-area.full-width a,
+.site-footer .widget-area.full-width > * {
+	color: var(--black);
+}
