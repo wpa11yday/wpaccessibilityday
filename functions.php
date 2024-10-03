@@ -439,8 +439,8 @@ Theme::get_instance();
  * @return bool
  */
 function is_wpad_main_site() {
-	// If a start time is set, then this is an event site.
-	return ( get_option( 'wpad_start_time' ) ) ? false : true;
+	// Check home URL to see if this is the main site.
+	return ( 'https://wpaccessibility.day' !== home_url() ) ? false : true;
 }
 
 /**
