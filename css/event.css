@@ -37,11 +37,16 @@
 	background: var(--accent1s1);
 }
 
-.wpad-callout {
+.wpad-callout:not(#wpad-archive .wpad-callout) {
 	background: var(--accent1s1);
 	padding: 1.5rem 60px;
 	margin: 0 auto 1rem;
 	max-width: 1120px;
+}
+
+#wpad-archive .wpad-callout {
+	max-width: 960px;
+	margin: .5rem auto;
 }
 
 .wpad-callout p {

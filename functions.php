@@ -660,7 +660,23 @@ add_action( 'gform_advancedpostcreation_post_after_creation_9', 'wpad_map_speake
 function wpad_archive_header() {
 	$title = get_bloginfo( 'title' );
 	if ( false !== stripos( $title, 'archive' ) ) {
-		echo sprintf( '<aside id="wpad-archive"><p>You are viewing the <strong>%s</strong>. <a 	href="https://wpaccessibility.day">View the current event site</a>.</p></aside>', $title );
+		echo sprintf( '<aside id="wpad-archive"><p>You are viewing the <strong>%s</strong>. <a 	href="https://wpaccessibility.day/past-events/">Check out our past events</a>.</p></aside>', $title );
+	} else {
+		$time  = time();
+		$event = strtotime( get_option( 'wpad_start_time', '' ) );
+		// Show during month before event.
+		if ( $event && $time > ( $event - MONTH_IN_SECONDS ) && $time < ( $event + DAY_IN_SECONDS ) ) {
+			// Show banner until event is over.
+			// Until 10 minutes before start.
+			if ( $time < $event - 600 ) {
+				echo '<aside id="wpad-archive">';
+				echo wpcs_banner();
+				echo '</aside>';
+			} elseif ( $time < ( $event + DAY_IN_SECONDS ) ) {
+				$year = date( 'Y', $event );
+				echo '<aside id="wpad-archive">WP Accessibility Day is running now! <a 	href="https://' . $year . '.wpaccessibility.day">Visit the event site</a></aside>';
+			}
+		}
 	}
 }
 add_action( 'wp_body_open', 'wpad_archive_header' );
