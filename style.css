@@ -1506,7 +1506,7 @@ code,kbd,tt,var {
 
 .entry-content {
 	position: relative;
-	z-index: 5;
+	z-index: 6; /* Ensure that the content stacking context is above the sidebar for ASL. */
 	background: var(--entry-bg);
 	margin-bottom: 80px;
 }
