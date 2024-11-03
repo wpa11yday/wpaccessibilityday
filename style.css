@@ -557,13 +557,35 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	display: inline-block;
 }
 
+.able-window-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	align-items: center;
+	justify-content: end;
+}
+
+.able-window-toolbar .transcript-language-select-wrapper {
+	padding-right: 0;
+	padding-left: 30px;
+}
+
+.able-window-toolbar .transcript-language-select-wrapper select {
+	margin-bottom: 0;
+}
+
 .able-big-play-button {
+	font-size: 7em;
+	padding: 1rem;
+	box-sizing: border-box;
+	opacity: 1;
 	box-shadow: none;
 }
 
 .able-big-play-button svg {
 	padding: 1rem;
 	border-radius: 12px;
+	background-color: rgba( 0,0,0,.9 );
 }
 
 .able-big-play-button:hover,
@@ -575,6 +597,20 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 .able-transcript-area {
 	border-color: var(--light-gray);
 	margin-bottom: 1rem;
+	height: 430px;
+}
+
+#primary .able-seekbar-wrapper {
+	margin: 10px 5px;
+	width: calc( 100% - 10px );
+}
+
+.able-left-controls {
+	margin-left: 2px;
+}
+
+.able-right-controls {
+	margin-right: 2px;
 }
 
 .able-transcript {
