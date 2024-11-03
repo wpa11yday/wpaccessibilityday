@@ -599,6 +599,29 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	height: 430px;
 }
 
+div.able-modal-dialog {
+	overflow: auto;
+}
+
+button.modalCloseButton {
+	padding: 6px 12px;
+}
+
+.able-resize-form div div {
+	margin: 0 0 1rem;
+}
+
+@media screen and (min-width: 40em) {
+	.video-wrapper {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 67% 33%;
+	}
+	.video-wrapper .holder {
+		background: #0001;
+	}
+}
+
 #primary .able-seekbar-wrapper {
 	margin: 10px 5px;
 	width: calc( 100% - 10px );
