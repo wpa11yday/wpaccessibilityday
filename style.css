@@ -623,7 +623,21 @@ button.modalCloseButton {
 	}
 	.video-wrapper .holder {
 		background: #0001;
+		outline: 2px dashed gray;
+		outline-offset: -6px;
 	}
+	.video-wrapper .holder p {
+		padding: .5rem;
+		color: #555;
+	}
+}
+
+.able-wrapper button {
+	box-shadow: none;
+}
+
+.able-window-toolbar .able-button-handler-preferences {
+	right: 5px;
 }
 
 #primary .able-seekbar-wrapper {
