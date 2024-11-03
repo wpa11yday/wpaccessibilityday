@@ -603,6 +603,10 @@ div.able-modal-dialog {
 	overflow: auto;
 }
 
+.able-status-bar {
+	padding: .25em 5px;
+}
+
 button.modalCloseButton {
 	padding: 6px 12px;
 }
