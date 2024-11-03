@@ -102,13 +102,13 @@ get_header(); ?>
 						</div>
 						<?php
 					}
+					the_content();
 					if ( function_exists( 'wpad_draw_topics' ) ) {
 						echo wpad_draw_topics( $session_post->ID );
 					}
 					if ( function_exists( 'wpad_draw_langs' ) ) {
 						echo wpad_draw_langs( $session_post->ID );
 					}
-					the_content();
 					?>
 					<div class="wpcs-session-links">
 						<?php
