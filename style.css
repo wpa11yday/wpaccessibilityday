@@ -576,7 +576,6 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 
 .able-big-play-button {
 	font-size: 7em;
-	padding: 1rem;
 	box-sizing: border-box;
 	opacity: 1;
 	box-shadow: none;
@@ -585,7 +584,7 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 .able-big-play-button svg {
 	padding: 1rem;
 	border-radius: 12px;
-	background-color: rgba( 0,0,0,.9 );
+	background-color: rgba( 0,0,0,.8 );
 }
 
 .able-big-play-button:hover,
