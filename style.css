@@ -615,6 +615,10 @@ button.modalCloseButton {
 	margin: 0 0 1rem;
 }
 
+.video-wrapper .holder {
+	display: none;
+}
+
 @media screen and (min-width: 40em) {
 	.video-wrapper {
 		width: 100%;
@@ -622,12 +626,13 @@ button.modalCloseButton {
 		grid-template-columns: 67% 33%;
 	}
 	.video-wrapper .holder {
+		display: block;
 		background: #0001;
 		outline: 2px dashed gray;
 		outline-offset: -6px;
 	}
 	.video-wrapper .holder p {
-		padding: .5rem;
+		padding: 1rem;
 		color: #555;
 	}
 }
