@@ -2013,6 +2013,12 @@ h2.event-time {
 	border-bottom: 4px solid transparent;
 }
 
+#footer-utility-navigation .menu {
+	display: grid;
+	grid-template-columns: repeat( 3, 36px );
+	justify-content: end;
+}
+
 #footer-utility-navigation .menu > li {
 	margin-right: 0;
 }
