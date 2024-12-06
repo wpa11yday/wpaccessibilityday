@@ -432,7 +432,7 @@ button::-moz-focus-inner,input::-moz-focus-inner,legend {
 	padding:0
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (width >= 40em) {
 	code,kbd,tt,var {
 		font-size:.8125rem
 	}
@@ -619,7 +619,7 @@ button.modalCloseButton {
 	display: none;
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (width >= 40em) {
 	.video-wrapper {
 		width: 100%;
 		display: grid;
@@ -2563,7 +2563,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 }
 
 /* Media queries */
-@media screen and (min-width: 60em) {
+@media screen and ( width >= 60em) {
 	.menu-toggle {
 		display:none
 	}
@@ -2586,7 +2586,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 }
 
 /* Breakpoint for the internal headers that are wider than content.*/
-@media screen and (max-width: 75em) {
+@media screen and (width <= 75em) {
 	.nav-breadcrumbs > p,
 	.entry-header .entry-header-content {
 		padding: 0 20px;
@@ -2594,7 +2594,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 }
 
 /* Breakpoint on small screens. */
-@media screen and (max-width: 60em) {
+@media screen and ( width <= 60em) {
 	.home .entry-header {
 		padding-top: 32px;
 	}
