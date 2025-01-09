@@ -9,9 +9,9 @@
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'wp-accessibility-day' ); ?></h1>
+<article class="search-result no-results not-found">
+	<header class="search-header">
+		<h2 class="search-title"><?php esc_html_e( 'Nothing Found', 'wp-accessibility-day' ); ?></h2>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -47,4 +47,4 @@
 
 		endif; ?>
 	</div><!-- .page-content -->
-</section><!-- .no-results -->
+</article><!-- .no-results -->

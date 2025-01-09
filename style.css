@@ -1438,6 +1438,10 @@ span.large-number {
 	border-bottom:6px solid var(--transcript-summary-border-color-focus)
 }
 
+.not-found .page-content {
+	margin-bottom: 4rem;
+}
+
 .page-content .wp-smiley,.entry-content .wp-smiley,.comment-content .wp-smiley {
 	border:none;
 	margin-bottom:0;
