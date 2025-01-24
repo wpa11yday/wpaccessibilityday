@@ -956,6 +956,12 @@ figure.box-shadow {
 	list-style-type:none
 }
 
+.main-navigation ul li:nth-last-of-type(2) ul,
+.main-navigation ul li:last-of-type ul {
+	left: auto;
+	right: 0;
+}
+
 .main-navigation ul ul.toggled-on {
 	display:block
 }
