@@ -462,7 +462,7 @@ add_filter( 'wp_dropdown_users_args', 'wpad_add_subscribers_to_dropdown', 10, 2 
  */
 function wpad_site_logo( $alt = 'WordPress Accessibility Day' ) {
 	$year = str_replace( array( 'https://', '.wpaccessibility.day' ), '', home_url() );
-	if ( is_wpad_main_site() || 'template' === $year ) {
+	if ( is_wpad_main_site() || 'template' === $year || 'staging' === $year ) {
 		return '<img src="' . get_stylesheet_directory_uri() . '/assets/logo-base.png" alt="' . esc_attr( $alt ) . '" />';
 	} else {
 
