@@ -2015,6 +2015,7 @@ h2.event-time {
 .navigation .menu > li {
 	margin: 0 16px 0 0;
 	border-bottom: 4px solid transparent;
+	width: fit-content;
 }
 
 #footer-utility-navigation .menu {
@@ -2847,5 +2848,14 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	#primary .shared-counts-wrap a {
 		margin-bottom: 24px;
 	}
-	
+}
+
+@media screen and ( width <= 20em ) {
+	.site-title,
+	h1, h2, h3, h4, p, li {
+		word-wrap: break-word !important;
+	}
+	button.toggle-details .dashicons {
+		margin-right: 6px;
+	}
 }
