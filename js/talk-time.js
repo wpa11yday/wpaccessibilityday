@@ -67,7 +67,7 @@
 			var userTime2 = new Date( utc2 ).toLocaleTimeString().replace( ':00', '' );
 			var userDate2 = new Date( utc2 ).toLocaleDateString();
 			if ( userDate === userDate2 ) {
-				label.html( '<span class="localtime">' + userTime + ' to ' + userTime2 + ' on ' + userDate + ' (' + zone + ')</span>' );
+				label.html( '<span class="localtime">' + userTime + ' to ' + userTime2 + ' on ' + userDate + ' <span class="timezone">(' + zone + ')</span></span>' );
 			} else {
 				console.log( userDate + ' ' + userDate2 );
 				label.html( '<span class="localtime">' + userTime + ' on ' + userDate + ' to ' + userTime2 + ' on ' + userDate2 + ' <span class="timezone">(' + zone + ')</span></span>' );
