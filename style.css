@@ -2012,6 +2012,10 @@ h2.event-time {
 	list-style-type:none
 }
 
+.main-navigation.navigation .menu li:last-of-type {
+	margin-right: 0;
+}
+
 .navigation .menu > li {
 	margin: 0 16px 0 0;
 	border-bottom: 4px solid transparent;
