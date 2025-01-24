@@ -2852,10 +2852,16 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 @media screen and ( width <= 20em ) {
 	.site-title,
-	h1, h2, h3, h4, p, li {
-		word-wrap: break-word !important;
+	h1, h2, h3, h4, p, li, .talk-title-meta a {
+		word-break: break-all !important;
+	}
+	h1.entry-title {
+		margin-right: 0 !important;
 	}
 	button.toggle-details .dashicons {
 		margin-right: 6px;
+	}
+	#gform_1 .gform-body {
+		width: 100%;
 	}
 }
