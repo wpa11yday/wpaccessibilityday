@@ -2019,6 +2019,9 @@ h2.event-time {
 .navigation .menu > li {
 	margin: 0 16px 0 0;
 	border-bottom: 4px solid transparent;
+}
+
+#utility-menu li, #footer-utility-navigation li {
 	width: fit-content;
 }
 
