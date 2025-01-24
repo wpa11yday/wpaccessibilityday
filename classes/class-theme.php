@@ -33,13 +33,6 @@ class Theme {
 	 * Enqueues Styles.
 	 */
 	public function enqueue_styles() {
-		$parent_style = 'wp-accessibility-day-style';
 
-		wp_enqueue_style(
-			'wpad-font',
-			'https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap',
-			array( $parent_style ),
-			wp_get_theme()->get( 'Version' )
-		);
 	}
 }

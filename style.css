@@ -173,6 +173,12 @@ body {
 	--sidebar-form-widget-fg: var(--black);
 }
 
+@font-face {
+	font-family: 'Sora';
+	src: url(/wp-content/themes/wp-a11y-day/assets/Sora/Sora-VariableFont_wght.ttf) format('truetype');
+	font-display: swap;
+}
+
 html {
 	font-family:sans-serif;
 	-webkit-text-size-adjust:100%;
