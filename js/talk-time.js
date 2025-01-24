@@ -26,7 +26,52 @@
 			var userTime = new Date( utc ).toLocaleTimeString().replace( ':00', '' );
 			var userDate = new Date( utc ).toLocaleDateString();
 
-			label.html( '<span class="localtime">' + userTime + ' on ' + userDate + ' (' + zone + ')</span>' );
+			label.html( '<span class="localtime">' + userTime + ' on ' + userDate + ' <span class="timezone">(' + zone + ')</span></span>' );
+		});
+		/**
+		 * Render volunteer application input times to local timezones.
+		 */
+		$( '#input_5_21 .gfield-choice-input' ).each( function( index ) {
+			var id          = $( this ).attr( 'id' );
+			var label       = $( 'label[for=' + id + ']' );
+			var labelText   = label.text();
+			var labelParts  = labelText.split( ' – ' );
+			var labelTimeA  = labelParts[0].replace( ' UTC', '' ).split( ':' )[0];
+			let dateA;
+			if ( labelTimeA > 15 && labelTimeA < 24 ) {
+				dateA = 15; // First day of event.
+			} else {
+				dateA = 16; // Second day of event. 
+			}
+			let labelTimeB = parseInt( labelTimeA ) + 3;
+			if ( labelTimeB > 24 ) {
+				labelTimeB = labelTimeB - 24;
+			}
+			let dateB;
+			if ( labelTimeB > 15 && labelTimeB < 24 ) {
+				dateB = 15;
+			} else {
+				dateB = 16;
+			}
+
+			let time1 = ( labelTimeA.length === 1 ) ? '0' + labelTimeA : labelTimeA;
+			var date1 = '2025-10-' + dateA + 'T' + time1  + ':00:00Z';
+			let time2 = ( labelTimeB.toString().length === 1 ) ? '0' + labelTimeB : labelTimeB;
+			var date2 = '2025-10-' + dateB + 'T' + time2 + ':00:00Z';
+			console.log( date1 + ' ' + date2 );
+			var utc1   = Date.parse( date1 );
+			var utc2  = Date.parse( date2 );
+
+			var userTime = new Date( utc1 ).toLocaleTimeString().replace( ':00', '' );
+			var userDate = new Date( utc1 ).toLocaleDateString();
+			var userTime2 = new Date( utc2 ).toLocaleTimeString().replace( ':00', '' );
+			var userDate2 = new Date( utc2 ).toLocaleDateString();
+			if ( userDate === userDate2 ) {
+				label.html( '<span class="localtime">' + userTime + ' to ' + userTime2 + ' on ' + userDate + ' (' + zone + ')</span>' );
+			} else {
+				console.log( userDate + ' ' + userDate2 );
+				label.html( '<span class="localtime">' + userTime + ' on ' + userDate + ' to ' + userTime2 + ' on ' + userDate2 + ' <span class="timezone">(' + zone + ')</span></span>' );
+			}
 		});
 
 	var toggleDetails = document.querySelectorAll( '.toggle-details' );
