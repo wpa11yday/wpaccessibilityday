@@ -135,3 +135,17 @@ footer #gform_18 .gform_footer input,
 #signup-welcome p span {
 	font-weight: 700;
 }
+
+#page .gform_wrapper.gravity-theme .gform_delete_file {
+	background-color: var(--button-bg);
+	color: var(--button-color);
+	padding: 6px 12px;
+	margin-left: 8px;
+	border: 1px solid;
+}
+
+#page .gform_wrapper.gravity-theme .gform_delete_file:focus,
+#page .gform_wrapper.gravity-theme .gform_delete_file:hover {
+	background-color: var(--button-bg-hover);
+	color: var(--button-color-hover);
+}
