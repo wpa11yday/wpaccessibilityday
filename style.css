@@ -626,7 +626,7 @@ button.modalCloseButton {
 }
 
 @media screen and (width >= 40em) {
-	.video-wrapper {
+	.video-wrapper:has(.holder) {
 		width: 100%;
 		display: grid;
 		grid-template-columns: 67% 33%;
