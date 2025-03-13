@@ -1327,6 +1327,10 @@ label[for=matomo_optout_checkbox] {
 	margin:0
 }
 
+#bottom-credits .footer-address {
+    margin-bottom: 20px !important;
+}
+
 #bottom-credits .footer-navigation .menu {
 	display: block;
 }
