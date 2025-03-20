@@ -571,6 +571,10 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	justify-content: end;
 }
 
+.able .able-popup {
+	opacity: .95;
+}
+
 .able-window-toolbar .transcript-language-select-wrapper {
 	padding-right: 0;
 	padding-left: 30px;
