@@ -121,7 +121,7 @@ body {
 	--template-peach-entry-header-bg: var(--accent3s1);
 	--template-peach-entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 25px,var(--accent3s1) 26px,var(--accent3s1) 100%);
 	--template-peach-icon-grid-fill: var(--accent3);
-	--home-entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 130px,var(--accent4s1) 131px,var(--accent4s1) 100%); 
+	--home-entry-header-gradient: linear-gradient(to top, var(--bg) 0%,var(--bg) 130px,var(--accent4s1) 131px,var(--accent4s1) 100%);
 	--home-entry-header-bg: var(--accent4);
 	--home-entry-header-cta-color: var(--fg);
 	--utility-menu-current-bg: var(--accent1);
@@ -447,7 +447,7 @@ button::-moz-focus-inner,input::-moz-focus-inner,legend {
 p > code {
 	padding:2px;
 	border-radius:2px;
-	font-size:inherit
+	font-size:inherit;
 }
 
 abbr,acronym {
@@ -1234,7 +1234,7 @@ label[for=matomo_optout_checkbox] {
 }
 
 .entry-header {
-	
+
 }
 
 .entry-header svg:not(.entry-header-cta svg) {
@@ -1756,7 +1756,7 @@ h2.event-time {
 .single-wpcsp_sponsor .nav-breadcrumbs,
 .page-template-page-pink #masthead,
 .page-template-page-pink .entry-header,
-.page-template-page-pink .entry-header h1, 
+.page-template-page-pink .entry-header h1,
 .page-template-page-pink .entry-header .page-excerpt,
 .page-template-page-pink .nav-breadcrumbs {
 	background: var(--template-pink-entry-header);
@@ -1772,7 +1772,7 @@ h2.event-time {
 
 .page-template-page-blue #masthead,
 .page-template-page-blue .entry-header,
-.page-template-page-blue .entry-header h1, 
+.page-template-page-blue .entry-header h1,
 .page-template-page-blue .entry-header .page-excerpt,
 .page-template-page-blue .nav-breadcrumbs {
 	background: var(--template-blue-entry-header-bg)
@@ -1791,7 +1791,7 @@ h2.event-time {
 .blog .nav-breadcrumbs,
 .page-template-page-green #masthead,
 .page-template-page-green .entry-header,
-.page-template-page-green .entry-header h1, 
+.page-template-page-green .entry-header h1,
 .page-template-page-green .entry-header .page-excerpt,
 .page-template-page-green .nav-breadcrumbs {
 	background: var(--template-green-entry-header-bg)
@@ -1812,7 +1812,7 @@ h2.event-time {
 .organizer .nav-breadcrumbs,
 .page-template-page-peach #masthead,
 .page-template-page-peach .entry-header,
-.page-template-page-peach .entry-header h1, 
+.page-template-page-peach .entry-header h1,
 .page-template-page-peach .entry-header .page-excerpt,
 .page-template-page-peach .nav-breadcrumbs {
 	background: var(--template-peach-entry-header-bg);
@@ -1865,7 +1865,7 @@ h2.event-time {
 	margin: 0 auto;
 }
 
-.entry-header h1:not(.wpsc-single-session-title), 
+.entry-header h1:not(.wpsc-single-session-title),
 .entry-header .page-excerpt {
 	margin-right: 50%;
 }
@@ -2119,7 +2119,7 @@ h2.event-time {
 .footer-sidebar .widget-sidebar-column:nth-of-type(2) h3 {
 	font-size: 32px;
 	font-size: 2rem;
-	margin-bottom: .5rem 
+	margin-bottom: .5rem
 }
 
 ol.comment-list {
@@ -2619,6 +2619,13 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	.entry-header .entry-header-content {
 		padding: 0 20px;
 	}
+	p > code {
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		max-width: 100%;
+		word-break: break-all;
+	}
 }
 
 /* Breakpoint on small screens. */
@@ -2668,12 +2675,12 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	.header-svg-container .widget_text,
 	.header-svg-container ,
 	.nav-breadcrumbs > p,
-	.entry-header > *, 
+	.entry-header > *,
 	.widget-area > *,
 	.entry-content > *,
 	.entry-list,
 	#primary .stylized-2col-section,
-	.site-main .posts-navigation, 
+	.site-main .posts-navigation,
 	.site-main .post-navigation{
 		padding-left: 24px;
 		padding-right: 24px;
@@ -2799,7 +2806,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		justify-content:flex-start!important;
 		margin-bottom:20px
 	}
-	
+
 	.main-navigation.toggled-on .menu > li {
 		margin:0
 	}
@@ -2823,7 +2830,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		grid-gap:5px
 	}
 
-	blockquote, 
+	blockquote,
 	.decoration-left {
 	    background: url(/wp-content/themes/wp-a11y-day/assets/partial-ring-left.svg) no-repeat 24px top;
 	    padding-top: 104px;
