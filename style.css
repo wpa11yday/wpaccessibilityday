@@ -1934,6 +1934,10 @@ h2.event-time {
 	display: block;
 }
 
+.wpad-archive .site-branding .site-title img {
+	max-width: 250px;
+}
+
 #utility-menu a:hover,
 .wpcsp-sponsor-website-link a:hover {
 	outline: none;

@@ -741,6 +741,10 @@ function wpad_people_class( $classes ) {
 			$classes[] = 'volunteer';
 		}
 	}
+	$title = get_bloginfo( 'title' );
+	if ( false !== stripos( $title, 'archive' ) ) {
+		$classes[] = 'wpad-archive';
+	}
 
 	return $classes;
 }
