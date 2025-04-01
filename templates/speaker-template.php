@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the single session posts
+ * The template for displaying the single speaker posts
  *
  * @package wp_conference_schedule_pro
  * @since 1.0.0
@@ -138,7 +138,7 @@ get_header(); ?>
 								if ( has_term( 'organizers', 'wpcsp_speaker_level' ) || has_term( 'lead-organizers', 'wpcsp_speaker_level' ) ) { ?>
 									<a class="button wpcsp-organizer-link" href="<?php echo home_url( 'about/organizers/' ); ?>">See All Organizers</a>
 								<?php
-								} 
+								}
 								if ( has_term( 'volunteers', 'wpcsp_speaker_level' ) ) { ?>
 									<a class="button wpcsp-volunteer-link" href="<?php echo home_url( 'wpad-people/volunteers/' ); ?>">See All Volunteers</a>
 								<?php } ?>

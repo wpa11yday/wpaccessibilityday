@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the single session posts
+ * The template for displaying the single sponsor posts
  *
  * @package wp_conference_schedule_pro
  * @since 1.0.0
@@ -63,7 +63,7 @@ get_header(); ?>
 						<div class="wpcsp-media">
 							<?php if ( $swag ) { ?>
 								<div class="wpcsp-sponsor-swag">
-									<h2>Attendee Swag</h2> 
+									<h2>Attendee Swag</h2>
 									<?php
 									if ( is_user_logged_in() ) {
 										echo $swag;
