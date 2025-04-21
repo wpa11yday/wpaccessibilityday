@@ -104,18 +104,19 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 	});
 
 	// Add unique ID to each .sub-menu and aria-controls to parent links
-	var subMenus = menuContainer.find('.sub-menu');
-	subMenus.each(function(index) {
-		var subMenu = $(this);
-		var parentLi = subMenu.closest('li.menu-item-has-children');
+	var subMenus = menuContainer.find( '.sub-menu' );
+	subMenus.each( function( index ) {
+		var subMenu  = $(this);
+		var parentLi = subMenu.closest( 'li.menu-item-has-children' );
 		subMenu.attr('id', 'sub-menu-' + (index + 1));
-		if (parentLi.length) {
-			var parentButton = parentLi.find('> button.dropdown-toggle');
-			if (parentButton.length) {
-				parentButton.attr('aria-controls', subMenu.attr('id'));
+		if ( parentLi.length ) {
+			var parentButton = parentLi.find( '> button.dropdown-toggle' );
+			if ( parentButton.length ) {
+				parentButton.attr( 'aria-controls', subMenu.attr( 'id' ) );
 			}
 		}
 	});
+
 
 	// Keyboard navigation.
 	$( '.menu-item a, button.dropdown-toggle' ).on('keydown', function(e) {
