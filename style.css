@@ -887,6 +887,7 @@ figure.box-shadow {
 	align-self: end;
 }
 
+.main-navigation .menu button,
 .main-navigation a {
 	color:var(--main-nav-color);
 	background:transparent;
@@ -895,11 +896,19 @@ figure.box-shadow {
 	border-radius:2px;
 	font-weight: 700;
 	border-bottom: 2px solid transparent;
+	padding: 0;
 }
 
+.main-navigation .menu button:hover,
 .main-navigation a:hover {
 	border-bottom: 2px solid var(--main-nav-color-hover);
 	outline: none;
+	background: none;
+	color: var(--main-nav-color);
+}
+
+.main-navigation .menu button:focus {
+	outline-offset: 2px;
 }
 
 .main-navigation .sub-menu {
@@ -998,6 +1007,7 @@ figure.box-shadow {
 	position:relative
 }
 
+.navigation .menu button,
 .navigation a {
 	display:flex;
 	height: 100%;
@@ -1006,18 +1016,11 @@ figure.box-shadow {
 }
 
 .main-navigation .dropdown-toggle {
-	padding:0 6px;
-	margin-left: 4px;
-	background:transparent;
-	color:var(--main-nav-toggle-color);
 	box-shadow: none;
-	height: 100%;
 }
 
-.main-navigation .dropdown-toggle:hover,
-.main-navigation .dropdown-toggle:focus {
-	background: var(--main-nav-toggle-bg-hover);
-	color: var(--main-nav-toggle-color-hover);
+.main-navigation .dropdown-toggle .dashicons {
+	color:var(--main-nav-toggle-color);
 }
 
 .site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation {
@@ -2015,6 +2018,7 @@ h2.event-time {
 	max-width:960px
 }
 
+.navigation .menu button,
 .navigation .menu a {
 	font-weight: 700;
 }

@@ -13,7 +13,9 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
 	var menuContainer = $('#main-navigation');
 	var menuToggle    = menuContainer.find( '.menu-toggle' );
+	var menuType        = 'button'; // 'button' or 'link';
 
+	menuContainer.addClass( 'menutype-' + menuType );
 	// Toggles the menu button.
 	if ( ! menuToggle.length ) {
 		return;
@@ -31,7 +33,16 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 	// Adds the dropdown toggle button.
 	$('.menu-item-has-children > a').not(this).each( function() {
 		var linkText         = $(this).text();
-		var screenReaderText = { 'expand' : 'submenu', 'collapse' : 'submenu' };
+		var screenReaderText = 'submenu';
+		if ( 'link' === menuType ) {
+			var controlText = $( '<span />', {
+					'class' : 'screen-reader-text',
+					text : linkText + ' ' + screenReaderText
+				}
+			);
+		} else {
+			var controlText = linkText;
+		}
 		var dropdownToggle   = $(
 				'<button />',
 				{
@@ -40,45 +51,45 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 					'aria-haspopup' : 'menu',
 					'type' : 'button'
 				}
-			).append( $(
-				'<span />',
-				{
-					'class' : 'screen-reader-text',
-					text : linkText + ' ' + screenReaderText.expand
-				}
-			)
-		);
+		).append( controlText );
+
 		dropdownToggle.append( $( '<span class="dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>' ) );
 
-		$(this).after( dropdownToggle );
+		if ( 'link' === menuType ) {
+			$(this).after( dropdownToggle );
+		} else {
+			$(this).replaceWith( dropdownToggle );
+		}
 	});
 
 	// Toggles the sub-menu when dropdown toggle button clicked.
 	menuContainer.find( '.dropdown-toggle' ).on( 'click', function(e) {
-		var dashicon = $( this ).find( '.dashicons' );
+		let keycode = ( e.keyCode ? e.keyCode : e.which );
+		if ( keycode == 27 || 'click' === e.type ) {
+			var dashicon = $( this ).find( '.dashicons' );
 
-		// close open submenus.
-		$( '.dropdown-toggle' ).not(this).each(function(){
+			// close open submenus.
+			$( '.dropdown-toggle' ).not(this).each(function(){
 
-			$(this).removeClass( 'toggled-on' );
-			$(this).nextAll( '.sub-menu' ).removeClass( 'toggled-on' );
-			 // jscs:disable
+				$(this).removeClass( 'toggled-on' );
+				$(this).nextAll( '.sub-menu' ).removeClass( 'toggled-on' );
+				 // jscs:disable
+				$(this).attr( 'aria-expanded', $(this).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+				// jscs:enable
+			});
+
+			e.preventDefault();
+			$(this).toggleClass( 'toggled-on' );
+			$(this).nextAll( '.sub-menu' ).toggleClass( 'toggled-on' );
+			if ( dashicon.hasClass( 'dashicons-arrow-down-alt2' ) ) {
+				dashicon.removeClass( 'dashicons-arrow-down-alt2' ).addClass( 'dashicons-arrow-up-alt2' );
+			} else {
+				dashicon.removeClass( 'dashicons-arrow-up-alt2' ).addClass( 'dashicons-arrow-down-alt2' );
+			}
+			// jscs:disable
 			$(this).attr( 'aria-expanded', $(this).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 			// jscs:enable
-		});
-
-		e.preventDefault();
-		$(this).toggleClass( 'toggled-on' );
-		$(this).nextAll( '.sub-menu' ).toggleClass( 'toggled-on' );
-		if ( dashicon.hasClass( 'dashicons-arrow-down-alt2' ) ) {
-			dashicon.removeClass( 'dashicons-arrow-down-alt2' ).addClass( 'dashicons-arrow-up-alt2' );
-		} else {
-			dashicon.removeClass( 'dashicons-arrow-up-alt2' ).addClass( 'dashicons-arrow-down-alt2' );
 		}
-		// jscs:disable
-		$(this).attr( 'aria-expanded', $(this).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-		// jscs:enable
-
 	});
 
 	// Adds a class to sub-menus for styling.
