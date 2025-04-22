@@ -2803,7 +2803,12 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	.main-navigation.toggled-on .menu button,
 	.main-navigation.toggled-on .menu a {
 		text-align:left;
-		padding:8px 18px
+		padding:8px 18px;
+	}
+
+	.main-navigation.toggled-on .menu button {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.home .wp-block-latest-posts {
