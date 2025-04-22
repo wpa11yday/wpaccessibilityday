@@ -2728,7 +2728,6 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 	.main-navigation #primary-menu .menu-item-has-children {
 		display:grid;
-		grid-template-columns:auto 3rem
 	}
 
 	.main-navigation #primary-menu .sub-menu {
@@ -2801,6 +2800,7 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 		margin: 0 auto 0 0;
 	}
 
+	.main-navigation.toggled-on .menu button,
 	.main-navigation.toggled-on .menu a {
 		text-align:left;
 		padding:8px 18px
