@@ -2389,68 +2389,6 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	display:none
 }
 
-#primary .shared-counts-wrap {
-	overflow:visible;
-	display: flex
-}
-
-#primary .shared-counts-wrap a,
-#primary .shared-counts-wrap a > * {
-	font-size: .875rem;
-}
-
-#primary .shared-counts-wrap a {
-	padding: 1px 8px;
-	display: flex;
-	width: fit-content;
-	align-items: center;
-	column-gap: 5px;
-	text-decoration: none;
-	border-radius: 4px;
-}
-
-#primary .shared-counts-wrap .shared-counts-icon {
-	margin: 8px 8px 4px 4px;
-}
-
-#primary .shared-counts-wrap a:hover,
-#primary .shared-counts-wrap a:focus {
-	outline: 2px solid;
-	outline-offset: 2px;
-}
-
-#primary .shared-counts-button {
-	line-height: inherit;
-}
-
-#primary .shared-counts-wrap svg {
-	width: .875rem;
-	height: .875rem;
-}
-
-#primary .shared-counts-wrap i {
-	margin: 5px;
-}
-
-#primary .shared-counts-label {
-	margin: 0;
-	font-size: inherit;
-	line-height: inherit;
-}
-
-#primary .shared-counts-icon-label {
-	display: flex;
-	align-items: center;
-}
-
-#primary .shared-counts-wrap .anww-external-link-icon {
-	color:var(--share-counts-wrap-color)
-}
-
-#primary .shared-counts-wrap .shared-counts-button.twitter {
-	background-color:var(--share-counts-wrap-twitter-bg)
-}
-
 .sponsorship h2 {
 	text-align: center;
 }
