@@ -103,22 +103,6 @@ get_header(); ?>
 						<?php
 					}
 					the_content();
-					if ( function_exists( 'wpad_draw_topics' ) ) {
-						echo wpad_draw_topics( $session_post->ID );
-					}
-					if ( function_exists( 'wpad_draw_langs' ) ) {
-						echo wpad_draw_langs( $session_post->ID );
-					}
-					?>
-					<div class="wpcs-session-links">
-						<?php
-						wpcs_slides( get_the_ID() );
-						wpcs_resources( get_the_ID() );
-						?>
-					</div>
-					<?php
-					$speakers = wpcs_session_speakers( get_the_ID(), $session_type );
-					echo $speakers['html'];
 					?>
 				</div><!-- .entry-content -->
 
