@@ -608,8 +608,6 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 
 .able-transcript-area {
 	border-color: var(--light-gray);
-	margin-bottom: 1rem;
-	height: 430px;
 }
 
 div.able-modal-dialog {
@@ -2537,6 +2535,16 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 #wpad-notice a {
 	color: var(--wpad-archive);
+}
+
+.please-translate {
+	padding: 1rem;
+	background: var(--accent1s2);
+	margin-bottom: 2rem;
+}
+
+.please-translate p {
+	margin: 0;
 }
 
 /* Media queries */
