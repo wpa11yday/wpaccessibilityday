@@ -800,6 +800,27 @@ blockquote cite {
 	column-gap: 20px;
 }
 
+.tax-wpcs_session_lang .entry-list {
+	grid-template-columns:repeat(4,minmax(0,1fr));
+}
+
+.tax-wpcs_session_lang.archive .entry-list .entry-header h2 {
+	font-size: 1.2rem;
+	margin: 12px;
+}
+
+@media screen and ( width < 60em ) {
+	.tax-wpcs_session_lang .entry-list {
+		grid-template-columns:repeat(3,minmax(0,1fr));
+	}
+}
+
+@media screen and ( width < 40em ) {
+	.tax-wpcs_session_lang .entry-list {
+		grid-template-columns:repeat(2,minmax(0,1fr));
+	}
+}
+
 .entry-list .entry-header {
 	background: transparent;
 	margin-bottom: 24px;

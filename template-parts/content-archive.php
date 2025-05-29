@@ -29,13 +29,14 @@
 
 	<div class="entry-content">
 		<?php
+			if ( 'wpcs_session' !== get_post_type() ) {
+				the_excerpt();
 
-			the_excerpt();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-accessibility-day' ),
-				'after'  => '</div>',
-			) );
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-accessibility-day' ),
+					'after'  => '</div>',
+				) );
+			}
 		?>
 	</div><!-- .entry-content -->
 
