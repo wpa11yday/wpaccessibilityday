@@ -28,7 +28,7 @@
 				<p class="footer-address"><b>WP Accessibility Day</b><br>5900 Balcones Drive #25861<br>Austin, TX, 78731, USA</p>
 				<p class="tag-us">
 					<b>Tag us!</b> We're @WPA11yDay on most social media platforms.<br> 
-					Hashtags: #WPA11yDay <?php if ( ! is_wpad_main_site() ) { ?> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a> <?php } ?>
+					Hashtags: #WPA11yDay <?php if ( ! is_wpad_main_site() ) { ?> and #WPAD<?php echo $year; ?></a> <?php } ?>
 				</p>
 				<p class="copyright">
 					©2020&ndash;<?php echo date( 'Y' ); ?> WP Accessibility Day
