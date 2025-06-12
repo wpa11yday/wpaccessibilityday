@@ -1347,13 +1347,15 @@ label[for=matomo_optout_checkbox] {
 }
 
 #colophon #bottom-credits .tag-us {
-	font-size: 18px;
-	font-size: 1.125rem;
 	padding-bottom: 4rem;
 }
 
 #bottom-credits .site-logo p {
 	margin:0
+}
+
+#bottom-credits .footer-address {
+	font-style: normal;
 }
 
 #bottom-credits .footer-navigation .menu {
