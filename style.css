@@ -1328,7 +1328,7 @@ label[for=matomo_optout_checkbox] {
 }
 
 #bottom-credits .footer-address {
-    margin-bottom: 20px !important;
+	font-style: normal;
 }
 
 #bottom-credits .footer-navigation .menu {
