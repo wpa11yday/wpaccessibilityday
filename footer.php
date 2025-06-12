@@ -25,7 +25,7 @@
 					<img src="<?php echo get_stylesheet_directory_uri() . '/assets/lockup.png'; ?>" alt="WpA11yDay" width="250" />
 				</p>
 				<?php $year = date( 'Y', strtotime( get_option( 'wpad_start_time' ) ) ); ?>
-				<p class="footer-address"><b>WP Accessibility Day</b><br>PO Box 601<br>Georgetown, TX 78627</p>
+				<p class="footer-address"><b>WP Accessibility Day</b><br>5900 Balcones Drive #25861<br>Austin, TX, 78731, USA</p>
 				<p class="tag-us">
 					<b>Tag us!</b> We're @WPA11yDay on most social media platforms.<br> 
 					Hashtags: #WPA11yDay <?php if ( ! is_wpad_main_site() ) { ?> and <a href="https://twitter.com/hashtag/WPAD2023">#WPAD<?php echo $year; ?></a> <?php } ?>
