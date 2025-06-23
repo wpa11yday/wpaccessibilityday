@@ -566,18 +566,6 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	display: inline-block;
 }
 
-.able-window-toolbar {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 4px;
-	align-items: center;
-	justify-content: end;
-}
-
-.able .able-popup {
-	opacity: .95;
-}
-
 .able-window-toolbar .transcript-language-select-wrapper {
 	padding-right: 0;
 	padding-left: 30px;
@@ -588,14 +576,11 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 }
 
 .able-big-play-button {
-	font-size: 7em;
-	box-sizing: border-box;
 	opacity: 1;
 	box-shadow: none;
 }
 
 .able-big-play-button svg {
-	padding: 1rem;
 	border-radius: 12px;
 	background-color: rgba( 0,0,0,.8 );
 }
