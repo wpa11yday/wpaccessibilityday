@@ -23,7 +23,7 @@
 			<?php
 			endif;
 			if ( has_post_thumbnail() ) :
-				the_post_thumbnail( array( 704, 392 ), array( 'data-thumbnail', 'true' ) );
+				the_post_thumbnail( array( 704, 392 ), array( 'data-thumbnail' => 'true' ) );
 			endif;
 			echo '</div>';
 		else :
