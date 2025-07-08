@@ -518,6 +518,11 @@ function wpad_breadcrumbs( $link_output, $link ) {
 	if ( 'wpcs_session' === get_post_type( $id ) ) {
 		return '<span><a href="' . home_url( '/schedule/' ) . '">Schedule</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
+	
+	if ( 'wpcsp_media_partner' === get_post_type( $id ) ) {
+		return '<span><a href="' . home_url( '/media-partners/' ) . '">Media Partners</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
+	}
+
 
 	return $link_output;
 }
