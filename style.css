@@ -1369,7 +1369,6 @@ label[for=matomo_optout_checkbox] {
 
 .home .entry-header h1.entry-title {
 	color: var(--entry-title-color);
-	text-shadow: 0 6px 6px var(--entry-title-bg);
 	margin-bottom:0;
 	font-size: 120px;
 	font-size: 7.5rem;
