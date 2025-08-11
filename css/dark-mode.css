@@ -317,3 +317,7 @@ input[data-com-onepassword-filled="dark"] {
 .site-footer .widget-area.full-width > * {
 	color: var(--black);
 }
+
+.gform_wrapper .localtime {
+	color: var(--light-gray);
+}
