@@ -149,3 +149,8 @@ footer #gform_18 .gform_footer input,
 	background-color: var(--button-bg-hover);
 	color: var(--button-color-hover);
 }
+
+.gform_wrapper .localtime {
+	font-size: .875rem;
+	color: var(--gray);
+}
