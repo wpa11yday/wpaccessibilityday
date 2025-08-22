@@ -901,3 +901,11 @@ function wpad_add_form_editor() {
 	}
 }
 add_action( 'admin_init', 'wpad_add_form_editor' );
+
+/**
+ * Remove core user activation styles.
+ */
+function wpad_remove_wpmu_styles() {
+	$response = remove_action( 'wp_head', 'wpmu_activate_stylesheet' );
+}
+add_action( 'wp_head', 'wpad_remove_wpmu_styles', 1 );
