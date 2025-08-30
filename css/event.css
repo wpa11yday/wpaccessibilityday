@@ -372,6 +372,12 @@
 	background: #f9f9f9;
 }
 
+.wpad-attendees .attendee-social {
+	display: flex;
+	gap: 4px;
+	align-items: end;
+}
+
 
 #page .wpad-donors {
 	list-style:none;
