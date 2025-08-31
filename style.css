@@ -2432,7 +2432,6 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 
 .utility-dark-mode {
 	display: flex;
-	padding-top: .25rem;
 }
 
 .utility-dark-mode button {
