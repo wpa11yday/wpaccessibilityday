@@ -2536,6 +2536,22 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	font-size: .875rem;
 }
 
+.wpcsp-partners ul {
+	gap: 24px;
+}
+
+.wpcsp-partners figure {
+	margin: 0;
+}
+
+.wpcsp-partners figure img {
+	display: block;
+}
+
+.wpcsp-partners figcaption {
+	padding: 8px;
+}
+
 @media screen and ( width <= 20em ) {
 	.session-blocks {
 		grid-template-columns: 1;

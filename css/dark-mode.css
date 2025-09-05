@@ -250,8 +250,14 @@ h3 {
     color: var(--accent4s1);
 }
 
+.wpcsp-partners a,
 .wpcsp-sponsor-description a {
 	background-color: var(--fg);
+}
+
+.wpcsp-partners figcaption {
+	background-color: #00000011;
+	color: var(--bg);
 }
 
 .entry-content > .search-form {
