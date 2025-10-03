@@ -22,6 +22,10 @@
 	margin-bottom:15px
 }
 
+.wpcsp-speaker img {
+	width: 100%;
+}
+
 .single-wpcsp_sponsor .has-post-thumbnail .wpcsp-sponsor-grid,
 .single-wpcsp_speaker .has-post-thumbnail .wpcsp-speaker-grid {
 	max-width:1120px;
