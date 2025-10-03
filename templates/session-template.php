@@ -51,6 +51,7 @@ get_header(); ?>
 						if ( $session_date ) {
 							$datatime = gmdate( 'Y-m-d\TH:i:s\Z', $session_time );
 							echo '<h2 class="wpsc-single-session-time general-session talk-time" data-time="' . $datatime . '"> ' . $session_date . ' at <span class="time-wrapper">' . gmdate( $time_format, $session_time ) . ' UTC</span></h2>';
+							echo wpad_add_calendar_links( $session_post->ID );
 						} else {
 							$parent_session = get_post_meta( $session_post->ID, '_wpad_session', true );
 							$session_time   = absint( get_post_meta( $parent_session, '_wpcs_session_time', true ) );

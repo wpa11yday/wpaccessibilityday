@@ -2552,6 +2552,25 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	padding: 8px;
 }
 
+.wpad-calendar-links ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 16px;
+	list-style:none;
+}
+
+.wpad-calendar-links ul a {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	gap: 4px;
+	outline: 1px solid;
+	padding: 4px;
+	font-size: .875rem;
+	background: rgba( 255,255,255,.25 );
+}
+
 @media screen and ( width <= 20em ) {
 	.session-blocks {
 		grid-template-columns: 1;
