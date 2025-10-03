@@ -2568,10 +2568,23 @@ button.has-popup[aria-expanded="true"] span {
 	transform: rotate( 45deg );
 }
 
+.schedule.session button.has-popup {
+	font-size: .875rem;
+	background: transparent;
+	color: var(--fg);
+	box-shadow: none;
+	border: 1px solid;
+	padding: 8px 12px;
+}
+
+.schedule.session button.has-popup:hover {
+	background: var(--button-bg-hover);
+}
+
 .wpad-calendar-links ul {
 	margin: 0;
 	padding: 6px;
-	display: grid;
+	display: none;
 	width: fit-content;
 	gap: 4px;
 	list-style:none;
