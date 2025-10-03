@@ -1197,7 +1197,7 @@ label[for=matomo_optout_checkbox] {
 }
 
 .entry-header {
-
+	z-index: 7; /* Ensure stacking context is above entry content. */
 }
 
 .entry-header svg:not(.entry-header-cta svg) {
@@ -1830,9 +1830,15 @@ h2.event-time {
 }
 
 .entry-header h1:not(.wpsc-single-session-title),
-.entry-header .page-excerpt {
+.entry-header .page-excerpt:not(.wpcs_session-template-default .page-excerpt) {
 	margin-right: 50%;
 }
+
+.wpcs_session-template-default .entry-header .page-excerpt {
+	display: flex;
+	justify-content: space-between;
+}
+
 
 .entry-header .page-excerpt {
 	min-height: 6rem;
@@ -2552,23 +2558,43 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	padding: 8px;
 }
 
+button.has-popup {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+button.has-popup[aria-expanded="true"] span {
+	transform: rotate( 45deg );
+}
+
 .wpad-calendar-links ul {
 	margin: 0;
-	padding: 0;
-	display: flex;
-	gap: 16px;
+	padding: 6px;
+	display: grid;
+	width: fit-content;
+	gap: 4px;
 	list-style:none;
+	border: 1px solid;
+	position: absolute;
+	background: var(--bg);
 }
 
 .wpad-calendar-links ul a {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	text-decoration: none;
 	gap: 4px;
-	outline: 1px solid;
 	padding: 4px;
 	font-size: .875rem;
+	font-weight: 500;
 	background: rgba( 255,255,255,.25 );
+}
+
+.wpad-calendar-links ul a span {
+	width: 24px;
+	height: auto;
+	text-align: center;
 }
 
 @media screen and ( width <= 20em ) {
@@ -2789,6 +2815,10 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	.main-navigation.toggled-on .menu button {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.wpcs_session-template-default .entry-header .page-excerpt {
+		display: grid;
 	}
 
 	.home .wp-block-latest-posts {
