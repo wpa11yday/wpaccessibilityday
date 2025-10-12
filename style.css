@@ -687,7 +687,7 @@ blockquote {
 
 blockquote cite {
 	font-style:normal;
-	font-size:1rem
+	font-size:0.8em
 }
 
 .entry-header .entry-title {
@@ -1082,6 +1082,10 @@ figure.box-shadow {
 
 #sidebar-widgets .widget-container {
 	margin-bottom: 78px;
+}
+
+#sidebar-widgets .widget.widget_recent_entries a, #sidebar-widgets .widget .menu a {
+	padding: 0 .5rem;
 }
 
 .widget-container li a {
@@ -1535,6 +1539,11 @@ a {
 .has-dark-blue-background-color,
 .has-white-color {
 	color:var(--bg)
+}
+
+.has-dark-blue-background-color a {
+	color: var(--fg);
+	outline-color: var(--fg);
 }
 
 /* Dark color assignments */
@@ -2930,4 +2939,22 @@ button.has-popup[aria-expanded="true"] span {
 	#gform_1 .gform-body {
 		width: 100%;
 	}
+}
+
+/**
+ * Event specific.
+ */
+
+#wpcsp-sponsor-2170 .wpcsp-sponsor-description a img {
+	max-height: 55px !important;
+	margin-bottom:5px;
+}
+
+#wpcsp-sponsor-1283 .wpcsp-sponsor-description a img {
+	max-height: 80px !important;
+}
+
+.postid-2191 blockquote {
+	border-left: 4px solid var(--color-dark-blue);
+	margin-left: 40px
 }
