@@ -2588,6 +2588,7 @@ button.has-popup[aria-expanded="true"] span {
 
 .schedule.session button.has-popup:hover {
 	background: var(--button-bg-hover);
+	color: var(--button-color-hover);
 }
 
 .wpad-calendar-links ul {
