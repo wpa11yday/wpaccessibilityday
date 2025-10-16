@@ -38,7 +38,16 @@
 }
 
 .current-talk {
-	background: var(--accent1s1);
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 20px;
+	align-items: center;
+}
+
+@media screen and ( width < 40em ) {
+	.current-talk {
+		display: block;
+	}
 }
 
 .wpad-callout:not(#wpad-archive .wpad-callout) {
@@ -400,12 +409,6 @@
 
 #page .wpad-donors li span.info {
 	font-size:1rem
-}
-
-.current-talk {
-	background:#fff;
-	padding:1em;
-	margin:0 -1em
 }
 
 .session_id {
