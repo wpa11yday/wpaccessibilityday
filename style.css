@@ -642,7 +642,7 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 }
 
 #able-vts-alert {
-	top: 40px;
+	top: 40px !important;
 }
 
 .entry-header-cta a.button {
