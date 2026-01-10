@@ -328,3 +328,20 @@ input[data-com-onepassword-filled="dark"] {
 .gform_wrapper .localtime {
 	color: var(--light-gray);
 }
+
+#able-vts fieldset legend {
+	color: var(--fg);
+}
+
+#able-vts table td {
+	color: var(--fg);
+}
+
+#able-vts table th {
+	color: var(--bg);
+}
+
+#able-vts-alert {
+	background: var(--accent4);
+	color: var(--bg);
+}
