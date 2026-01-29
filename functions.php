@@ -351,7 +351,7 @@ function wp_accessibility_day_scripts() {
 	);
 	wp_localize_script( 'wp-accessibility-day-time', 'tz', $args );
 
-	$year = str_replace( array( 'https://', '.wpaccessibility.day' ), '', home_url() );
+	$year = str_replace( array( 'https://wpaccessibility.day/', '/' ), '', home_url() );
 	$args = array(
 		'darkstylesheet'   => get_template_directory_uri() . '/css/dark-mode.css?v=' . $dark_style_ver,
 		'hcstylesheet'     => get_template_directory_uri() . '/css/high-contrast.css?v=' . $hc_ver,
