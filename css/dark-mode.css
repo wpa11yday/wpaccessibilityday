@@ -349,3 +349,8 @@ input[data-com-onepassword-filled="dark"] {
 .donation-grid .gchoice {
 	color: var(--bg);
 }
+
+.StripeElement iframe:nth-of-type(1) {
+	background: var(--fg);
+	border-radius: 5px;
+}
