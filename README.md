@@ -1,8 +1,8 @@
 # WP Accessibility Day Theme
 
-This is the theme used by WordPress Accessibility Day. Version 1.0 (untagged) was used for 2020.wpaccessibility.day; it was improved but not redesigned with version 2.0, used for 2022.wpaccessibility.day. Version 3.0 is used on 2023 and for indefinite use on future events.
+This theme is used for WordPress Accessibility Day events. Version 1.0 (untagged) was used for 2020.wpaccessibility.day. Version 2.0, used for the 2022 event, featured improvements but not a complete redesign. The current Version 3.0 was used for the 2023 event and will be used for future WordPress Accessibility Day events.
 
-3.0 design by Ryan Bracey & Second Melody.
+Version 3.0 was designed by Ryan Bracey & Second Melody.
 
 ## Contributing
 
