@@ -556,9 +556,9 @@ add_action('wp', 'custom_maybe_activate_user', 9);
  */
 function wpad_headers( $headers, $wp ) {
 	// Disable caching on sponsor post type single.
-	//if ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) {
+	if ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) {
 		$headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0';
-	//}
+	}
 
 	return $headers;
 }
@@ -753,6 +753,24 @@ function wpad_people_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'wpad_people_class', 10, 1 );
+
+
+/**
+ * Add site class to differentiate multisite instances.
+ *
+ * @param array $classes Classes passed to post.
+ *
+ * @return Array
+ */
+function wpad_site_class( $classes ) {
+	$blogid = get_current_blog_id();
+	$class  = 'site-' . $blogid;
+
+	$classes[] = $class;
+
+	return $classes;
+}
+add_filter( 'body_class', 'wpad_site_class', 10, 1 );
 
 /**
  * Enqueue block editor customizations.
