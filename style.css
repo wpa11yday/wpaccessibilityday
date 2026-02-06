@@ -2967,3 +2967,63 @@ button.has-popup[aria-expanded="true"] span {
 	border-left: 4px solid var(--color-dark-blue);
 	margin-left: 40px
 }
+
+
+.page-id-6128 .gform_wrapper .gfield.buttonized .gfield_radio label, 
+.page-id-6128 .gform_wrapper .gfield.buttonized .gfield_checkbox label {
+	font-size: 20px;
+	padding: 10px 5px 10px 40px;
+	min-height:88px;
+	display:flex !important;
+	align-items: center;
+	text-align: left;
+}
+
+.page-id-6128 .gform_wrapper .gfield.buttonized input[type="radio"]:checked+label::before, 
+.page-id-6079 .gform_wrapper .gfield.buttonized input[type="checkbox"]:checked+label::before {
+	left:8px;
+
+}
+
+/* WCEU 2026 Form */
+.donation-grid .gfield_radio {
+	gap: .25rem !important;	
+
+}
+
+.donation-grid .gchoice {
+	border: 1px solid var(--accent2);
+	border-radius: 4px;
+	background-color: var(--accent2s1);
+	color: var(--fg);
+	padding: 10px;
+	margin: .5rem;
+}
+
+.donation-grid .gchoice .gfield-choice-input {
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.donation-grid .gchoice .gform-field-label .donation-amount {
+	font-size: 1.6em;
+	display: block;
+}
+
+.donate-rewards {
+	font-size: 1em;
+	text-align:left;
+}
+
+.donation-grid .gchoice:last-child {
+  grid-column: 1 / -1;
+}
+
+.site-1 #gform_24 {
+	display: block;
+}
+
+.site-1 #gform_24 .gform-body,
+.site-1 #gform_24 .gform-footer {
+	width: 100%;
+}

@@ -345,3 +345,7 @@ input[data-com-onepassword-filled="dark"] {
 	background: var(--accent4);
 	color: var(--bg);
 }
+
+.donation-grid .gchoice {
+	color: var(--bg);
+}
