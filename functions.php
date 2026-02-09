@@ -555,8 +555,10 @@ add_action('wp', 'custom_maybe_activate_user', 9);
  * @return array
  */
 function wpad_headers( $headers, $wp ) {
-	// Disable caching on sponsor post type single.
-	if ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) {
+	// Disable caching on sponsor post type single & special pages.
+	$uncached_pages = array( 'wceu-2026' );
+	$dontcache      = ( is_singular() && isset( $wp->query_vars['pagename'] ) && in_array( $wp->query_vars['pagename'], $uncached_pages, true ) ) ? true : false;
+	if ( $dontcache || ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) ) {
 		$headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0';
 	}
 
