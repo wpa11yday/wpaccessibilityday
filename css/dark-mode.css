@@ -377,3 +377,7 @@ input[data-com-onepassword-filled="dark"] {
 	color: var(--fg);
 	border-right-width: 1px;
 }
+
+.gform_wrapper.gravity-theme .gfield_validation_message a, .gform_wrapper.gravity-theme .validation_message a {
+	color: #c02b0a;
+}
