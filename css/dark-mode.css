@@ -365,7 +365,6 @@ input[data-com-onepassword-filled="dark"] {
 	font-weight: 600;
 }
 
-
 #primary .gform_wrapper.gravity-theme .gform_show_password {
 	background: var(--input-bg);
 	color: var(--bg);
