@@ -2954,6 +2954,22 @@ button.has-popup[aria-expanded="true"] span {
 	}
 }
 
+#primary .gform_wrapper.gravity-theme .gform_show_password {
+	border: 1px solid;
+	border-right-width: 0px;
+	box-shadow: none;
+	padding: 4px;
+	right: 4px;
+	background: transparent;
+	color: var(--fg);
+}
+
+#primary .gform_wrapper.gravity-theme .gform_show_password:hover,
+#primary .gform_wrapper.gravity-theme .gform_show_password:focus {
+	background: var(--fg);
+	color: var(--bg);
+}
+
 /**
  * Event specific.
  */

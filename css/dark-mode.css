@@ -364,3 +364,16 @@ input[data-com-onepassword-filled="dark"] {
 	color: var(--accent5);
 	font-weight: 600;
 }
+
+
+#primary .gform_wrapper.gravity-theme .gform_show_password {
+	background: var(--input-bg);
+	color: var(--bg);
+}
+
+#primary .gform_wrapper.gravity-theme .gform_show_password:hover,
+#primary .gform_wrapper.gravity-theme .gform_show_password:focus {
+	background: var(--bg);
+	color: var(--fg);
+	border-right-width: 1px;
+}
