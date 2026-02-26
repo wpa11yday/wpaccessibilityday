@@ -841,6 +841,11 @@ figure.box-shadow {
 	margin:30px auto
 }
 
+/* Override core pullquote styling */
+.wp-block-pullquote {
+	padding: 2rem 0;
+}
+
 .wp-block-button.button-small a {
 	font-size:1rem;
 	padding:10px 18px
