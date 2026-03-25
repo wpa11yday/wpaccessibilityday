@@ -13,6 +13,10 @@ $wpad_theme_update_checker = PucFactory::buildUpdateChecker(
 $wpad_theme_update_checker->setBranch( 'main' );
 
 
+add_filter( 'wpseo_breadcrumb_separator', function() {
+    return '</li><li>';
+});
+
 if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -518,7 +522,7 @@ function wpad_breadcrumbs( $link_output, $link ) {
 	if ( 'wpcs_session' === get_post_type( $id ) ) {
 		return '<span><a href="' . home_url( '/schedule/' ) . '">Schedule</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
-	
+
 	if ( 'wpcsp_media_partner' === get_post_type( $id ) ) {
 		return '<span><a href="' . home_url( '/media-partners/' ) . '">Media Partners</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
@@ -846,11 +850,11 @@ function wpad_register_block_patterns() {
 
 	/**
 	 * Filters the theme block pattern categories so we can register our own.
-	 * 
+	 *
 	 * @hook wpad_block_pattern_categories
-	 * 
+	 *
 	 * @param {object} array of categories to add
-	 * 
+	 *
 	 * @return {object}
 	 */
 	$block_pattern_categories = apply_filters( 'wpad_block_pattern_categories', $block_pattern_categories );
