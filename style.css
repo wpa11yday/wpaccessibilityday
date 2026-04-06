@@ -1182,6 +1182,30 @@ label[for=matomo_optout_checkbox] {
 .nav-breadcrumbs {
 	color: var(--breadcrumbs-color);
 	font-weight: 700;
+	display: flex;
+}
+
+.nav-breadcrumbs ul {
+	list-style: none;
+	display: flex;
+	padding:0;
+	width:100%;
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+.nav-breadcrumbs ul li{
+	 display: inline;
+}
+
+.nav-breadcrumbs ul li span span::after{
+	content: "»";
+	margin-left: 15px;
+	color: var(--breadcrumbs-color);
+    text-decoration: none;
+}
+
+
 }
 
 .nav-breadcrumbs span > span {
@@ -1189,8 +1213,14 @@ label[for=matomo_optout_checkbox] {
 	font-weight: 400;
 }
 
+.nav-breadcrumbs li > span  {
+    color: var(--fg);
+    font-weight: 400;
+	margin-right:0;
+}
+
 .nav-breadcrumbs span:nth-of-type(1) {
-	margin-right: 12px;
+
 	margin-left: 0;
 }
 
@@ -1804,7 +1834,8 @@ h2.event-time {
 .page-template-page-peach .entry-header,
 .page-template-page-peach .entry-header h1,
 .page-template-page-peach .entry-header .page-excerpt,
-.page-template-page-peach .nav-breadcrumbs {
+.page-template-page-peach .nav-breadcrumbs
+{
 	background: var(--template-peach-entry-header-bg);
 }
 
@@ -3001,7 +3032,7 @@ button.has-popup[aria-expanded="true"] span {
 }
 
 
-.page-id-6128 .gform_wrapper .gfield.buttonized .gfield_radio label, 
+.page-id-6128 .gform_wrapper .gfield.buttonized .gfield_radio label,
 .page-id-6128 .gform_wrapper .gfield.buttonized .gfield_checkbox label {
 	font-size: 20px;
 	padding: 10px 5px 10px 40px;
@@ -3011,7 +3042,7 @@ button.has-popup[aria-expanded="true"] span {
 	text-align: left;
 }
 
-.page-id-6128 .gform_wrapper .gfield.buttonized input[type="radio"]:checked+label::before, 
+.page-id-6128 .gform_wrapper .gfield.buttonized input[type="radio"]:checked+label::before,
 .page-id-6079 .gform_wrapper .gfield.buttonized input[type="checkbox"]:checked+label::before {
 	left:8px;
 
@@ -3019,7 +3050,7 @@ button.has-popup[aria-expanded="true"] span {
 
 /* WCEU 2026 Form */
 .donation-grid .gfield_radio {
-	gap: .25rem !important;	
+	gap: .25rem !important;
 
 }
 

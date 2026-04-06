@@ -71,7 +71,7 @@
 		?>
 		<nav aria-label="Breadcrumbs" class="nav-breadcrumbs">
 		<?php
-		yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+		yoast_breadcrumb( '<ul id="breadcrumbs"><li>','</ul>' );
 		?>
 		</nav>
 		<?php
