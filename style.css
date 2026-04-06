@@ -1182,7 +1182,11 @@ label[for=matomo_optout_checkbox] {
 .nav-breadcrumbs {
 	color: var(--breadcrumbs-color);
 	font-weight: 700;
-	display: flex;
+}
+
+.nav-breadcrumbs a:hover,
+.nav-breadcrumbs a:focus {
+	outline-offset: 0;
 }
 
 .nav-breadcrumbs ul {
@@ -1194,15 +1198,12 @@ label[for=matomo_optout_checkbox] {
 	margin: 0 auto;
 }
 
-.nav-breadcrumbs ul li{
-	 display: inline;
-}
-
 .nav-breadcrumbs ul li span span::after{
 	content: "»";
+	content: "»" / '';
 	margin-left: 15px;
 	color: var(--breadcrumbs-color);
-    text-decoration: none;
+	text-decoration: none;
 }
 
 
