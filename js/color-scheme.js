@@ -1,12 +1,11 @@
 /**
  * Handle dark/light toggle.
  */
-/* global wpA11YdayColorScheme */
+/* global themeColorScheme */
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-	const lightModeButton = document.querySelector('button[aria-label="Enable light mode"]');
-	const darkModeButton = document.querySelector('button[aria-label="Enable dark mode"]');
+	const modeButton = document.querySelector('button[aria-label="Enable dark mode"]');
 	const colorSchemeCookieName = 'wpadColorScheme';
 	const themeStyleSheet = document.getElementById('wp-accessibility-day-event-css');
 	const head = themeStyleSheet.parentNode;
@@ -18,13 +17,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	darkModeStyleSheet.setAttribute('rel', 'stylesheet');
 	darkModeStyleSheet.setAttribute('id', 'wp-accessibility-day-dark-css-toggle');
-	darkModeStyleSheet.setAttribute('href', wpA11YdayColorScheme.darkstylesheet );
+	darkModeStyleSheet.setAttribute('href', themeColorScheme.darkstylesheet );
 	darkModeStyleSheet.setAttribute('type', 'text/css');
 	darkModeStyleSheet.setAttribute('media', 'all');
 
 	highContrastStyleSheet.setAttribute('rel', 'stylesheet');
 	highContrastStyleSheet.setAttribute('id', 'wp-accessibility-day-dark-css-toggle');
-	highContrastStyleSheet.setAttribute('href', wpA11YdayColorScheme.hcstylesheet );
+	highContrastStyleSheet.setAttribute('href', themeColorScheme.hcstylesheet );
 	highContrastStyleSheet.setAttribute('type', 'text/css');
 	highContrastStyleSheet.setAttribute('media', 'all');
 
@@ -54,12 +53,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	/**
 	 * Toggles the active/pressed state of the buttons.
 	 *
-	 * @param {HTMLElement} active 
-	 * @param {HTMLElement} inactive 
+	 * @param {HTMLElement} active element
+	 * @param {string} state 
 	 */
-	const toggleButton = (active, inactive) => {
-		active.setAttribute('aria-pressed', 'true');
-		inactive.setAttribute('aria-pressed', 'false');
+	const toggleButton = (active, state) => {
+		active.setAttribute('aria-pressed', state);
 	}
 
 	/**
@@ -82,13 +80,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		switch (action) {
 			case 'remove':
 				head.removeChild(darkModeStyleSheet);
-				logo.setAttribute( 'src', wpA11YdayColorScheme.lightModeLogo );
-				lockup.setAttribute( 'src', wpA11YdayColorScheme.lightModeLockup );
+				logo.setAttribute( 'src', themeColorScheme.lightModeLogo );
+				lockup.setAttribute( 'src', themeColorScheme.lightModeLockup );
 			break;
 			default:
 				head.insertBefore(darkModeStyleSheet, themeStyleSheet.nextSibling)
-				logo.setAttribute( 'src', wpA11YdayColorScheme.darkModeLogo );
-				lockup.setAttribute( 'src', wpA11YdayColorScheme.darkModeLockup );
+				logo.setAttribute( 'src', themeColorScheme.darkModeLogo );
+				lockup.setAttribute( 'src', themeColorScheme.darkModeLockup );
 
 		}
 	}
@@ -97,35 +95,29 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 	// Update the active state.
 	if ('dark' === colorschemeCookie || (! colorschemeCookie && prefersDarkScheme)) {
-		toggleButton(darkModeButton, lightModeButton);
+		toggleButton(modeButton, 'true');
 		toggleStyle();
 		
-		highContrastStyleSheet.setAttribute('href', wpA11YdayColorScheme.hcdarkstylesheet );
+		highContrastStyleSheet.setAttribute('href', themeColorScheme.hcdarkstylesheet );
 	}
 
 	if (isHighContrast()) {
 		head.appendChild(highContrastStyleSheet);
 	}
 
-	lightModeButton.addEventListener('click', (e) => {
+	modeButton.addEventListener('click', (e) => {
 		e.preventDefault();
 
-		if ('false' === lightModeButton.getAttribute('aria-pressed')) {
-			toggleButton(lightModeButton, darkModeButton);
+		if ('true' === modeButton.getAttribute('aria-pressed')) {
+			toggleButton(modeButton,'false');
 			toggleStyle('remove');
 			setCookie(colorSchemeCookieName, 'light');
-			highContrastStyleSheet.setAttribute('href', wpA11YdayColorScheme.hcstylesheet );
-		}
-	});
-
-	darkModeButton.addEventListener('click', (e) => {
-		e.preventDefault();
-
-		if ('false' === darkModeButton.getAttribute('aria-pressed')) {
-			toggleButton(darkModeButton, lightModeButton);
+			highContrastStyleSheet.setAttribute('href', themeColorScheme.hcstylesheet );
+		} else if ('false' === modeButton.getAttribute('aria-pressed')) {
+			toggleButton(modeButton, 'true');
 			toggleStyle();
 			setCookie(colorSchemeCookieName, 'dark');
-			highContrastStyleSheet.setAttribute('href', wpA11YdayColorScheme.hcdarkstylesheet );
+			highContrastStyleSheet.setAttribute('href', themeColorScheme.hcdarkstylesheet );
 		}
 	});
 });

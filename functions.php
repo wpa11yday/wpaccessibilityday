@@ -365,7 +365,7 @@ function wp_accessibility_day_scripts() {
 		$args['lightModeLogo'] = get_template_directory_uri() . '/assets/logo-base.png';
 		$args['darkModeLogo']  = get_template_directory_uri() . '/assets/logo-base-dark.png';
 	}
-	wp_localize_script( 'wp-accessibility-color-scheme', 'wpA11YdayColorScheme', $args );
+	wp_localize_script( 'wp-accessibility-color-scheme', 'themeColorScheme', $args );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

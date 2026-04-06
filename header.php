@@ -49,10 +49,8 @@
 					?>
 				</nav><!-- #utility-navigation -->
 				<div class="utility-dark-mode placeholder">
-					<button type="button" aria-pressed="true" aria-label="Enable light mode">
-						<span class="fa-regular fa-sun" aria-hidden="true"></span>
-					</button>
 					<button type="button" aria-pressed="false" aria-label="Enable dark mode">
+						<span class="fa-regular fa-sun" aria-hidden="true"></span>
 						<span class="fa-solid fa-moon" aria-hidden="true"></span>
 					</button>
 				</div>

@@ -2471,20 +2471,11 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	background: var(--dark-mode-button-bg);
 	color: var(--dark-mode-button-color);
 	border: 2px solid var(--dark-mode-button-border-color);
-	width: 2rem;
+	width: auto;
+	border-radius: 2rem;
 	height: 2rem;
 	display: inline-block;
 	text-align: center;
-}
-
-.utility-dark-mode button:nth-of-type(1) {
-	border-radius: 2rem 0 0 2rem;
-	border-right: none;
-}
-
-.utility-dark-mode button:nth-of-type(2) {
-	border-radius: 0 2rem 2rem 0;
-	border-left: none;
 }
 
 .utility-dark-mode button span {
@@ -2494,7 +2485,12 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	position: relative;
 }
 
-.utility-dark-mode button[aria-pressed=true] span {
+.utility-dark-mode button[aria-pressed=false] span.fa-sun {
+	background: var(--dark-mode-button-bg-pressed);
+	border: 1px solid var(--dark-mode-button-border-color-pressed);
+}
+
+.utility-dark-mode button[aria-pressed=true] span.fa-moon {
 	background: var(--dark-mode-button-bg-pressed);
 	border: 1px solid var(--dark-mode-button-border-color-pressed);
 }
@@ -2509,8 +2505,14 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	line-height: 1.875;
 }
 
-.utility-dark-mode button:hover span,
-.utility-dark-mode button:focus span  {
+.utility-dark-mode button[aria-pressed=true]:hover span.fa-sun,
+.utility-dark-mode button[aria-pressed=true]:focus span.fa-sun {
+	background: var(--dark-mode-button-bg-hover);
+	color: var(--dark-mode-button-color-hover);
+}
+
+.utility-dark-mode button[aria-pressed=false]:hover span.fa-moon,
+.utility-dark-mode button[aria-pressed=false]:focus span.fa-moon {
 	background: var(--dark-mode-button-bg-hover);
 	color: var(--dark-mode-button-color-hover);
 }
