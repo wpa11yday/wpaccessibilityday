@@ -14,7 +14,7 @@ $wpad_theme_update_checker->setBranch( 'main' );
 
 
 add_filter( 'wpseo_breadcrumb_separator', function() {
-    return '</li><li>';
+	return '</li><li>';
 });
 
 if ( ! function_exists( 'wp_accessibility_day_setup' ) ) :
@@ -516,15 +516,15 @@ function wpad_breadcrumbs( $link_output, $link ) {
 	$id = isset( $link['id'] ) ? $link['id'] : get_queried_object_id();
 
 	if ( 'wpcsp_sponsor' === get_post_type( $id ) ) {
-		return '<span><a href="' . home_url( '/sponsors/' ) . '">Sponsors</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
+		return '<span><a href="' . home_url( '/sponsors/' ) . '">Sponsors</a></span></li><li><span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
 
 	if ( 'wpcs_session' === get_post_type( $id ) ) {
-		return '<span><a href="' . home_url( '/schedule/' ) . '">Schedule</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
+		return '<span><a href="' . home_url( '/schedule/' ) . '">Schedule</a></span></li><li><span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
 
 	if ( 'wpcsp_media_partner' === get_post_type( $id ) ) {
-		return '<span><a href="' . home_url( '/media-partners/' ) . '">Media Partners</a></span>' . ' / <span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
+		return '<span><a href="' . home_url( '/media-partners/' ) . '">Media Partners</a></span></li><li><span class="breadcrumb_last" aria-current="page">' . $link['text'] . '</span>';
 	}
 
 

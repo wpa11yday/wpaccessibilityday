@@ -1192,21 +1192,18 @@ label[for=matomo_optout_checkbox] {
 .nav-breadcrumbs ul {
 	list-style: none;
 	display: flex;
-	padding:0;
+	padding:.875rem 0;
 	width:100%;
 	max-width: 1120px;
-	margin: 0 auto;
+	margin: 0 auto 0;
 }
 
-.nav-breadcrumbs ul li span span::after{
-	content: "»";
-	content: "»" / '';
-	margin-left: 15px;
+.nav-breadcrumbs ul li > span::after{
+	content: "/";
+	margin-left: 12px;
+	margin-right: 12px;
 	color: var(--breadcrumbs-color);
 	text-decoration: none;
-}
-
-
 }
 
 .nav-breadcrumbs span > span {
@@ -1215,26 +1212,17 @@ label[for=matomo_optout_checkbox] {
 }
 
 .nav-breadcrumbs li > span  {
-    color: var(--fg);
-    font-weight: 400;
+	color: var(--fg);
+	font-weight: 400;
 	margin-right:0;
 }
 
 .nav-breadcrumbs span:nth-of-type(1) {
-
 	margin-left: 0;
 }
 
-#breadcrumbs > span > a,
-.nav-breadcrumbs span {
-	margin-right: 12px;
-	margin-left: 12px;
-}
-
-.nav-breadcrumbs p {
-	margin-bottom:0;
-	margin-top:0;
-	padding: 12px 0;
+#breadcrumbs li:last-of-type span::after {
+	content: none;
 }
 
 .entry-header img {
