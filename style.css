@@ -2775,6 +2775,7 @@ button.has-popup[aria-expanded="true"] span {
 		width: 100%;
 	}
 
+	.wpad-event .site-branding .site-title img,
 	.site-branding .site-title img {
 		max-width: 100%;
 		margin-bottom: 1rem;
