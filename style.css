@@ -165,7 +165,6 @@ body {
 	--dark-mode-button-bg-pressed: var(--accent4);
 	--dark-mode-button-border-color-pressed: var(--dark-mode-button-border-color);
 	--dark-mode-button-bg-hover: var(--accent1);
-	--dark-mode-button-color-hover: var(--bg);
 	--wpad-archive-bg: var(--accent1s1);
 	--wpad-archive: var(--fg);
 	--wpad-notice-bg: var(--accent1s1);
@@ -558,6 +557,19 @@ table {
 	text-decoration: none;
 	border-radius: 0;
 	border-bottom: none;
+}
+
+#utility-menu > li:not(.wp-block-button) > a {
+	display: grid;
+	place-items: center;
+	min-inline-size: 32px;
+	min-block-size: 32px;
+	padding: 0;
+}
+
+.main-navigation .menu > li > :is(a, button) {
+	min-block-size: 32px;
+	align-items: center;
 }
 
 h2 .simpletoc-collapsible,
@@ -1192,10 +1204,17 @@ label[for=matomo_optout_checkbox] {
 .nav-breadcrumbs ul {
 	list-style: none;
 	display: flex;
-	padding:.875rem 0;
+	padding: .875rem 0;
+	flex-wrap: wrap;
+	row-gap: .25rem;
 	width:100%;
 	max-width: 1120px;
 	margin: 0 auto 0;
+}
+
+.nav-breadcrumbs li {
+	display: inline-flex;
+	align-items: baseline;
 }
 
 .nav-breadcrumbs ul li > span::after{
@@ -1869,7 +1888,7 @@ h2.event-time {
 	margin-bottom: 0;
 }
 
-.nav-breadcrumbs > p,
+.nav-breadcrumbs > ul,
 .entry-header .entry-header-content {
 	max-width: 1120px;
 	margin: 0 auto;
@@ -2525,23 +2544,17 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	line-height: 1.875;
 }
 
-.utility-dark-mode button[aria-pressed=true]:hover span.fa-sun,
-.utility-dark-mode button[aria-pressed=true]:focus span.fa-sun {
-	background: var(--dark-mode-button-bg-hover);
-	color: var(--dark-mode-button-color-hover);
-}
-
-.utility-dark-mode button[aria-pressed=false]:hover span.fa-moon,
-.utility-dark-mode button[aria-pressed=false]:focus span.fa-moon {
-	background: var(--dark-mode-button-bg-hover);
-	color: var(--dark-mode-button-color-hover);
+.utility-dark-mode button:hover,
+.utility-dark-mode button:focus {
+	outline: 3px solid var(--button-outline-focus);
+	outline-offset: 3px;
 }
 
 #wpad-notice,
 #wpad-archive {
 	background: var(--wpad-archive-bg);
 	text-align: center;
-	padding:.25em;
+	padding: .25rem 1rem;
 	margin: 0;
 	border-bottom: 2px solid;
 }
@@ -2688,9 +2701,34 @@ button.has-popup[aria-expanded="true"] span {
 	}
 }
 
+@media screen and ( width <= 40em ) {
+	.nav-breadcrumbs > ul {
+		display: block;
+	}
+
+	.nav-breadcrumbs li {
+		display: inline;
+	}
+
+	.nav-breadcrumbs [aria-current="page"] {
+		overflow-wrap: anywhere;
+	}
+
+	#masthead .utility-navigation li {
+		margin: 0;
+	}
+	#masthead #utility-menu {
+		column-gap: 2px;
+	}
+
+	.entry-header h1:not(.wpsc-single-session-title), .entry-header .page-excerpt:not(.wpcs_session-template-default .page-excerpt) {
+		margin-right: auto;
+	}
+}
+
 /* Breakpoint for the internal headers that are wider than content.*/
 @media screen and (width <= 75em) {
-	.nav-breadcrumbs > p,
+	.nav-breadcrumbs > ul,
 	.entry-header .entry-header-content {
 		padding: 0 20px;
 	}
@@ -2749,7 +2787,7 @@ button.has-popup[aria-expanded="true"] span {
 	.header-svg-container h1,
 	.header-svg-container .widget_text,
 	.header-svg-container ,
-	.nav-breadcrumbs > p,
+	.nav-breadcrumbs > ul,
 	.entry-header > *,
 	.widget-area > *,
 	.entry-content > *,
@@ -2779,10 +2817,6 @@ button.has-popup[aria-expanded="true"] span {
 
 	.header-svg-container {
 		padding: 0;
-	}
-
-	button.menu-toggle {
-		padding:18px 24px
 	}
 
 	.main-navigation .menu-primary-navigation-container {
