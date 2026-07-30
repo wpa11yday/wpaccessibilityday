@@ -2719,6 +2719,7 @@ button.has-popup[aria-expanded="true"] span {
 	}
 	#masthead #utility-menu {
 		column-gap: 2px;
+		border-top: 8px solid transparent;
 	}
 
 	.entry-header h1:not(.wpsc-single-session-title), .entry-header .page-excerpt:not(.wpcs_session-template-default .page-excerpt) {
