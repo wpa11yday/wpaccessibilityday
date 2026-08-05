@@ -34,14 +34,15 @@
 		$( '#input_5_21 .gfield-choice-input' ).each( function( index ) {
 			var id          = $( this ).attr( 'id' );
 			var label       = $( 'label[for=' + id + ']' );
-			var labelText   = label.text().replace( ' on October 15', '' ).replace( ' on October 16', '' ).replace( /UTC/g, '' );
+			var labelText   = label.text().replace( ' on October 7', '' ).replace( ' on October 8', '' ).replace( /UTC/g, '' );
 			var labelParts  = labelText.split( '–' );
 			var labelTimeA  = labelParts[0].trim().split( ':' )[0];
 			let dateA;
 			if ( labelTimeA >= 14 && labelTimeA < 24 ) {
-				dateA = 15; // First day of event.
+				// If date is single digit, must be string eg '07'; if double, can be int.
+				dateA = '07'; // First day of event.
 			} else {
-				dateA = 16; // Second day of event. 
+				dateA = '08'; // Second day of event. 
 			}
 			let labelTimeB = parseInt( labelTimeA ) + 4;
 			if ( labelTimeB > 24 ) {
@@ -49,15 +50,15 @@
 			}
 			let dateB;
 			if ( labelTimeB >= 14 && labelTimeB < 24 ) {
-				dateB = 15;
+				dateB = '07';
 			} else {
-				dateB = 16;
+				dateB = '08';
 			}
 
 			let time1 = ( labelTimeA.length === 1 ) ? '0' + labelTimeA : labelTimeA;
-			var date1 = '2025-10-' + dateA + 'T' + time1  + ':45:00Z';
+			var date1 = '2026-10-' + dateA + 'T' + time1  + ':45:00Z';
 			let time2 = ( labelTimeB.toString().length === 1 ) ? '0' + labelTimeB : labelTimeB;
-			var date2 = '2025-10-' + dateB + 'T' + time2 + ':00:00Z';
+			var date2 = '2026-10-' + dateB + 'T' + time2 + ':00:00Z';
 			var utc1   = Date.parse( date1 );
 			var utc2  = Date.parse( date2 );
 
