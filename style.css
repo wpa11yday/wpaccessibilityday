@@ -891,13 +891,15 @@ figure.box-shadow {
 .main-navigation .menu button:hover,
 .main-navigation a:hover {
 	border-bottom: 2px solid var(--main-nav-color-hover);
+	border-radius: none;
 	outline: none;
 	background: none;
 	color: var(--main-nav-color);
 }
 
+.main-navigation .menu button:focus-visible,
 .main-navigation .menu button:focus {
-	outline-offset: 2px;
+	outline: 2px solid currentColor;
 }
 
 .main-navigation .sub-menu {
