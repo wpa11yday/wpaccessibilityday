@@ -127,7 +127,7 @@ h3 {
 	border-color: var(--accent4);
 }
 
-.footer-sidebar .widget-sidebar-column:nth-of-type(2) *:not(input) {
+.footer-sidebar .widget-sidebar-column:nth-of-type(2) *:not(input,button) {
 	color: var(--black);
 }
 

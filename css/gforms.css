@@ -109,10 +109,14 @@ footer #gform_18 .gform-footer,
 	padding:0
 }
 
+footer #gform_18 .gform_footer button,
+#gform_24 .gform_footer button,
+#gform_1 .gform_footer button,
 footer #gform_18 .gform_footer input,
 #gform_24 .gform_footer input,
 #gform_1 .gform_footer input {
 	margin:0 0 16px;
+	margin-bottom: 16px;
 	padding:14px 24px;
 	line-height:1
 }

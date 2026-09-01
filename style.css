@@ -1921,7 +1921,7 @@ h2.event-time {
 	grid-template-columns: 1fr 1fr;
 }
 
-.home .entry-header .entry-header-cta .widget-container *:not(input,a) {
+.home .entry-header .entry-header-cta .widget-container *:not(input,button,a) {
 	color: var(--home-entry-header-cta-color);
 }
 
