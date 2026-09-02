@@ -1400,6 +1400,7 @@ label[for=matomo_optout_checkbox] {
 
 .home .wp-block-latest-posts li {
 	padding: 4px;
+	margin: 0;
 }
 
 .home .wp-block-latest-posts a,
