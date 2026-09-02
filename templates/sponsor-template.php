@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the single session posts
+ * The template for displaying the single session posts.
  *
  * @package wp_conference_schedule_pro
  * @since 1.0.0
@@ -65,10 +65,10 @@ get_header(); ?>
 								<div class="wpcsp-sponsor-swag">
 									<h2>Attendee Swag</h2> 
 									<?php
-									if ( is_user_logged_in() ) {
+									$begin = strtotime( get_option( 'wpad_start_time' ) );
+									$end   = strtotime( get_option( 'wpad_end_time' ) );
+									if ( time() > ( $begin + ( 7 * DAY_IN_SECONDS ) && time() < $end + ( 7 * DAY_IN_SECONDS ) ) {
 										echo $swag;
-									} else {
-										echo '<p>You must be logged into your attendee account to view swag. <a href="' . wp_login_url() . '">Login</a> or <a href="' . esc_url( $register_url ) . '">get a free ticket</a></p>';
 									}
 									?>
 								</div>
