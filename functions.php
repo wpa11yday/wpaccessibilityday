@@ -560,7 +560,7 @@ add_action('wp', 'custom_maybe_activate_user', 9);
  */
 function wpad_headers( $headers, $wp ) {
 	// Disable caching on sponsor post type single & special pages.
-	$uncached_pages = array( 'wceu-2026' );
+	$uncached_pages = array( 'register' );
 	$dontcache      = ( is_singular() && isset( $wp->query_vars['pagename'] ) && in_array( $wp->query_vars['pagename'], $uncached_pages, true ) ) ? true : false;
 	if ( $dontcache || ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) ) {
 		$headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0';
