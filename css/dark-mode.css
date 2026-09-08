@@ -279,7 +279,7 @@ select:focus {
 #wpad-notice p,
 #wpad-archive p,
 #wpad-notice a,
-#wpad-archive a {
+#wpad-archive a:not(.button) {
 	color: var(--bg);
 }
 
