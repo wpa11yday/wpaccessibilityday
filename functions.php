@@ -934,3 +934,63 @@ function wpad_remove_wpmu_styles() {
 	$response = remove_action( 'wp_head', 'wpmu_activate_stylesheet' );
 }
 add_action( 'wp_head', 'wpad_remove_wpmu_styles', 1 );
+
+
+/**
+ * Render Google Tag Manager tracking code only for US-based visitors.
+ */
+function wpad_render_tagmanager_tracking() {
+	if ( get_current_blog_id() === 9 ) {
+		$ip   = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : false;
+		$data = false;
+
+		if ( $ip ) {
+			$ip = wpad_anonymize_ip_for_country( $ip );
+			if ( $ip ) {
+				$response = wp_remote_get( "http://ip-api.com/json/{$ip}" );
+				$data     = json_decode( $response['body'], true );
+			}
+		}
+		if ( $data && isset( $data['status'] ) && 'success' === $data['status'] && 'US' === $data['countryCode'] ) {
+	?>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18453467877"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'AW-18453467877');
+		</script>
+	<?php
+		}
+	}
+}
+add_filter( 'wpad_render_site_head', 'wpad_render_tagmanager_tracking' );
+
+/**
+ * Anonymize an IP by dropping the last octet.
+ *
+ * @param string $ip IP address.
+ *
+ * @return string IP address minus the terminal designators.
+ */
+function wpad_anonymize_ip_for_country( string $ip ): string {
+	// Check if it's a valid IPv4 address
+	if ( filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 ) ) {
+		$packed = inet_pton( $ip );
+		// Apply a /24 mask (hex 0xFFFFFF00)
+		$masked = $packed & "\xFF\xFF\xFF\x00"; 
+		return inet_ntop( $masked );
+	}
+
+	// Check if it's a valid IPv6 address
+	if ( filter_var( $ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6 ) ) {
+		$packed = inet_pton( $ip );
+		// Apply a /48 mask (first 6 bytes kept, rest zeroed out)
+		$masked = $packed & "\xFF\xFF\xFF\xFF\xFF\xFF\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00";
+		return inet_ntop( $masked );
+	}
+
+	return false; // Return original if not a valid IP
+}
