@@ -1012,6 +1012,7 @@ figure.box-shadow {
 
 .main-navigation .dropdown-toggle .dashicons {
 	color:var(--main-nav-toggle-color);
+	margin-left: 4px;
 }
 
 .site-main .comment-navigation,.site-main .posts-navigation,.site-main .post-navigation {
