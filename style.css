@@ -246,6 +246,7 @@ button.toggle-details:focus,
 .is-style-button-underline a::after {
 	font-family: dashicons;
 	content: '\f344';
+	content: '\f344' / '';
 	color: var(--accent1);
 	margin-left: 4px;
 	position:relative;
@@ -924,6 +925,7 @@ figure.box-shadow {
 .main-navigation li ul .current-menu-item::before {
 	font-family: dashicons;
 	content: '\f139';
+	content: '\f139' / '';
 	color: var(--main-nav-icon-color-current);
 }
 
@@ -2348,12 +2350,14 @@ input[type="submit"]:hover,input[type="submit"]:focus,button:hover,button:focus,
 	padding: 3px 6px;
 	border-radius: 100%;
 	content: "\002b";
+	content: "\002b" / '';
 	font-size: 20px;
 	line-height: 1;
 }
 
 #primary .simpletoc .active .simpletoc-icon::after {
 	content: "\002d";
+	content: "\002d" / '';
 }
 
 #primary .simpletoc .active {
