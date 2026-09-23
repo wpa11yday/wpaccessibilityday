@@ -548,6 +548,16 @@ table {
 	width:100%
 }
 
+table.volunteer-contact-table th,
+table.volunteer-contact-table td {
+	padding: 8px;
+}
+
+table.volunteer-contact-table th {
+	background: var(--entry-header-bg);
+	color: var(--fg);
+}
+
 #utility-menu {
 	align-items: center;
 }
