@@ -387,8 +387,13 @@
 
 .wpad-attendees .attendee-social {
 	display: flex;
-	gap: 4px;
+	gap: 8px;
 	align-items: end;
+}
+
+.wpad-attendees .attendee-social a {
+	min-width: 24px;
+	min-height: 24px;
 }
 
 
