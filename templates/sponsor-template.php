@@ -68,7 +68,7 @@ get_header(); ?>
 									$begin = strtotime( get_option( 'wpad_start_time' ) );
 									$end   = strtotime( get_option( 'wpad_end_time' ) );
 									if ( ( time() > ( $begin - ( 7 * DAY_IN_SECONDS ) ) && ( time() < $end + ( 7 * DAY_IN_SECONDS ) ) ) ) {
-										echo $swag;
+										echo wp_kses_post( $swag );
 									} else {
 										echo '<p>Sponsor swag will be available starting the week before the event!</p>';
 									}
