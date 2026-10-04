@@ -383,6 +383,7 @@
 
 .wpad-attendees img {
 	background: #f9f9f9;
+	border-radius: 10px;
 }
 
 .wpad-attendees .attendee-social {
