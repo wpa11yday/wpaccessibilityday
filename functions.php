@@ -682,11 +682,11 @@ function wpad_archive_header() {
 			// Until 10 minutes before start.
 			if ( $time < $event - 600 ) {
 				echo '<aside id="wpad-archive">';
-				echo wpcs_banner();
+				echo wpautop( wpcs_banner() );
 				echo '</aside>';
 			} elseif ( $time < ( $event + DAY_IN_SECONDS ) ) {
 				$year = date( 'Y', $event );
-				echo '<aside id="wpad-archive">WP Accessibility Day is running now! <a 	href="https://wpaccessibility.day/' .$year . '/schedule/">Check out the schedule!</a></aside>';
+				echo '<aside id="wpad-archive"><p>WP Accessibility Day is running now! <a 	href="https://wpaccessibility.day/' .$year . '/schedule/">Check out the schedule!</a></p></aside>';
 			}
 		}
 	}
