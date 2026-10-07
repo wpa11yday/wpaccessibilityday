@@ -560,7 +560,7 @@ add_action('wp', 'custom_maybe_activate_user', 9);
  */
 function wpad_headers( $headers, $wp ) {
 	// Disable caching on sponsor post type single & special pages.
-	$uncached_pages = array( 'register' );
+	$uncached_pages = array( 'register', 'schedule' );
 	$dontcache      = ( is_singular() && isset( $wp->query_vars['pagename'] ) && in_array( $wp->query_vars['pagename'], $uncached_pages, true ) ) ? true : false;
 	if ( $dontcache || ( isset( $wp->query_vars['post_type'] ) && 'wpcsp_sponsor' === $wp->query_vars['post_type'] ) ) {
 		$headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0';
@@ -966,7 +966,7 @@ function wpad_render_tagmanager_tracking() {
 		}
 	}
 }
-add_filter( 'wpad_render_site_head', 'wpad_render_tagmanager_tracking' );
+//add_filter( 'wpad_render_site_head', 'wpad_render_tagmanager_tracking' );
 
 /**
  * Anonymize an IP by dropping the last octet.
