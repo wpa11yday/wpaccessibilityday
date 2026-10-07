@@ -686,7 +686,7 @@ function wpad_archive_header() {
 				echo '</aside>';
 			} elseif ( $time < ( $event + DAY_IN_SECONDS ) ) {
 				$year = date( 'Y', $event );
-				echo '<aside id="wpad-archive">WP Accessibility Day is running now! <a 	href="https://' . $year . '.wpaccessibility.day">Visit the event site</a></aside>';
+				echo '<aside id="wpad-archive">WP Accessibility Day is running now! <a 	href="https://wpaccessibility.day/' .$year . '/schedule/">Check out the schedule!</a></aside>';
 			}
 		}
 	}
