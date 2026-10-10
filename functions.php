@@ -671,8 +671,8 @@ add_action( 'gform_advancedpostcreation_post_after_creation_9', 'wpad_map_speake
  */
 function wpad_archive_header() {
 	$title = get_bloginfo( 'title' );
-	if ( false !== stripos( $title, 'archive' ) ) {
-		echo sprintf( '<aside id="wpad-archive"><p>You are viewing the <strong>%s</strong>. <a 	href="https://wpaccessibility.day/past-events/">Check out our past events</a>.</p></aside>', $title );
+	if ( str_contains( $title, 'archive' ) || str_contains( $title, 'Archive' ) ) {
+		echo sprintf( '<aside id="wpad-archive"><p>You are viewing the <strong>%s</strong>. <a href="https://wpaccessibility.day/past-events/">View all our past events</a>.</p></aside>', $title );
 	} else {
 		$time  = time();
 		$event = strtotime( get_option( 'wpad_start_time', '' ) );
@@ -686,7 +686,7 @@ function wpad_archive_header() {
 				echo '</aside>';
 			} elseif ( $time < ( $event + DAY_IN_SECONDS ) ) {
 				$year = date( 'Y', $event );
-				echo '<aside id="wpad-archive"><p>WP Accessibility Day is running now! <a 	href="https://wpaccessibility.day/' .$year . '/schedule/">Check out the schedule!</a></p></aside>';
+				echo '<aside id="wpad-archive"><p>WP Accessibility Day is running now! <a href="https://wpaccessibility.day/' .$year . '/schedule/">Check out the schedule!</a></p></aside>';
 			}
 		}
 	}
